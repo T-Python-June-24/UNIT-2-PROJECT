@@ -38,3 +38,22 @@ def home(request):
         'form': form,
         'firebase_data': firebase_data
     })
+
+
+
+def home_light(request):
+    response = redirect('Tourister:home')
+    response.delete_cookie('mode')#!cookie age 
+    return response
+    
+    
+
+def home_dark(request):
+    response = redirect('Tourister:home')
+    response.set_cookie('mode', 'dark', max_age=60*60*24*365*2)#!cookie age 
+    return response
+
+
+
+def kings(request):
+   return render(request,'Tourister/kings.html')
