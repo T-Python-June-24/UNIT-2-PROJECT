@@ -1,8 +1,22 @@
-{% extends "tourister/base.html" %}
-{% load static %}
+<!-- templates/tourister/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Add Data to Firebase</h1>
+    <form method="post" action="{% url 'Tourister:home' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Data</button>
+    </form>
 
-{% block content %}
-    <h1>Home</h1>
-    <p>Welcome to the home page</p>
-    <img src="{% static 'tourister/images/home.jpg' %}" alt="home">
-{% endblock %}
+    <h2>Firebase Data</h2>
+    <ul>
+        {% for key, value in firebase_data.items %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
