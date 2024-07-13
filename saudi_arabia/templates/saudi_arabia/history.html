@@ -1,0 +1,178 @@
+{% extends 'saudi_arabia/base.html' %} {% load static %} {% block title%}
+History of Saudi Arabia
+{% endblock %} 
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+  <h1
+    class="text-5xl font-bold mb-12 text-center animate__animated animate__fadeInDown text-emerald-700 dark:text-emerald-400"
+  >
+    History of Saudi Arabia
+  </h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {% for key, value in history.items %}
+    <div
+      class="bg-gradient-to-br from-emerald-50 via-white to-emerald-100 dark:from-gray-800 dark:to-emerald-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 animate__animated animate__fadeInLeft"
+    >
+      <img
+        src="{% static value.image %}"
+        alt="{{ value.title }}"
+        class="w-full h-48 object-cover"
+      />
+      <div class="p-6">
+        <h2
+          class="text-2xl font-semibold mb-3 text-emerald-800 dark:text-emerald-200"
+        >
+          {{ value.title }}
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          {{ value.content|truncatechars:50 }}
+        </p>
+        <button
+          class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-2 rounded-full hover:from-emerald-600 hover:to-emerald-700 transition duration-300 dark:from-emerald-500 dark:to-emerald-600 dark:hover:from-emerald-600 dark:hover:to-emerald-700 explore-btn"
+          onclick="showModal('{{ key }}')"
+        >
+          Explore More
+        </button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  id="historyModal"
+  class="fixed inset-0 bg-black bg-opacity-50 dark:bg-opacity-70 hidden items-center justify-center z-50"
+>
+  <div
+    id="modalContent"
+    class="bg-gradient-to-br from-emerald-50 via-white to-emerald-100 dark:from-gray-800 dark:to-emerald-900 p-8 rounded-xl max-w-4xl w-full mx-4 transform transition-all duration-300 scale-0 shadow-2xl"
+  >
+    <div class="flex flex-col md:flex-row">
+      <div class="md:w-1/2 mb-4 md:mb-0 md:mr-6">
+        <img
+          id="modalImage"
+          src=""
+          alt=""
+          class="w-full h-auto object-cover rounded-lg shadow-md"
+        />
+      </div>
+      <div class="md:w-1/2">
+        <h2
+          id="modalTitle"
+          class="text-3xl font-bold mb-6 text-emerald-800 dark:text-emerald-200"
+        ></h2>
+        <div
+          id="modalBody"
+          class="text-gray-700 dark:text-gray-300 mb-6 max-h-[40vh] overflow-y-auto pr-4 custom-scrollbar"
+        ></div>
+      </div>
+    </div>
+    <button
+      onclick="closeModal()"
+      class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-3 rounded-full hover:from-emerald-600 hover:to-emerald-700 transition duration-300 dark:from-emerald-500 dark:to-emerald-600 dark:hover:from-emerald-600 dark:hover:to-emerald-700 mt-6 explore-btn"
+    >
+      Close
+    </button>
+  </div>
+</div>
+{% endblock %} {% block extra_css %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Light mode specific styles */
+  body:not(.dark) .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, #f0fff4, #ffffff, #e6fffa);
+  }
+
+  body:not(.dark) .text-emerald-700 {
+    color: #047857;
+  }
+
+  body:not(.dark) .text-emerald-800 {
+    color: #065f46;
+  }
+
+  body:not(.dark) .bg-emerald-600 {
+    background-color: #059669;
+  }
+
+  body:not(.dark) .hover\:bg-emerald-700:hover {
+    background-color: #047857;
+  }
+</style>
+{% endblock %} {% block extra_js %}
+<script>
+  const historyData = {
+      {% for key, value in history.items %}
+          '{{ key }}': {
+              title: '{{ value.modal_title|escapejs }}',
+              content: '{{ value.modal_content|escapejs }}',
+              image: '{% static value.image %}'
+          },
+      {% endfor %}
+  };
+
+  function showModal(type) {
+      const modal = document.getElementById("historyModal");
+      const modalContent = document.getElementById("modalContent");
+      const title = document.getElementById("modalTitle");
+      const content = document.getElementById("modalBody");
+      const image = document.getElementById("modalImage");
+
+      title.textContent = historyData[type].title;
+      content.innerHTML = historyData[type].content;
+      content.classList.add('custom-scrollbar');
+      image.src = historyData[type].image;
+      image.alt = historyData[type].title;
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      setTimeout(() => {
+          modalContent.classList.remove("scale-0");
+          modalContent.classList.add("scale-100");
+      }, 50);
+  }
+
+  function closeModal() {
+      const modal = document.getElementById("historyModal");
+      const modalContent = document.getElementById("modalContent");
+
+      modalContent.classList.remove("scale-100");
+      modalContent.classList.add("scale-0");
+
+      setTimeout(() => {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+      }, 300);
+  }
+
+  // Add floating animation to history cards
+  document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.animate__fadeInLeft');
+      cards.forEach((card, index) => {
+          card.classList.add('float-animation');
+          card.style.animationDelay = `${index * 0.2}s`;
+      });
+  });
+</script>
+{% endblock %}
