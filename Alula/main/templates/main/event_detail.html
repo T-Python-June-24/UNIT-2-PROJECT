@@ -1,0 +1,14 @@
+<!-- templates/main/event_detail.html -->
+{% extends 'main/base.html' %}
+
+{% block title %}{{ event.title }}{% endblock %}
+
+{% block content %}
+<div class="card mb-4">
+    <div class="card-body">
+        <h1 class="card-title">{{ event.title }}</h1>
+        <p class="card-text">{{ event.description }}</p>
+        <p class="card-text"><small class="text-muted">{{ event.date }} - {{ event.location }}</small></p>
+    </div>
+</div>
+{% endblock %}

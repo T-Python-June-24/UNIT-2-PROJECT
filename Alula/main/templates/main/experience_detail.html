@@ -1,0 +1,15 @@
+<!-- templates/main/experience_detail.html -->
+{% extends 'main/base.html' %}
+
+{% block title %}{{ experience.title }}{% endblock %}
+
+{% block content %}
+<div class="card mb-4">
+    <img src="{{ experience.image.url }}" class="card-img-top" alt="{{ experience.title }}">
+    <div class="card-body">
+        <h1 class="card-title">{{ experience.title }}</h1>
+        <p class="card-text">{{ experience.description }}</p>
+        <p class="card-text">{{ experience.price }}</p>
+    </div>
+</div>
+{% endblock %}

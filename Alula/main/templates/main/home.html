@@ -1,0 +1,60 @@
+
+{% extends 'main/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to AlUla</h1>
+    <p class="lead">Explore the rich history and breathtaking landscapes of AlUla.</p>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-4">
+        <h2>Places to Visit</h2>
+        <div class="card-deck">
+            {% for place in places %}
+                <div class="card mb-4">
+                    <img src="{{ place.image.url }}" class="card-img-top" alt="{{ place.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ place.name }}</h5>
+                        <p class="card-text">{{ place.description }}</p>
+                        <a href="{% url 'place_detail' place.pk %}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h2>Events</h2>
+        <div class="card-deck">
+            {% for event in events %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ event.title }}</h5>
+                        <p class="card-text">{{ event.description }}</p>
+                        <p class="card-text"><small class="text-muted">{{ event.date }} - {{ event.location }}</small></p>
+                        <a href="{% url 'event_detail' event.pk %}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h2>Experiences</h2>
+        <div class="card-deck">
+            {% for experience in experiences %}
+                <div class="card mb-4">
+                    <img src="{{ experience.image.url }}" class="card-img-top" alt="{{ experience.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ experience.title }}</h5>
+                        <p class="card-text">{{ experience.description }}</p>
+                        <p class="card-text">{{ experience.price }}</p>
+                        <a href="{% url 'experience_detail' experience.pk %}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
