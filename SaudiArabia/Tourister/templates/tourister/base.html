@@ -1,27 +1,42 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} class="dark" {% endif %}>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/city.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/kings.css' %}">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>{% block title %}Saudi Arabia{% endblock %}</title>
 </head>
 <body>
-    <nav>
-        <ul class="sidebar">
-            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#73e0e0"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="https://tuwaiq.edu.sa/">HOME</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Login</a></li>
+    <nav class="{% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}dark{% endif %}">
+        <ul class="sidebar {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}dark{% endif %}">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="teal"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="{% url 'Tourister:home' %}">HOME</a></li>
+            <li><a href="{% url 'Tourister:kings' %}">History</a></li>
+            <li><a href="{% url 'Tourister:city' %}">Citys</a></li>
+            <li><a href="{% url 'Tourister:contact' %}">Contact</a></li>
         </ul>
         <ul>
-            <li><a href="https://tuwaiq.edu.sa/"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#73e0e0"><path d="M338-204q-15 8-30.5 2.5T284-222l-60-120q-8-15-2.5-30.5T242-396q15-8 30.5-2.5T296-378l60 120q8 15 2.5 30.5T338-204Zm360 0q-15 8-30.5 2.5T644-222L464-582q-8-15-2.5-30.5T482-636q15-8 30.5-2.5T536-618l180 360q8 15 2.5 30.5T698-204Zm-188 4q-17 0-28.5-11.5T470-240q0-17 11.5-28.5T510-280q17 0 28.5 11.5T550-240q0 17-11.5 28.5T510-200Zm388-4q-15 8-30.5 2.5T844-222l-20-40q-8-15-2.5-30.5T842-316q15-8 30.5-2.5T896-298l20 40q8 15 2.5 30.5T898-204ZM458-324q-15 8-30.5 2.5T404-342L224-702q-8-15-2.5-30.5T242-756q15-8 30.5-2.5T296-738l180 360q8 15 2.5 30.5T458-324Zm342-36q-17 0-28.5-11.5T760-400q0-17 11.5-28.5T800-440q17 0 28.5 11.5T840-400q0 17-11.5 28.5T800-360Zm-600-80q-17 0-28.5-11.5T160-480q0-17 11.5-28.5T200-520q17 0 28.5 11.5T240-480q0 17-11.5 28.5T200-440Zm558-44q-15 8-30.5 2.5T704-502L604-702q-8-15-2.5-30.5T622-756q15-8 30.5-2.5T676-738l100 200q8 15 2.5 30.5T758-484Zm-600-80q-15 8-30.5 2.5T104-582L44-702q-8-15-2.5-30.5T62-756q15-8 30.5-2.5T116-738l60 120q8 15 2.5 30.5T158-564Zm292-116q-17 0-28.5-11.5T410-720q0-17 11.5-28.5T450-760q17 0 28.5 11.5T490-720q0 17-11.5 28.5T450-680Z"/></svg></a></li>
-            <li class="hideOnMobile"><a href="#">Plans</a></li>
-            <li class="hideOnMobile"><a href="#">About</a></li>
-            <li class="hideOnMobile"><a href="#">Login</a></li>
-            
+            <li><a href="{% url 'Tourister:home' %}"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="teal"><path d="M338-204q-15 8-30.5 2.5T284-222l-60-120q-8-15-2.5-30.5T242-396q15-8 30.5-2.5T296-378l60 120q8 15 2.5 30.5T338-204Zm360 0q-15 8-30.5 2.5T644-222L464-582q-8-15-2.5-30.5T482-636q15-8 30.5-2.5T536-618l180 360q8 15 2.5 30.5T698-204Zm-188 4q-17 0-28.5-11.5T470-240q0-17 11.5-28.5T510-280q17 0 28.5 11.5T550-240q0 17-11.5 28.5T510-200Zm388-4q-15 8-30.5 2.5T844-222l-20-40q-8-15-2.5-30.5T842-316q15-8 30.5-2.5T896-298l20 40q8 15 2.5 30.5T898-204ZM458-324q-15 8-30.5 2.5T404-342L224-702q-8-15-2.5-30.5T242-756q15-8 30.5-2.5T296-738l180 360q8 15 2.5 30.5T458-324Zm342-36q-17 0-28.5-11.5T760-400q0-17 11.5-28.5T800-440q17 0 28.5 11.5T840-400q0 17-11.5 28.5T800-360Zm-600-80q-17 0-28.5-11.5T160-480q0-17 11.5-28.5T200-520q17 0 28.5 11.5T240-480q0 17-11.5 28.5T200-440Zm558-44q-15 8-30.5 2.5T704-502L604-702q-8-15-2.5-30.5T622-756q15-8 30.5-2.5T676-738l100 200q8 15 2.5 30.5T758-484Zm-600-80q-15 8-30.5 2.5T104-582L44-702q-8-15-2.5-30.5T62-756q15-8 30.5-2.5T116-738l60 120q8 15 2.5 30.5T158-564Zm292-116q-17 0-28.5-11.5T410-720q0-17 11.5-28.5T450-760q17 0 28.5 11.5T490-720q0 17-11.5 28.5T450-680Z"/></svg></a></li>
+            <li class="hideOnMobile"><a href="{% url 'Tourister:kings' %}">History</a></li>
+            <li class="hideOnMobile"><a href="{% url 'Tourister:city' %}">Citys</a></li>
+            <li class="hideOnMobile"><a href="{% url 'Tourister:contact' %}">Contact</a></li>
+            {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}
+                <div><a href="{% url 'Tourister:home_light' %}"><img class="person-icon" src="{% static 'images/lightWhite.png' %}" alt="icon"></a></div>
+            {% else %}
+                <div><a href="{% url 'Tourister:home_light' %}"><img class="person-icon-light" src="{% static 'images/light_mode.png' %}" alt="icon"></a></div>
+            {% endif %}
+            <div>
+                <a href="{% url 'Tourister:home_dark' %}">
+                    <img class="person-icon {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} person-icon-dark {% endif %}" src="{% static 'images/dark_mode.png' %}" alt="icon">
+                </a>
+            </div>
             <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="26px" fill="#73e0e0"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
     </nav>
@@ -36,8 +51,26 @@
         }
     </script>
     <main>
-        {% block content %}
-        {% endblock %}
+        {% block content %} {% endblock %}
     </main>
+
+
+    {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}
+        <footer class="bg-zinc-950 text-white pt-2 mt-16 dark">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 RealEstate Agency. All rights reserved ❤️.</p>
+                <p><a href="" class="text-gray-400 hover:text-gray-200">Privacy Policy</a> | <a href="" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a></p>
+            </div>
+        </footer>
+    {% else %}
+        <footer class="bg-neutral-100 text-black pt-2 mt-16">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 Saudi Agency. All rights reserved ❤️.</p>
+                <p><a href="" class="text-gray-400 hover:text-gray-200">Privacy Policy</a> | <a href="" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a></p>
+            </div>
+        </footer>
+    {% endif %}
+</body>
 </body>
 </html>
+
