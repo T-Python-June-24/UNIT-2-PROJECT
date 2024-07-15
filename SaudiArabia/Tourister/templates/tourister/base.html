@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/css/city.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static '/css/kings.css' %}">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <title>{% block title %}Saudi Arabia{% endblock %}</title>
 </head>
 <body>
@@ -57,15 +58,15 @@
 
     {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}
         <footer class="bg-zinc-950 text-white pt-2 mt-16 dark">
-            <div class="container mx-auto text-center">
-                <p>&copy; 2024 RealEstate Agency. All rights reserved ❤️.</p>
+            <div class=" mx-auto text-center">
+                <p>&copy; 2024 SaudiArabia. All rights reserved ❤️.</p>
                 <p><a href="" class="text-gray-400 hover:text-gray-200">Privacy Policy</a> | <a href="" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a></p>
             </div>
         </footer>
     {% else %}
         <footer class="bg-neutral-100 text-black pt-2 mt-16">
-            <div class="container mx-auto text-center">
-                <p>&copy; 2024 Saudi Agency. All rights reserved ❤️.</p>
+            <div class="mx-auto text-center">
+                <p>&copy; 2024 SaudiArabia. All rights reserved ❤️.</p>
                 <p><a href="" class="text-gray-400 hover:text-gray-200">Privacy Policy</a> | <a href="" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a></p>
             </div>
         </footer>

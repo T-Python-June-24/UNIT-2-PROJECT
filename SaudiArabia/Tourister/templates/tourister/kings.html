@@ -2,175 +2,177 @@
 {% load static %}
 
 {% block content %}
-
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #0b3d2a;
-    font-family: Helvetica, sans-serif;
-  }
-  
-  .header-text {
-    text-align: center;
-    color: white;
-    margin: 50px 0;
-  }
-  
-  .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+* {
+  box-sizing: border-box;
+}
+
+
+ body {
+  background-color: #0b3d2a;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-text {
+  text-align: center;
+  color: white;
+  margin: 50px 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: teal;
+  border: 4px solid gold;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+.timeline-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
   .timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
+    left: 31px;
   }
   
   .container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
   }
   
-  .container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: teal;
-    border: 4px solid gold;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  
-  .left {
-    left: 0;
-  }
-  
-  .right {
-    left: 50%;
-  }
-  
-  .left::before {
-    content: "";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-  }
-  
-  .right::before {
-    content: "";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
+  .container::before {
+    left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
-  
-  .right::after {
-    left: -16px;
+
+  .left::after, .right::after {
+    left: 15px;
   }
   
-  .content {
-    padding: 20px 30px;
-    background-color: white;
-    position: relative;
-    border-radius: 6px;
+  .right {
+    left: 0%;
   }
-  
-  .timeline-image {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 20px;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .timeline::after {
-      left: 31px;
-    }
-    
-    .container {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-    
-    .container::before {
-      left: 60px;
-      border: medium solid white;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent white transparent transparent;
-    }
-  
-    .left::after, .right::after {
-      left: 15px;
-    }
-    
-    .right {
-      left: 0%;
-    }
-  }
-  
-  
-  
-  .card {
-    display: flex;
-    align-items: center;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: auto;
-  }
-  .card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  .card-content {
-    flex: 1;
-    padding-right: 20px;
-  }
-  .card h2 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  .card p {
-    color: #666;
-    margin-bottom: 10px;
-  }
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+}
+
+
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: auto;
+}
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.card-content {
+  flex: 1;
+  padding-right: 20px;
+}
+.card h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+.card p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 
 <div class="img-animation">
@@ -244,4 +246,25 @@
 </div>
 
 <br><br>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const animateOnScroll = document.querySelectorAll('.animate-on-scroll');
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeIn');
+        } else {
+          entry.target.classList.remove('animate__animated', 'animate__fadeIn');
+        }
+      });
+    }, { threshold: 0.5 }); // Adjust threshold as needed
+    
+    animateOnScroll.forEach(item => {
+      observer.observe(item);
+    });
+  });
+</script>
+
 {% endblock %}

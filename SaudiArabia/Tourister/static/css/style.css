@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: #ffffff;
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -48,7 +49,7 @@ nav a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
-    color: teal; /* Default text color */
+    color: teal;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,7 +120,7 @@ nav li:first-child {
 
 .sidebar.hide {
     animation: slideOut 0.5s ease-in-out forwards;
-    display: flex; /* Display flex during animation */
+    display: flex; 
 }
 
 .sidebar.hidden {
@@ -258,9 +259,6 @@ footer {
   }
   
 
-
-
-  /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 .container {

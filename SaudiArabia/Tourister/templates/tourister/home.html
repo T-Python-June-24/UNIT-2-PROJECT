@@ -2,29 +2,42 @@
 {% load static %}
 
 {% block content %}
+
+
+
 <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-    <video
-      autoplay
-      loop
-      muted
-      class="absolute z-10 w-full h-full object-cover"
-    >
-      <source
-        src="https://firebasestorage.googleapis.com/v0/b/pythoncli-e6c14.appspot.com/o/saudi.mp4?alt=media&token=33e89ba5-fb64-4da8-a2fd-9fced4cba574"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-    <div class="absolute z-30 bottom-0 left-0 w-full max-w-[120rem] mx-auto h-full px-6 md:px-8 lg:px-10 flex flex-col justify-end space-y-6">
-        <div class="text-gray-50 md:pb-36 space-y-6">
-            <span class="font-light text-sm text-accent-500">Saudi Arabia</span>
-            <h1 class="text-3xl md:text-5xl max-w-[30rem] font-medium">Welcome To Saudi Arabia History</h1>
-            <p class="max-w-[30rem] font-light ml-4 relative before:content-[''] before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            <div class="md:flex-row flex-col flex gap-4">
-                <button class="inline-block text-base font-medium px-12 py-2 bg-teal-500 rounded-lg cursor-pointer text-white">Exploree More</button>
-                <button class="inline-block text-base font-medium px-12 py-2 border border-accent-400 rounded-lg text-accent-400 cursor-pointer bg-gray-50/10 backdrop-blur-3xl">Send Message</button>
-            </div>
+    {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}
+
+<img src="{% static 'images/riyadh1.avif' %}" alt="" style="z-index: -1; object-fit: cover; width: 100%; height: 100%;">
+<div class="absolute z-30 bottom-0 left-0 w-full max-w-[120rem] mx-auto h-full px-6 md:px-8 lg:px-10 flex flex-col justify-end space-y-6">
+    <div class="text-white md:pb-36 space-y-6">
+        <h1 class="text-3xl md:text-5xl max-w-[30rem] font-medium">Exploree Saudi Arabia</h1>
+        <p class="max-w-[30rem] font-dark ml-4 relative before:content-[''] before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm">Saudi Arabia is a country located in the Middle East, known for its rich history and cultural heritage. It is home to iconic landmarks such as the ancient city of Petra and the stunning Red Sea coastline. With its diverse landscapes, vibrant cities, and warm hospitality, Saudi Arabia offers a unique travel experience for visitors from around the world.</p>
+        <div class="md:flex-row flex-col flex gap-4">
+            <button class="inline-block text-base font-medium px-12 py-2 bg-teal-500 rounded-lg cursor-pointer text-white">Exploree More</button>
+            <button class="inline-block text-base font-medium px-12 py-2 border border-accent-400 rounded-lg text-accent-400 cursor-pointer bg-gray-50/10 backdrop-blur-3xl">Send Message</button>
         </div>
     </div>
+</div>
+
+{% else %}
+
+
+<video autoplay loop muted class="absolute z-20 w-full h-full object-cover">
+    <source src="https://firebasestorage.googleapis.com/v0/b/pythoncli-e6c14.appspot.com/o/saudi.mp4?alt=media&token=33e89ba5-fb64-4da8-a2fd-9fced4cba574" type="video/mp4"/>
+    Your browser does not support the video tag.
+</video>
+<div class="absolute z-30 bottom-0 left-0 w-full max-w-[120rem] mx-auto h-full px-6 md:px-8 lg:px-10 flex flex-col justify-end space-y-6">
+    <div class="text-teal-600 md:pb-36 space-y-6">
+        <h1 class="text-3xl md:text-5xl max-w-[30rem] font-medium">Exploree Saudi Arabia</h1>
+        <p class="text-black  max-w-[30rem] font-light ml-4 relative before:content-[''] before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm">Saudi Arabia is a country located in the Middle East, known for its rich history and cultural heritage. It is home to iconic landmarks such as the ancient city of Petra and the stunning Red Sea coastline. With its diverse landscapes, vibrant cities, and warm hospitality, Saudi Arabia offers a unique travel experience for visitors from around the world.</p>
+        <div class="md:flex-row flex-col flex gap-4">
+            <button class="inline-block text-base font-medium px-12 py-2 bg-teal-500 rounded-lg cursor-pointer text-black">Exploree More</button>
+            <button class="inline-block text-base font-medium px-12 py-2 border border-accent-400 rounded-lg text-black cursor-pointer bg-gray-50/10 backdrop-blur-3xl">Send Message</button>
+        </div>
+    </div>
+</div>
+{% endif %}
+    
 </header>
 {% endblock %}

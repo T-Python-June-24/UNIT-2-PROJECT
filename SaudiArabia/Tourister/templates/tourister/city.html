@@ -16,18 +16,17 @@
                             {{ property.title }}
                         </p>
                     </div>
-                    <div class="p-6">
+                    <div class="pl-6 pr-6">
                         <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
                             {{ property.content }}
                         </p>
                     </div>
-                    <div class="p-16 pt-12">
-                        <button class="flex justify-center align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
-                            More <a href={{property.link}}></a>
-                        </button>
+                    <div class="p-6 flex flex-col items-center justify-end h-full">
+                        <button type="submit" class="bg-black text-white py-2 px-16 rounded-lg mt-16"> <a href="{{ property.link }}"></a>More</button>
                     </div>
                     
                 </div>
+                
             {% endfor %}
         </div>
     </div>
