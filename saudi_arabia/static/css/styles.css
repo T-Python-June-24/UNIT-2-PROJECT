@@ -1,17 +1,15 @@
 /* Base styles */
 body {
+  height: 100vh;
   font-family: "Poppins", sans-serif;
-  transition: background-color 0.5s, color 0.5s;
-  font-size: 18px;
-  background-color: #f7fafc;
-  color: #2d3748;
-  position: relative;
-  overflow-x: hidden;
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%23e2e8f0" fill-opacity="0.4" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
+  background-color: #ffffff;
+  color: #333333;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%23006c35" fill-opacity="0.1" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
 }
 
 /* Dark mode styles */
 body.dark {
+  height: 100vh;
   background-color: #121212;
   color: #a0c0a0;
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%239C92AC" fill-opacity="0.4" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
@@ -23,9 +21,7 @@ header {
   transition: background-color 0.5s;
 }
 
-body.dark header {
-  background-color: rgba(18, 18, 18, 0.9);
-}
+/* Content */
 
 /* Text colors */
 .text-saudi-green {
@@ -45,8 +41,9 @@ body.dark .text-gray-800 {
   color: #c0e0c0;
 }
 
-.text-gray-700 {
-  color: #4a5568;
+.btn:hover {
+  box-shadow: 0 4px 10px rgba(247, 101, 145, 0.5);
+  transform: scale(0.98);
 }
 
 body.dark .text-gray-700 {
@@ -112,27 +109,55 @@ body.dark .explore-btn:hover {
   box-shadow: 0 6px 8px rgba(0, 204, 122, 0.3);
 }
 
-/* Spline container */
-.spline-container {
-  width: 600px;
-  height: 600px;
-  position: absolute;
-  top: -150px;
-  right: 400px;
-  z-index: -1;
-}
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-section {
     text-align: center;
   }
 
+  .explore-btn {
+    margin-top: 20px;
+  }
+}
+
+
+@media (min-width: 2000px) {
+  .hero-section {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
   .spline-container {
-    width: 100%;
-    height: 300px;
-    position: static;
-    margin-top: 2rem;
+    height: 800px;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .explore-btn {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+  }
+
+  .blurred-circle {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(calc(var(--x) / 2), calc(var(--y) / 2)) scale(1.1);
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(1);
   }
 }
 
@@ -183,7 +208,7 @@ body.dark #glow {
   );
 }
 
-/* The switch - the box around the slider */
+
 .switch {
   font-size: 17px;
   position: relative;
@@ -193,14 +218,14 @@ body.dark #glow {
   user-select: none;
 }
 
-/* Hide default HTML checkbox */
+
 .switch .cb {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
+
 .toggle {
   position: absolute;
   cursor: pointer;

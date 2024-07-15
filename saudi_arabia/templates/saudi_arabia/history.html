@@ -1,10 +1,8 @@
 {% extends 'saudi_arabia/base.html' %} {% load static %} {% block title%}
-History of Saudi Arabia
-{% endblock %} 
-{% block content %}
-<div class="container mx-auto px-4 py-8">
+History of Saudi Arabia {% endblock %} {% block content %}
+<div class="container mx-auto px-4">
   <h1
-    class="text-5xl font-bold mb-12 text-center animate__animated animate__fadeInDown text-emerald-700 dark:text-emerald-400"
+    class="text-6xl font-bold mb-12 text-center animate__animated animate__fadeInDown text-emerald-700 dark:text-emerald-400"
   >
     History of Saudi Arabia
   </h1>
@@ -12,7 +10,7 @@ History of Saudi Arabia
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {% for key, value in history.items %}
     <div
-      class="bg-gradient-to-br from-emerald-50 via-white to-emerald-100 dark:from-gray-800 dark:to-emerald-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 animate__animated animate__fadeInLeft"
+      class="bg-gradient-to-br from-emerald-50 via-white to-emerald-100 dark:from-gray-800 dark:to-emerald-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 animate__animated animate__fadeInUp"
     >
       <img
         src="{% static value.image %}"
@@ -43,7 +41,7 @@ History of Saudi Arabia
 <!-- Modal -->
 <div
   id="historyModal"
-  class="fixed inset-0 bg-black bg-opacity-50 dark:bg-opacity-70 hidden items-center justify-center z-50"
+  class="fixed overflow-y-scroll inset-0 bg-black bg-opacity-50 dark:bg-opacity-70 hidden items-center justify-center z-50"
 >
   <div
     id="modalContent"
@@ -168,11 +166,15 @@ History of Saudi Arabia
 
   // Add floating animation to history cards
   document.addEventListener('DOMContentLoaded', () => {
-      const cards = document.querySelectorAll('.animate__fadeInLeft');
+      const cards = document.querySelectorAll('.animate__fadeInUp');
       cards.forEach((card, index) => {
           card.classList.add('float-animation');
           card.style.animationDelay = `${index * 0.2}s`;
       });
+
+      // Add page load animation
+      const container = document.querySelector('.container');
+      container.classList.add('animate__animated', 'animate__fadeIn');
   });
 </script>
 {% endblock %}

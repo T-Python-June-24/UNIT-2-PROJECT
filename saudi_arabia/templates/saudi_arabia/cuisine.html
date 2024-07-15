@@ -1,0 +1,368 @@
+{% extends 'saudi_arabia/base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/cuisine.css' %}" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<style>
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    width: 85%;
+    max-width: 350px;
+    height: 400px;
+  }
+
+  .swiper-slide:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #047857;
+    background-color: transparent;
+    padding: 25px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+
+  .swiper-pagination-bullet {
+    background: #047857;
+    opacity: 0.5;
+    width: 12px;
+    height: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 20px;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 640px) {
+    .swiper-container {
+      height: auto;
+      padding-bottom: 70px;
+    }
+
+    .swiper-slide {
+      height: 250px;
+      width: 95%;
+    }
+
+    .swiper-pagination {
+      bottom: 35px !important;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: auto;
+      bottom: 5px;
+      transform: translateY(0);
+    }
+
+    .swiper-button-prev {
+      left: 20px;
+    }
+
+    .swiper-button-next {
+      right: 20px;
+    }
+  }
+
+  .swiper-slide-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    backdrop-filter: blur(5px);
+  }
+
+  .dark .swiper-slide-content {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .swiper-slide-active .swiper-slide-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #modalImage {
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+  }
+
+</style>
+{% endblock %} {% block content %}
+<div class="container mx-auto px-4 py-12">
+  <h1
+    class="text-6xl font-extrabold mb-12 text-center text-emerald-700 dark:text-emerald-400 animate__animated animate__fadeInDown"
+  >
+    Explore Saudi Arabian Cuisines
+  </h1>
+  <p
+    class="text-center mb-8 animate__animated animate__fadeInUp max-w-2xl mx-auto text-lg md:text-xl text-gray-700 dark:text-gray-300"
+  >
+    Discover the rich flavors and diverse dishes of Saudi Arabian cuisine. Swipe
+    through the images below to learn more about each culinary tradition.
+  </p>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      {% for cuisine in cuisines %}
+      <div
+        class="swiper-slide"
+        style="background-image: url('{% static cuisine.image %}')"
+        data-cuisine-id="{{ forloop.counter0 }}"
+      >
+        <div class="swiper-slide-content">
+          <h2
+            class="font-bold mb-2 text-xl md:text-2xl text-emerald-800 dark:text-emerald-200"
+          >
+            {{ cuisine.name }}
+          </h2>
+          <p class="text-sm md:text-base text-gray-600 dark:text-gray-400">
+            Click for more details
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<div id="cuisineModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img
+      id="modalImage"
+      src=""
+      alt="Cuisine"
+      class="mx-auto rounded-md shadow-md mb-4"
+    />
+    <h2
+      id="modalTitle"
+      class="text-2xl sm:text-3xl font-bold mb-4 text-emerald-700 dark:text-emerald-400"
+    ></h2>
+    <p
+      id="modalDescription"
+      class="mb-6 text-lg text-gray-700 dark:text-gray-300"
+    ></p>
+    <h3
+      class="text-xl font-semibold mb-4 text-emerald-600 dark:text-emerald-500"
+    >
+      Ingredients:
+    </h3>
+    <div id="modalIngredients" class="ingredients-grid"></div>
+  </div>
+</div>
+{% endblock %} {% block extra_js %}
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          effect: 'fade',
+        },
+        768: {
+          slidesPerView: 'auto',
+          effect: 'coverflow',
+          coverflowEffect: {
+            rotate: 30,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+        }
+      },
+      on: {
+        slideChange: function () {
+          animateSlideContent(this.activeIndex);
+        },
+      },
+    });
+
+    function animateSlideContent(index) {
+      const activeSlide = document.querySelector(`.swiper-slide[data-swiper-slide-index="${index}"]`);
+      if (activeSlide) {
+        const content = activeSlide.querySelector('.swiper-slide-content');
+        content.style.opacity = '0';
+        content.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          content.style.opacity = '1';
+          content.style.transform = 'translateY(0)';
+        }, 300);
+      }
+    }
+
+    const modal = document.getElementById("cuisineModal");
+    const closeBtn = document.getElementsByClassName("close")[0];
+    const modalImage = document.getElementById("modalImage");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDescription = document.getElementById("modalDescription");
+    const modalIngredients = document.getElementById("modalIngredients");
+
+    const cuisines = [
+      {% for cuisine in cuisines %}
+        {
+          name: "{{ cuisine.name|escapejs }}",
+          image: "{% static cuisine.image %}",
+          description: "{{ cuisine.description|escapejs }}",
+          ingredients: {{ cuisine.ingredients|safe }},
+          selectedIngredients: {{ cuisine.selected_ingredients|safe }}
+        },
+      {% endfor %}
+    ];
+
+    function showModal(type) {
+      const cuisine = cuisines[type];
+      modalImage.src = cuisine.image;
+      modalTitle.textContent = cuisine.name;
+      modalDescription.textContent = cuisine.description;
+      modalIngredients.innerHTML = '';
+
+      const savedIngredients = Cookies.get(cuisine.name) ? JSON.parse(Cookies.get(cuisine.name)) : [];
+
+      cuisine.ingredients.forEach(ingredient => {
+        const div = document.createElement('div');
+        div.className = 'ingredient-item';
+        div.textContent = ingredient;
+        if (savedIngredients.includes(ingredient)) {
+          div.classList.add('selected');
+        }
+        div.addEventListener('click', function() {
+          this.classList.toggle('selected');
+          updateSelectedIngredients(cuisine.name);
+        });
+        modalIngredients.appendChild(div);
+      });
+
+      modal.classList.add("show");
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        modal.querySelector('.modal-content').style.transform = 'scale(1)';
+        modal.querySelector('.modal-content').style.opacity = '1';
+      }, 50);
+    }
+
+    function updateSelectedIngredients(cuisineName) {
+      const selectedIngredients = Array.from(modalIngredients.querySelectorAll('.ingredient-item.selected'))
+        .map(item => item.textContent);
+
+      Cookies.set(cuisineName, JSON.stringify(selectedIngredients), { expires: 30 });
+
+      const cuisineIndex = cuisines.findIndex(c => c.name === cuisineName);
+      if (cuisineIndex !== -1) {
+        cuisines[cuisineIndex].selectedIngredients = selectedIngredients;
+      }
+
+      fetch('{% url "saudi_arabia:save_selected_ingredients" %}', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': '{{ csrf_token }}'
+        },
+        body: JSON.stringify({
+          cuisine_name: cuisineName,
+          selected_ingredients: selectedIngredients
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
+          console.log('Selected ingredients saved successfully');
+        } else {
+          console.error('Failed to save selected ingredients:', data.message);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error.message);
+      });
+    }
+
+    function closeModal() {
+      const modalContent = modal.querySelector('.modal-content');
+      modalContent.style.transform = 'scale(0.7)';
+      modalContent.style.opacity = '0';
+      setTimeout(() => {
+        modal.classList.remove("show");
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+      slide.addEventListener('click', function() {
+        const cuisineId = this.getAttribute('data-cuisine-id');
+        showModal(cuisineId);
+      });
+    });
+
+    closeBtn.onclick = closeModal;
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+
+    function adjustModalSize() {
+      if (modal.classList.contains('show')) {
+        const modalContent = modal.querySelector('.modal-content');
+        const maxHeight = window.innerHeight * 0.9;
+        modalContent.style.maxHeight = `${maxHeight}px`;
+
+        if (window.innerWidth < 360) {
+          modalContent.style.fontSize = '14px';
+        } else {
+          modalContent.style.fontSize = '';
+        }
+      }
+    }
+
+    window.addEventListener('resize', adjustModalSize);
+    window.addEventListener('orientationchange', adjustModalSize);
+  });
+</script>
+{% endblock %}
