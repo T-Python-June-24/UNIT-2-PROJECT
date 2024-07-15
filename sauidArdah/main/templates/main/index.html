@@ -1,0 +1,136 @@
+{% extends 'main/base.html' %}
+{% load static %}
+		<!-- component -->
+<!--
+  Welcome to Tailwind Play, the official Tailwind CSS playground!
+
+  Everything here works just like it does when you're running Tailwind locally
+  with a real build pipeline. You can customize your config file, use features
+  like `@apply`, or even add third-party plugins.
+
+  Feel free to play with this example if you're just learning, or trash it and
+  start from scratch if you know enough to be dangerous. Have fun!
+-->
+  {% block content %}
+<div class="w-screen h-screen overflow-hidden relative before:block before:absolute before:bg-black before:h-full before:w-full before:top-0 before:left-0 before:z-10 before:opacity-30 ">
+	{% if "true" in request.COOKIES.dark_theme %} 
+	<img src="{% static 'images/ardahbg.png' %}" class="absolute top-0 left-0 min-h-full w-full blur-sm" alt="">
+	{% else %}
+	<img src="{% static 'images/ardah1.png' %}" class="absolute top-0 left-0 min-h-full w-full blur-sm" alt="">
+	{% endif %}
+	<div class="relative z-20 max-w-screen-lg mx-auto grid grid-cols-12 h-full items-center">
+	  <div class="col-span-6 ">
+		<span class="uppercase text-white text-xs font-bold mb-2 block"></span>
+		<h1 class="text-white font-extrabold text-5xl mb-8">Ardha Dances: The Voice of Saudi Heritage</h1>
+		<p class="text-stone-100 text-base">
+			Explore the Vibrant Traditions of Saudi Arabia's Iconic Ardha Performances
+		</p>
+		<button class="mt-8 text-white uppercase py-4 text-base font-light px-10 border border-white hover:bg-white hover:bg-opacity-10"><a href="#start">Get started</a></button>
+	  </div>
+	</div>
+  </div>
+  <div class="bg-[#f7d0b6] py-20  dark:bg-[#181818]" >
+	<div class="max-w-screen-lg mx-auto flex justify-between items-center">
+	  <div class="max-w-xl" data-aos="fade-down"
+	  data-aos-easing="linear"
+	  data-aos-duration="2000">
+		<h2 class="font-black text-sky-950 text-3xl mb-4 dark:text-white"  id="start">Immerse yourself in the rich cultural heritage of Saudi Arabia</h2>
+		<p class="text-base text-sky-950 dark:text-white">through the captivating Ardha dances. Discover the diverse regional styles, captivating rhythms, and time-honored traditions that have been passed down for generations. From the lively Qazwa'i Ardha of the South to the stately Najdi Ardha of the central region, each form of the Ardha showcases the unique spirit and identity of the Saudi people.</p>
+	  </div>
+	</div>
+  </div>
+  <div class="py-12 relative overflow-hidden bg-white dark:bg-[#121212]" data-aos="fade-up" data-aos-duration="3000"> <!--background of content  -->
+	<div class="grid grid-cols-2 max-w-screen-lg mx-auto">
+	  <div class="w-full flex flex-col items-end pr-16">
+		<h2 class="text-[#64618C] font-bold text-2xl max-w-xs text-right mb-12 mt-10"></h2>
+		<div class="h-full mt-auto overflow-hidden relative">
+		  <img src="{% static 'images/kingsalman.png' %} " class="h-full w-full object-contain rounded-3xl" alt="" >
+		</div>
+	  </div>
+  
+	  <div class="py-20 bg-slate-100 relative before:absolute before:h-full before:w-screen before:bg-sky-950 before:top-0 before:left-0  before:dark:bg-[#181818]" >
+		<div class="relative z-20 pl-12">
+		  <h2 class="text-[#f7d0b6] font-black text-5xl leading-snug mb-10 dark:text-white">The Najdi <br> Ardha</h2>
+		  <p class="text-white text-sm">
+			a form of traditional folk dance in central Saudi Arabia.
+		  </p>
+		  <a href="{% url 'main:njdiArdah_view'%}">
+		  <button class="mt-8 text-white uppercase py-3 text-sm px-10 border border-white hover:bg-white hover:bg-opacity-10">Learn More.</button>
+			</a>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+  <div class="py-4 relative overflow-hidden bg-white dark:bg-[#121212]" data-aos="fade-right" data-aos-duration="3000" >
+	<div class="grid grid-cols-2 max-w-screen-lg mx-auto">
+	  
+  
+	  <div class="py-20 bg-slate-100 relative before:absolute before:h-full before:w-screen before:bg-[#f7d0b6] before:top-0 before:right-0 before:dark:bg-[#181818]">
+		<div class="relative z-20 pl-12">
+		  <h2 class="text-sky-950 font-black text-5xl leading-snug mb-10 dark:text-white">The Southern Ardha</h2>
+		  <p class="text-sky-950  dark:text-white  text-sm">
+			traditional communal dance form from the southern regions of Saudi Arabia.
+		  </p>
+		  <button class="mt-8 text-sky-950 uppercase py-3 text-sm px-10 border border-sky-950 dark:white dark:text-white dark:border-white hover:bg-white hover:bg-opacity-10">Learn More.</button>
+		</div>
+	  </div>
+	  <div class="w-full flex flex-col pl-16">
+		<h2 class="text-[#64618C] font-bold text-2xl max-w-xs text-left mb-12 mt-10"></h2>
+		<div class="h-full mt-auto overflow-hidden relative">
+		  <img src="{% static 'images/ardah2.jpg' %}" class="h-full w-full object-contain" alt="">
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+  
+  <div class="py-12 relative overflow-hidden bg-white dark:bg-[#121212]" data-aos="fade-left" data-aos-duration="3000">
+	<div class="grid grid-cols-2 max-w-screen-lg mx-auto">
+	  <div class="w-full flex flex-col items-end pr-16">
+		<h2 class="text-[#64618C] font-bold text-2xl max-w-xs text-right mb-12 mt-10"></h2>
+		<div class="h-full mt-auto overflow-hidden relative">
+		  <img src="{% static 'images/ardah5.jpg' %}" class="h-full w-full object-contain" alt="">
+		</div>
+	  </div>
+  
+	  <div class="py-20 bg-slate-100 relative before:absolute before:h-full before:w-screen before:bg-sky-950 before:top-0 before:dark:bg-[#181818] before:left-0">
+		<div class="relative z-20 pl-12">
+		  <h2 class="text-[#f7d0b6] font-black text-5xl leading-snug mb-10 dark:text-white">The Daha<br></h2>
+		  <p class="text-white text-sm">
+			traditional group dance form found in the eastern and central regions of Saudi Arabia.
+		  </p>
+		  <button class="mt-8 text-white uppercase py-3 text-sm px-10 border border-white hover:bg-white hover:bg-opacity-10">Learn More.</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+
+
+  
+  <div class="py-4 relative overflow-hidden bg-white dark:bg-[#121212]" data-aos="fade-right" data-aos-duration="3000">
+	<div class="grid grid-cols-2 max-w-screen-lg mx-auto">
+	  
+  
+	  <div class="py-20 bg-slate-100 relative before:absolute before:h-full before:w-screen before:bg-[#f7d0b6] before:dark:bg-[#181818] before:top-0 before:right-0 ">
+		<div class="relative z-20 pl-12">
+		  <h2 class="text-sky-950 font-black text-5xl leading-snug mb-10 dark:text-white">Qazwa'i <br> Ardha</h2>
+		  <p class="text-sky-950 text-sm dark:text-white">
+			traditional dance form of the tribal communities in the Asir region of southern Saudi Arabia.
+		  </p>
+		  <button class="mt-8 text-sky-950 uppercase py-3 text-sm px-10 border dark:border-white dark:text-white border-sky-950 hover:bg-white hover:bg-opacity-10">Learn More.</button>
+		</div>
+	  </div>
+	  <div class="w-full flex flex-col pl-16">
+		<h2 class="text-[#64618C] font-bold text-2xl max-w-xs text-left mb-12 mt-10"></h2>
+		<div class="h-full mt-auto overflow-hidden relative">
+		  <img src="{% static 'images/ardah6jpeg.jpeg' %}" class="h-full w-full object-contain" alt="">
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+{% endblock %}
+
+  
