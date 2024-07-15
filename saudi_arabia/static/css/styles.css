@@ -322,5 +322,5 @@ body.dark #glow {
 
 .switch input:checked + .toggle > .right {
   transform: rotateX(10deg) rotateY(0deg);
-  color: #487bdb;
+  color: #00cc7a;
 }
