@@ -1,0 +1,12 @@
+
+.home-background{
+    align-items: center;
+    justify-content: center;
+}
+.Hero-background{
+    background-image: url('../images/coffe4.jpg');
+    background-size: cover;
+    height: 600px;
+    margin-top: 100px;
+}
+
