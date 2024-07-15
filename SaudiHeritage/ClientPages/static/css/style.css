@@ -1,6 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
+  font-family: 'Jawad', 'serif';
 }
 
 .video-container {
@@ -53,6 +54,7 @@ body, html {
   animation: animatetop 1s !important;
 }
 .text-in-banner {
+  font-family: 'Jawad', 'serif';
   display: flex;
   position: absolute;
   width: 100%;
@@ -62,6 +64,7 @@ body, html {
   animation-name: text-banner;
   animation-duration: 1s;
   opacity: 0;
+  z-index: 1000;
   animation-delay: 8s;
   animation-fill-mode: forwards;
   flex-direction:column;
@@ -101,5 +104,197 @@ body, html {
 @keyframes showNavbar {
   to {
     opacity: 1;
+  }
+}
+.banner {
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+button.btn.my-2.my-sm-0 {
+  color: #fff;
+}
+
+.historical-cities {
+  background:#fff;
+  padding: 60px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.historical-cities h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+.historical-cities .card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.historical-cities .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.historical-cities .card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.historical-cities .card-body {
+	background-color: #fff;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	text-align: center !important;
+}
+.historical-cities .btn-primary {
+  background-color: #ffffff;
+  border-color: green;
+  color: green;
+}
+.historical-cities .btn-primary:hover {
+  background-color: green;
+  border-color: #ffecd2;
+  
+}
+.card {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0,0,0,.125);
+	border-radius: .25rem;
+	align-items: center !important;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.cards {
+	background: green;
+	padding: 2rem;
+	border-radius: 50%;
+	position: relative;
+	bottom: 10vh;
+}
+.cards span{
+  color:#fff;
+  font-size: 3rem;
+}
+.number {
+	background: url('../images/banner1.jpg');
+}
+.features {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.features h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: inline-block;
+  width: 20%;
+  margin: 2rem;
+  vertical-align: top;
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem;
+}
+
+.feature-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.material-symbols-outlined {
+	font-family: 'Material Symbols Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 41px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-moz-font-feature-settings: 'liga';
+	-moz-osx-font-smoothing: grayscale;
+}
+::-webkit-scrollbar{
+  width: .5rem;
+}
+::-webkit-scrollbar-track{
+  background-color: #fff;
+}
+::-webkit-scrollbar-button{
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb{
+  background-color: green;
+}
+.styled-text {
+  position: relative;
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.styled-text {
+  color: #fff;
+}
+
+.title {
+  color:#008000;
+}
+@media (max-width: 768px) {
+  .feature-item {
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-item {
+    flex-basis: 100%;
+    width: 90%;
   }
 }

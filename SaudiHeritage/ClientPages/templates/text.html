@@ -1,81 +1,84 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بنر</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-        }
-        .banner {
-            position: relative;
-            padding: 50px;
-            background-color: #1a1a1a;
-        }
-        .banner h1 {
-            font-size: 3em;
-            color: #A671FF;
-            margin: 0;
-        }
-        .banner h1 span {
-            color: #fff;
-        }
-        .features {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-        }
-        .feature {
-            background: #fff;
-            color: #000;
-            border-radius: 10px;
-            padding: 20px;
-            width: 200px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        .feature img {
-            width: 50px;
-            height: 50px;
-        }
-        .main-image {
-            width: 300px;
-            border-radius: 50%;
-            margin-top: 30px;
-        }
+      .features {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      
+      .features h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+      
+      .feature-item {
+        display: inline-block;
+        width: 20%;
+        margin: 2rem;
+        vertical-align: top;
+      }
+      
+      .feature-icon {
+        width: 80px;
+        height: 80px;
+        background-color: #8b0aec;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 1rem;
+      }
+      
+      .feature-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .feature-item p {
+        font-size: 0.9rem;
+        color: #ccc;
+      }
     </style>
 </head>
 <body>
-    <div class="banner">
-        <h1><span>اكتشف نفسك</span> في كل زاوية من العالم</h1>
-        <div class="features">
-            <div class="feature">
-                <img src="path/to/icon1.png" alt="Icon 1">
-                <h2>أكثر من 70 دورة عبر الإنترنت</h2>
-                <p>نمِّ نفسك مع دوراتنا عبر الإنترنت.</p>
-            </div>
-            <div class="feature">
-                <img src="path/to/icon2.png" alt="Icon 2">
-                <h2>5000+ عضو</h2>
-                <p>تطوير دوراتنا اللغوية.</p>
-            </div>
-            <div class="feature">
-                <img src="path/to/icon3.png" alt="Icon 3">
-                <h2>أفضل المدربين</h2>
-                <p>أفضل المعلمين للحصول على تعليم ممتاز.</p>
-            </div>
-            <div class="feature">
-                <img src="path/to/icon4.png" alt="Icon 4">
-                <h2>شهادات عبر الإنترنت</h2>
-                <p>تحقيق مع شهاداتنا عبر الإنترنت.</p>
-            </div>
-        </div>
-        <img src="path/to/main-image.png" alt="Main Image" class="main-image">
+  <section class="features">
+    <h1>Find Yourself in Every Corner of the World</h1>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <img src="course-icon.png" alt="Course Icon">
+      </div>
+      <h3>70+ Online Courses</h3>
+      <p>Grow yourself with our online courses.</p>
     </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <img src="instructor-icon.png" alt="Instructor Icon">
+      </div>
+      <h3>Top Instructors</h3>
+      <p>Best teachers for excellent tutoring.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <img src="members-icon.png" alt="Members Icon">
+      </div>
+      <h3>5000+ Members</h3>
+      <p>Development of our language courses</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <img src="certificate-icon.png" alt="Certificate Icon">
+      </div>
+      <h3>Online Certificates</h3>
+      <p>Achieve with our online certificates.</p>
+    </div>
+  </section>
 </body>
 </html>
