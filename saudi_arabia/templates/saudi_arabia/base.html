@@ -82,6 +82,14 @@
       .logo-text {
         font-family: "Cinzel Decorative", cursive;
       }
+
+      #mobile-menu {
+        display: none;
+      }
+
+      #mobile-menu.show {
+        display: block;
+      }
     </style>
   </head>
   <body
@@ -101,7 +109,7 @@
           >
           <button class="md:hidden" id="menu-toggle">
             <svg
-              class="w-6 h-6"
+              class="w-6 h-6 transition-transform duration-300"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -111,7 +119,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"
+                d="M4 6h16M4 12h16M4 18h16"
               ></path>
             </svg>
           </button>
@@ -155,7 +163,7 @@
             </label>
           </div>
         </div>
-        <div class="md:hidden mt-4 hidden" id="mobile-menu">
+        <div class="md:hidden mt-4" id="mobile-menu">
           <a
             href="{% url 'saudi_arabia:index' %}"
             class="block py-2 nav-item {% if request.resolver_match.url_name == 'index' %}active{% endif %}"
@@ -216,10 +224,13 @@
       document
         .getElementById("menu-toggle")
         .addEventListener("click", function () {
-          document.getElementById("mobile-menu").classList.toggle("hidden");
+          const mobileMenu = document.getElementById("mobile-menu");
+          const menuToggle = this.querySelector("svg");
+          
+          mobileMenu.classList.toggle("show");
+          menuToggle.style.transform = mobileMenu.classList.contains("show") ? "rotate(45deg)" : "rotate(0deg)";
         });
 
-      // Add this function to create and animate the glow effects
       function createGlowEffects() {
         const container = document.getElementById("blurred-circles-container");
         const colors = ["#4ecdc4", "#45aaf2", "#7ed56f", "#2ecc71", "#16a085"];
