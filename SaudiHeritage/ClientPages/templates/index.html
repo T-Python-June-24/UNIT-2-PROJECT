@@ -1,59 +1,18 @@
+{% extends "base.html" %}
 {% load static%}
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <!-- Bootstrap CSS -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% block title%}Saudi Heritage{%endblock%}
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-   
-    
-    <title>SAUDI HERITAGE</title>
-  </head>
-  <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top hidden background" id="navbar">
-          <a class="navbar-brand" href="#"><img src="{% static 'images/logo-white.png'%}" style="height: 70px;" alt=""></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">الرئيسية <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">المقالات</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">مدري هنا</a>
-              </li>
-            </ul>
-            <form class="form-inline mt-2 mt-md-0">
-              <button class="btn my-2 my-sm-0" type="submit">sign in</button>
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Registry</button>
-            </form>
-          </div>
-        </nav>
-      </header>
-      
+      {% block display%}
       <section>
         <div class="owl-item active" style="width: 100%;">
           <div class="item">
             <div class="text-in-banner">
               <p class="text-banner">التراث والثقافة في قلب السعودية</p>
               <p class="text-banner"> اكتشف تاريخ المملكة الغني ومعالمها الأثرية، واستمتع بالفعاليات الثقافية والمهرجانات التراثية التي تعكس عراقة الفنون والتقاليد السعودية.</p>
-              <button class="btn btn-success">اقرا المزيد</button>
+              <a class="btn btn-success" href="#naif">اقرا المزيد</a>
             </div>
             <video autoplay muted loop playsinline id="hail_video_slide" data-video="1" class="mtz-lpcbi">
-              <source src="{% static 'video/video1.mp4'%}" type="video/mp4">
+              <source src="{% static 'video/video1.mp4' %}" type="video/mp4">
             </video>
           </div>
         </div>
@@ -61,10 +20,10 @@
 
       <section class="historical-cities">
         <div class="container">
-          <h2 class="text-center mb-5"> المناطق <snap style="color: green;">التاريخية</snap></h2>
+          <h2 class="animate-on-scroll text-center mb-5"> المناطق <snap style="color: green;">التاريخية</snap></h2>
           <div class="row">
-            <div class="col-md-4 mb-4">
-              <div class="card">
+            <div class="col-md-4 mb-4 animate-on-scroll">
+              <div class="card ">
                 <img src="{% static 'images/alanga.jpg' %}" class="card-img-top" alt="مدينة 1">
                 <div class="card-body">
                   <h5 class="card-title">قلعة العنقة </h5>
@@ -73,7 +32,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 animate-on-scroll">
               <div class="card">
                 <img src="{% static 'images/alma.jpg' %}" class="card-img-top" alt="مدينة 2">
                 <div class="card-body">
@@ -83,7 +42,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 animate-on-scroll">
               <div class="card">
                 <img src="{% static 'images/mard.jpg' %}" class="card-img-top" alt="مدينة 3">
                 <div class="card-body">
@@ -99,7 +58,7 @@
       <section class="historical-cities number">
         <div class="container">
           <div class="row nums">
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mr animate-on-scroll">
               <div class="card">
                 <div class="cards">
                   <span class="material-symbols-outlined">
@@ -112,7 +71,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mr animate-on-scroll">
               <div class="card">
                 <div class="cards">
                   <span class="material-symbols-outlined">
@@ -125,7 +84,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mr animate-on-scroll">
               <div class="card">
                 <div class="cards">
                   <span class="material-symbols-outlined">
@@ -133,20 +92,20 @@
                   </span>
                 </div>
                 <div class="card-body">
-                  <h1 style="color: green;" data-goal="5000" class="num">0</h1>
-                  <h1>زائر سنويا</h1>
+                  <h1 style="color: green;" data-goal="30" class="num">0</h1>
+                  <h1>هيئات ووزارات لخدمة السياح</h1>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="features">
+      <section class="features" id="naif">
         
         <h1 class="styled-text">مميزات السياحة في <span class="title"> السعودية</span> 
         </h1>
       
-        <div class="feature-item">
+        <div class="feature-item animate-on-scroll">
           <div class="feature-icon">
             <span class="material-symbols-outlined">
               sunny
@@ -155,7 +114,7 @@
           <h3>التنوع الجغرافي</h3>
           <p>يضم صحاري شاسعة مثل الربع الخالي، جبالاً شاهقة مثل جبال السروات والحجاز، وشواطئ ساحرة على البحر الأحمر والخليج العربي توفر فرصًا للغوص والاستجمام</p>
         </div>
-        <div class="feature-item">
+        <div class="feature-item animate-on-scroll">
           <div class="feature-icon">
             <span class="material-symbols-outlined">
               date_range
@@ -164,28 +123,14 @@
           <h3>المعالم التاريخية والثقافية</h3>
           <p> تضم مدائن صالح المدرجة ضمن التراث العالمي لليونسكو، الدرعية العاصمة التاريخية، ومدينة جدة التاريخية ببيوتها التقليدية وأسواقها القديمة</p>
         </div>
-        <div class="feature-item">
+        <div class="feature-item animate-on-scroll">
           <div class="feature-icon">
             <span class="material-symbols-outlined">
-              celebration
+              tour
               </span>
           </div>
-          <h3>المناسبات والفعاليات</h3>
-          <p> تشمل موسم الرياض بفعالياته الترفيهية والثقافية، موسم الطائف بمهرجاناته التراثية، وسباقات الفورمولا إي لعشاق رياضة السيارات</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <span class="material-symbols-outlined">
-              restaurant_menu
-              </span>
-          </div>
-          <h3>المطبخ السعودي</h3>
-          <p>يقدم تجربة غنية بالأطعمة التقليدية مثل الكبسة والمندي والجريش، والحلويات مثل المعمول والتمر.</p>
+          <h3>المهرجانات والفعاليات</h3>
+          <p> مثل مهرجان الجنادرية الوطني للتراث والثقافة، مواسم الطائف والسودة، ومهرجانات الصقور وسباقات الهجن التي تعكس تراث المنطقة</p>
         </div>
       </section>
-    <script src="{% static 'javascript/script.js' %}"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmQxVncDAy5uIKz4rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
-  </body>
-</html>
+    {%endblock%}

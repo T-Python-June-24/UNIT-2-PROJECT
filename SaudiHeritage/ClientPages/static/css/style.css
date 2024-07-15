@@ -2,6 +2,7 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: 'Jawad', 'serif';
+  scroll-behavior: smooth;
 }
 
 .video-container {
@@ -90,13 +91,7 @@ body, html {
   }
 }
 
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  opacity: 0;
+.in-fixed-top {
   animation: showNavbar 1s 8s forwards;
 }
 
@@ -204,7 +199,7 @@ button.btn.my-2.my-sm-0 {
 	background: url('../images/banner1.jpg');
 }
 .features {
-  background-color: #1a1a1a;
+  background:linear-gradient(to left, #868585bf, #ffffff00);
   color: #fff;
   padding: 4rem 2rem;
   text-align: center;
@@ -236,11 +231,12 @@ button.btn.my-2.my-sm-0 {
 .feature-item h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: #000;
 }
 
 .feature-item p {
   font-size: 0.9rem;
-  color: #ccc;
+  color: #313030;
 }
 .material-symbols-outlined {
 	font-family: 'Material Symbols Outlined';
@@ -272,16 +268,14 @@ button.btn.my-2.my-sm-0 {
 .styled-text {
   position: relative;
   font-size: 2em;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   font-family: Arial, sans-serif;
   text-align: center;
   margin-top: 20px;
 }
 
-.styled-text {
-  color: #fff;
-}
+
 
 .title {
   color:#008000;
@@ -297,4 +291,48 @@ button.btn.my-2.my-sm-0 {
     flex-basis: 100%;
     width: 90%;
   }
+  .row {
+    text-align: center;
+  }
+  .d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    justify-content: center;
+  }
+  .text-banner {
+    font-family: 'Jawad', 'serif';
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+  }
+}
+.mb-4, .my-4 {
+	display: flex !important;
+	justify-items: center !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
+.mr{
+  margin-bottom: 7.5rem;
+}
+.logo-bottom {
+	height: 19rem;
+}
+.div-img {
+  display: flex;
+  justify-content: center;
+}
+.animate {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-on-scroll{
+  opacity: 0;
 }

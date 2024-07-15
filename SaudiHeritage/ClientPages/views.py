@@ -8,4 +8,4 @@ def index(request:HttpRequest):
     return render(request , 'index.html')
 
 def test(request:HttpRequest):
-    return render(request , 'text.html')
+    return render(request , 'base.html')
