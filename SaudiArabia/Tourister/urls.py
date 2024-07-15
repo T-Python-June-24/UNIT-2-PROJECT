@@ -12,5 +12,6 @@ urlpatterns = [
     path('city/', views.city, name='city'),
     path('contact/', views.contact, name='contact'),
     path('card/', views.card, name='card'),
+    path('chatbot/', views.agent, name='chatbot'),
 
 ]

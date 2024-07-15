@@ -1,0 +1,106 @@
+{% extends "tourister/base.html" %}
+{% load static %}
+
+{% block content %}
+<link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
+<script>
+    async function sendMessage() {
+        const userInput = document.getElementById('chat').value;
+        const responseBox = document.getElementById('responseBox');
+
+        if (userInput.trim() === '') return;
+
+        const response = await fetch('{% url "Tourister:chatbot" %}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: JSON.stringify({ message: userInput })
+        });
+
+        const data = await response.json();
+        responseBox.innerHTML += `
+            <div class="bg-gray-200 p-2 rounded my-2 text-left">
+                <strong>You:</strong> ${userInput}
+            </div> <br>`;
+        responseBox.innerHTML += `
+            <div class="bg-blue-100 p-2 rounded my-2 text-left	">
+                <strong>AI:</strong> ${data.response} </div> <br>`;
+        responseBox.scrollTop = responseBox.scrollHeight; // Scroll to the bottom
+        document.getElementById('chat').value = '';
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #3cff76;
+        background-image: linear-gradient(225deg, #3cffc8 0%, #17503b 50%, #2B86C5 100%);
+        justify-content: center;
+        margin: 0;
+    }
+    #responseBox {
+        height: 300px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    #lottie-container {
+        width: 300px; /* Set the width of the animation */
+        height: 300px; /* Set the height of the animation */
+        margin: auto; /* Center the animation */
+    }
+</style>
+<div class="flex justify-center items-center h-screen">
+    <div class="w-full max-w-2xl bg-white p-6 rounded-lg shadow-md relative z-10 text-center snap-center">
+      <div id="lottie-container" class="mb-4"></div>
+  
+      <script>
+        // Load the Lottie animation
+        lottie.loadAnimation({
+          container: document.getElementById('lottie-container'), // the DOM element that will contain the animation
+          renderer: 'svg', // the render type
+          loop: true, // whether the animation should loop
+          autoplay: true, // whether the animation should start automatically
+          path: 'https://lottie.host/430f11b8-811b-4283-b0b8-eb2ff77f64d1/4yoqwChDnA.json' // the path to the animation json
+        });
+      </script>
+  
+      <h1 class="text-2xl font-bold mb-4">Chat with Abdullah The Data Scientist</h1>
+      <div id="responseBox" class="border-2 border-gray-300 p-4 h-72 overflow-y-scroll mb-4 rounded"></div>
+  
+      <form onsubmit="event.preventDefault(); sendMessage();">
+        <label for="chat" class="sr-only">Your message</label>
+        <div class="flex items-center py-2 px-3 bg-gray-50 rounded-lg dark:bg-gray-700">
+          <button type="button" class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path></svg>
+          </button>
+          <button type="button" class="p-2 text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z" clip-rule="evenodd"></path></svg>
+          </button>
+          <textarea id="chat" rows="1" class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
+          <button type="submit" class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600">
+            <svg class="w-6 h-6 rotate-90" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+{% endblock content %}

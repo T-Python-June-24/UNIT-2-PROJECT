@@ -32,8 +32,8 @@
         <h1 class="text-3xl md:text-5xl max-w-[30rem] font-medium">Exploree Saudi Arabia</h1>
         <p class="text-black  max-w-[30rem] font-light ml-4 relative before:content-[''] before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm">Saudi Arabia is a country located in the Middle East, known for its rich history and cultural heritage. It is home to iconic landmarks such as the ancient city of Petra and the stunning Red Sea coastline. With its diverse landscapes, vibrant cities, and warm hospitality, Saudi Arabia offers a unique travel experience for visitors from around the world.</p>
         <div class="md:flex-row flex-col flex gap-4">
-            <button class="inline-block text-base font-medium px-12 py-2 bg-teal-500 rounded-lg cursor-pointer text-black">Exploree More</button>
-            <button class="inline-block text-base font-medium px-12 py-2 border border-accent-400 rounded-lg text-black cursor-pointer bg-gray-50/10 backdrop-blur-3xl">Send Message</button>
+            <button class="inline-block text-base font-medium px-12 py-2 bg-teal-500 rounded-lg cursor-pointer text-white"><a href="{% url 'Tourister:city' %}">Exploree More</a></button>
+            <button class="inline-block text-base font-medium px-12 py-2 border border-accent-400 rounded-lg text-teal-300 cursor-pointer bg-gray-50/10 backdrop-blur-3xl"><a href="{% url 'Tourister:contact' %}">Send Message</a></button>
         </div>
     </div>
 </div>
