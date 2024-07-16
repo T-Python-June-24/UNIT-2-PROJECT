@@ -1,0 +1,26 @@
+{% extends 'main/city-base.html' %}
+
+{%load static%}
+
+{% block title %}العلا {% endblock %}
+{% block 1st-page-title %}  رحلة إلى قلب العلا، جوهرة الصحراء{% endblock %}
+{% block 1st-page-subtitle %}انغمس في سحر العلا، حيث تتحدث الصخور وتروي الجبال قصص العصور{% endblock %}
+{% block 1st-page-img %}<img src="\static\images\alula-dancing.jpg" alt="" class="home__img">{% endblock %}
+
+{% block 2st-page-title %}    أسطورة صامتة في رحاب العلا   {% endblock %}
+{% block 2st-page-subtitle %}استكشف ألغاز الزمان مع صخرة الفيل، حيث تروي كل زاوية قصة عبر الأجيال   {% endblock %}
+{% block 2st-page-img %}<img src="\static\images\jabal-alfil-in-alula.jpg" alt="" class="home__img">{% endblock %}
+
+
+{% block 1st-card-imglink %}<a href="{% url 'main:flameـrace' %}"><img src="{%static 'images/hero-06.webp'%}" alt="AlUla"></a>{% endblock %}
+{% block 1st-card-title %} سباق لهيب العلا  {% endblock %}
+{% block 1st-card-price %} ٢٤ أغسطس {% endblock %}
+
+{% block 2st-card-imglink %}<a href=""><img src="{%static 'images/jabal-alfil-light.jpg'%}" alt="AlUla"></a>{% endblock %}
+{% block 2st-card-title %}   اقترب من صخرة الفيل المحبوبة في العلا   {% endblock %}
+{% block 2st-card-price %}  لا تحتاج تذاكر دخول {% endblock %}
+
+{% block 3st-card-imglink %}<a href=""><img src="{%static 'images/hegra.webp'%}" alt=""></a>{% endblock %}
+{% block 3st-card-title %}  حجره : تذكر الماضي {% endblock %}
+{% block 3st-card-price %}  لا تحتاج تذاكر دخول {% endblock %}
+

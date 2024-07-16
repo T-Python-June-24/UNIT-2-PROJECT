@@ -127,6 +127,7 @@ align-items: center;
 }
 .sub {
     margin-top: 3rem;
+    margin-left: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -184,7 +185,7 @@ align-items: center;
     flex-wrap: wrap;
     justify-content: flex-start; 
     gap: 2rem;
-    margin-right: 3rem;
+    margin-right: 9rem;
     margin-bottom: 5rem;
 }
 

@@ -13,7 +13,10 @@ def Sarawat(request):
 
 def Marka(request):
    return render(request, "main/Marka.html")
-
+def AlUla(request):
+   return render(request, "main/AlUla.html")
+def flameـrace(request):
+   return render(request, "main/flameـrace.html")
 def dark_mode(request):
     response = redirect(request.META.get('HTTP_REFERER', '/'))  
     response.set_cookie("mode", "dark", max_age=60*60*24*365)  
