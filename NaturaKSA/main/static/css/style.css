@@ -3,18 +3,34 @@
 
 :root {
     --background-color: #ffffff;
-
-    --text-color: #333333;
-    --header-color: #f1f1f1;
-    --footer-color: #dddddd;
+    --text-color: #555555;
+    --main--text-color:#rgb(90, 87, 87);
+    --paragraph-color: rgb(152, 152, 132);
   }
   
   [data-theme="dark"] {
     --background-color: #333333;
-    --text-color: #ffffff;
-    --header-color: #222222;
-    --footer-color: #1a1a1a;
+    --text-color:beige;
+    --main--text-color:beige;
+    --paragraph-color: rgb(216, 216, 192);
   }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family:  'Tajawal',sans-serif;
+}
+.container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+img.full-width {
+    width: 100%;
+    height: auto;
+}
   .mode-icons-container .dark-mode {
     background-color: var(--background-color);
     border-radius: 50%;
@@ -77,26 +93,16 @@ align-items: center;
 }
 
 .home_subtitle{
-    font-family:  'Tajawal',sans-serif;
-    color: beige;
+    
+    color:beige;
     font-size: 4rem;
     margin-bottom: 0.5rem;
 }
 .home__title{
-    font-family:  'Tajawal',sans-serif;
     color: beige;
     font-size: 3rem;
     margin-bottom: 2.5rem;
     font-weight:100 ;
-}
-.home__button{
-    color: aliceblue;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: .5rem;
-    font-weight: 400;
-    font-size: 2rem;
 }
 
 .swiper-button-prev ,.swiper-button-next{
@@ -112,7 +118,6 @@ align-items: center;
 }
 
 .swiper-pagination{
-    font-family:  'Tajawal',sans-serif;
     color: beige;
     font-size: 3rem;
 
@@ -123,20 +128,22 @@ align-items: center;
 
 }
 .sub {
-    margin-top: 3rem;
-    margin-left: 7rem;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end; 
+}
+.cites__card{
+    margin-top: 3rem;
+    margin-left: 7rem;
 }
 
 .section-title {
     margin-top: 3rem;
     display: block; 
     align-self: center; 
-    font-family: 'Tajawal',sans-serif;
-    color: rgb(90, 87, 87);
+    color: var(--text-color);
     font-size: 3rem;
     margin-bottom: 7rem;
 }
@@ -168,7 +175,6 @@ align-items: center;
     text-align: center;
     width: 100%;
     margin: 0; 
-    font-family: 'Tajawal',sans-serif;
     font-size:2rem;
     color: rgb(245, 255, 181);
 
@@ -221,15 +227,13 @@ align-items: center;
     color: #7b6f41;
     font-size: 14px;
     font-weight: bold;
-    font-family:  'Tajawal',sans-serif;
 
 }
 
 .title {
     font-size: 1.4rem;
-    color: #333;
+    color: var(--text-color);
     margin: 10px 0 5px;
-    font-family:  'Tajawal',sans-serif;
      margin-bottom: 2rem;
 }
 
@@ -273,16 +277,10 @@ align-items: center;
 .info-section:last-child {
     border-right: none;
 }
-.Activity-info{
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-margin-bottom: -3rem;
-}
+
 
 
 .Activity-title{
-    font-family:  'Tajawal',sans-serif;
     color: beige;
     font-size: 3rem;
     margin-bottom: 2.5rem;
@@ -295,11 +293,14 @@ margin-bottom: -3rem;
 .Activity-info{
 
     justify-content: space-between;
-
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -3rem;
+    
 }
 .overview-titel{
-    font-family:  'Tajawal',sans-serif;
-    color: rgb(118, 118, 112); 
+    color: var(--text-color); 
     font-size: 3rem;
     margin-top: 4rem;
     margin-right: 3%; 
@@ -324,8 +325,7 @@ margin-bottom: -3rem;
 }
 
 .overview {
-    font-family: 'Tajawal', sans-serif;
-    color: rgb(152, 152, 132);
+    color: var(--paragraph-color);
     font-size: 1.4rem;
     text-align: right; 
     width: 80%; 
@@ -353,10 +353,11 @@ margin-bottom: -3rem;
     object-fit: cover; 
 }
 
-
+.history{
+    background-color: var(--background-color);
+}
 .history-title {
-    font-family: 'Tajawal', sans-serif;
-    color: rgb(118, 118, 112);
+    color: var(--text-color);
     font-size: 3rem;
     margin-top: 4rem;
     margin-right: 3%; 
@@ -368,8 +369,7 @@ margin-bottom: -3rem;
     align-items: center; 
 }
 .history-paragraph{
-    font-family: 'Tajawal', sans-serif;
-    color: rgb(152, 152, 132);
+    color: var(--paragraph-color);
     font-size: 1.4rem;
     text-align: center; 
     width: 80%; 
@@ -415,8 +415,7 @@ margin-bottom: -3rem;
     font-size: 1.25rem;
   }
   .nav__item a{
-    color: rgb(0, 0, 0);
-    font-family: 'Tajawal',sans-serif;
+    color: var(--text-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   }

@@ -16,44 +16,34 @@
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
+<body data-theme="{% if request.COOKIES.mode == 'dark' %}dark{% else %}light{% endif %}"></body>
     {% block navbar %}
     <header class="header" id="header">
         <nav class="nav container">
-          
-      
-          <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-              
-              <li class="nav__item">
-                <a href="#about">حول</a>
-              </li>
-              <li class="nav__item">
-                <a href="#contact" >تواصل معنا</a>
-              </li>
-              <li class="nav__item">
-                <a href="#home" >الرئيسية</a>
-              </li>
-            </ul>
-      
-            <div class="nav__close" id="nav-close">
-              <i class="ri-close-line"></i>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#about">حول</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact">تواصل معنا</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#home">الرئيسية</a>
+                    </li>
+                </ul>
             </div>
-          </div>
-      
-          <div class="mode-icons-container">
-            <a href="{% url 'main:dark_mode' %}">
-                <span class="material-symbols-outlined {% if request.COOKIES.mode == 'dark' %}dark-mode{% endif %}">dark_mode</span>
-            </a>
-            <a href="{% url 'main:light_mode' %}">
-                <span class="material-symbols-outlined {% if request.COOKIES.mode != 'dark' %}light-mode{% endif %}">light_mode</span>
-            </a>
-        </div>
-      
-
-          </div>
+    
+            <div class="mode-icons-container">
+                <a href="{% url 'main:dark_mode' %}">
+                    <span class="material-symbols-outlined {% if request.COOKIES.mode == 'dark' %}dark-mode{% endif %}">dark_mode</span>
+                </a>
+                <a href="{% url 'main:light_mode' %}">
+                    <span class="material-symbols-outlined {% if request.COOKIES.mode != 'dark' %}light-mode{% endif %}">light_mode</span>
+                </a>
+            </div>
         </nav>
-      </header>
+    </header>
       
     {% endblock navbar %}
 
