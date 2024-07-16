@@ -1,0 +1,26 @@
+{% extends 'main/city-base.html' %}
+
+{%load static%}
+
+{% block title %}عسير {% endblock %}
+{% block 1st-page-title %} اكتشف عالم جبال عسير {% endblock %}
+{% block 1st-page-subtitle %}تراث عريق وطبيعة خلابة في قلب السعودية  {% endblock %}
+{% block 1st-page-img %}<img src="\static\images\view-in-aseer.webp" alt="" class="home__img">{% endblock %}
+
+{% block 2st-page-title %} تراث ثقافي وتنوع حيوي فريد {% endblock %}
+{% block 2st-page-subtitle %}طبيعية خلابة تجمع بين الوديان الخضراء والقمم الجبلية المرتفعة   {% endblock %}
+{% block 2st-page-img %}<img src="\static\images\al-habala-park.webp" alt="" class="home__img">{% endblock %}
+
+
+{% block 1st-card-imglink %}<a href="{% url 'main:Sarawat' %}"><img src="{%static 'images/sarawat.webp'%}" alt="sarawat"></a>{% endblock %}
+{% block 1st-card-title %} نزهة ساروات الممتعة{% endblock %}
+{% block 1st-card-price %} ساعتان الى ساعتان ونصف الاسعار تبدا من ٢٤٨ ريال {% endblock %}
+
+{% block 2st-card-imglink %}<a href="{% url 'main:Marka' %}"><img src="{%static 'images/marka-aseer.png'%}" alt=""></a>{% endblock %}
+{% block 2st-card-title %}  ماركا: قصة حب في جزيرة ساحرة {% endblock %}
+{% block 2st-card-price %} يومان الاسعار تبدا من ٦,٥٠٠ ريال{% endblock %}
+
+{% block 3st-card-imglink %}<a href=""><img src="{%static 'images/wadi-ljb.jpg'%}" alt=""></a>{% endblock %}
+{% block 3st-card-title %}  رحلة وادي لجب {% endblock %}
+{% block 3st-card-price %} لمده ثلاث ايام بسعر ٧,٠٦٢ ريال{% endblock %}
+

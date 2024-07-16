@@ -1,0 +1,103 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet"></link>
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <main class="main">
+        <section class="home">
+           <div class="home__swiper swiper">
+            <div class="swiper-wrapper">
+
+                <article class="home__article swiper-slide">
+                    <div class="home__data container">
+                        <h3 class="home_subtitle"> {% block 1st-page-title %} {% endblock %}</h3>
+                        <h1 class=" home__title">   {% block 1st-page-subtitle %} {% endblock %}    </h1>
+
+                        </a>
+                    </div>
+                    {% block 1st-page-img %} {% endblock %}
+                    <!-- <img src="\static\images\view-in-aseer.webp" alt="" class="home__img"> -->
+                     </article>
+
+                     <article class="home__article swiper-slide">
+                        <div class="home__data container">
+                            <h3 class="home_subtitle"> {% block 2st-page-title %} {% endblock %}     </h3>
+                            <h1 class="home__title"> {% block 2st-page-subtitle %} {% endblock %} </h1>
+                            
+                        </div>
+                        {% block 2st-page-img %} {% endblock %}
+                        <!-- <img src="\static\images\al-habala-park.webp" alt="" class="home__img"> -->
+                         </article>
+
+
+            </div>
+           <!--  pagination -->
+           <div class="swiper-pagination"></div>
+           <!-- navagtion buttons -->
+           <div class="swiper-navagation">
+            <div class="swiper-button-prev">
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+            </div>
+            <div class="swiper-button-next">
+                <span class="material-symbols-outlined">arrow_forward_ios</span>
+
+            </div>
+
+           </div>
+           </div> 
+
+        </section>
+            <section class="sub">
+                <div class="section-title">رحلات مميزة...أرض مميزة</div>
+                <div class="cards-container">
+                    <div class="card">
+                        {% block 1st-card-imglink %} {% endblock %}
+                        <!-- <a href="{% url 'main:Sarawat' %}"><img src="{%static 'images/sarawat.webp'%}" alt="sarawat"></a> -->
+                        <div class="card-content">
+                            <div class="title">{% block 1st-card-title %} {% endblock %}</div>
+                            <div class="price"> {% block 1st-card-price %} {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        {% block 2st-card-imglink %} {% endblock %}   
+                            <div class="card-content">
+                            <div class="title">{% block 2st-card-title %} {% endblock %}</div>
+                            <div class="price">{% block 2st-card-price %} {% endblock %}</div>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        {% block 3st-card-imglink %} {% endblock %}   
+                        <div class="card-content">
+                            <div class="title"> {% block 3st-card-title %} {% endblock %} </div>
+                            <div class="price">{% block 3st-card-price %} {% endblock %}</div>
+
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </section>
+
+
+
+
+
+    </main>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

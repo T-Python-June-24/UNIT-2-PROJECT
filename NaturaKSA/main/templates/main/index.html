@@ -1,0 +1,106 @@
+{% extends 'main/base.html' %}
+
+{%load static%}
+{% block title %} الرئيسية{% endblock %}
+{% block content %}
+
+    <main class="main">
+        <section class="home">
+
+           <div class="home__swiper swiper">
+            
+            <div class="swiper-wrapper">
+              
+                <article class="home__article swiper-slide">
+                    <div class="home__data container">
+                        <h3 class="home_subtitle"> جمال الطبيعة السعودية .. رحله لا تنسى</h3>
+                        <h1 class=" home__title"> اكتشف الجمال البكر</h1>
+
+                        </a>
+                    </div>
+                    <img src="\static\images\desert.webp" alt="" class="home__img">
+                     </article>
+
+                     <article class="home__article swiper-slide">
+                        <div class="home__data container">
+                            <h3 class="home_subtitle">ثروة البحار السعودية</h3>
+                            <h1 class="home__title">التنوع البيئي والحياة البحرية الزاخرة</h1>
+          
+                            </a>
+                        </div>
+                        <img src="\static\images\red-sea.webp" alt="" class="home__img">
+                         </article>
+
+                         <article class="home__article swiper-slide">
+                            <div class="home__data container">
+                                <h3 class="home_subtitle">جمال الأشجار الشامخة</h3>
+                                <h1 class="home__title">التنوع والعظمة في عالم النباتات السعودية</h1>
+                               
+                                </a>
+                            </div>
+                            <img src="\static\images\alahsa-oasis.jpg" alt="" class="home__img">
+                             </article>
+
+                             <article class="home__article swiper-slide">
+                                <div class="home__data container">
+                                    <h3 class="home_subtitle">القمم الشامخة للجبال السعودية</h3>
+                                    <h1 class="home__title">مناظر طبيعية مبهرة من الحضارات القديمة إلى الحديثة</h1>
+                                   
+                                    </a>
+                                </div>
+                                <img src="\static\images\edge-of-the-world.jpg" alt="" class="home__img">
+                                 </article>
+            </div>
+           <!--  pagination -->
+           <div class="swiper-pagination"></div>
+           <!-- navagtion buttons -->
+           <div class="swiper-navagation">
+            <div class="swiper-button-prev">
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+            </div>
+            <div class="swiper-button-next">
+                <span class="material-symbols-outlined">arrow_forward_ios</span>
+
+            </div>
+
+           </div>
+           </div> 
+
+        </section>
+        <section class="sub">
+            <div class="section-title">اكتشف جمال المدن السعودية   </div>
+            <div class="cites__card">
+                <article class="cites__article">
+                    <a href=""><img src="/static/images/alula-landscape.jpg" alt=""></a>
+                    <h2 class="citie title">العلا</h2>
+
+                </article>
+
+                <article class="cites__article">
+                    <a href=""><img src="/static/images/edge-of-the-world.jpg" alt=""></a>
+                    <h2 class="citie title">الرياض</h2>
+
+                </article>
+
+                <article class="cites__article">
+                    <a href=""><img src="/static/images/albaha.jpg" alt=""></a>
+                    <h2 class="citie title">الباحه</h2>
+
+                </article>
+
+                <article class="cites__article">
+                    <a href="{% url 'main:Aseer' %}"><img src="/static/images/aseer.webp" alt=""></a>
+                    <h2 class="citie title">عسير</h2>
+
+                </article>
+
+            </div>
+
+
+            
+        </section>
+
+    </main>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    {% endblock %}

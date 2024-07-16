@@ -1,0 +1,92 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet"></link>
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <main class="main">
+        <section class="home">
+
+           <div class="home__swiper swiper">
+            <div class="swiper-wrapper">
+                <article class="home__article swiper-slide">
+                    <div class="home__data container">
+                        <h1 class="Activity-title"> {% block Activity-title %} {% endblock %}   </h1>
+
+                    </div>
+                    {% block 1stActivity-img %} {% endblock %}
+                    <!-- <img src="\static\images\sarawt1.jpg" alt="" class="home__img"> -->
+                     </article>
+
+                     <article class="home__article swiper-slide">
+                        <div class="home__data container">
+                          
+                        </div>
+                        {% block 2stActivity-img %} {% endblock %}
+                        <!-- <img src="\static\images\sarawt4.webp" alt="" class="home__img"> -->
+                         </article>
+                         <div class="info-bar">
+                             <div class="info-section">
+                                 <p> {% block Activity-duration %} {% endblock %}  </p>
+                             </div>
+                             <div class="info-section">
+                                 <p><i class="icon-land"></i></p>
+                                 <p>{% block Activity-price %} {% endblock %}</p>
+                             </div>
+                          
+                             <div class="info-section">
+                                 <div class="group-size-title">
+                                     <p>:حجم المجموعة</p>
+                                     <p>{% block groub-size %} {% endblock %}</p>
+                                 </div>
+                                     
+                             </div>
+                             <div class="info-section">
+                                {% block RESERVATIONS%} {% endblock %}
+                                 <!-- <a href="https://abha.platinumlist.net/ar/event-tickets/sarawat-fun-hike/casual-ticket-office?id_event_show=2235157">للحجز من الموقع الرسمي</a> -->
+                             </div>
+                         </div>
+            </div>
+           <!--  pagination -->
+           <!-- navagtion buttons -->
+           <div class="swiper-navagation">
+            <div class="swiper-button-prev">
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+            </div>
+            <div class="swiper-button-next">
+                <span class="material-symbols-outlined">arrow_forward_ios</span>
+
+            </div>
+
+           </div>
+           </div> 
+    <section class="Activity-info">
+        <div class="overview-titel"> {% block overview-titel"%} {% endblock %}   </div>
+        <div class="overview-container">
+            <p class="overview">{% block overview-paragraph"%} {% endblock %} 
+            </p>
+        </div>
+         
+        <div class="map">
+            {% block google-map-link"%} {% endblock %} 
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15155.00499391364!2d42.3783557373411!3d18.267221424444003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e359bded47c2c1%3A0x2e8545f36791c06a!2z2KzYqNin2YQg2KfZhNiz2LHZiNin2Ko!5e0!3m2!1sar!2ssa!4v1721065182999!5m2!1sar!2ssa" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+        </div>
+        
+    </section>
+
+    </main>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
