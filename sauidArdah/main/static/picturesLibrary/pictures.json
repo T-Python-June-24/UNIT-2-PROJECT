@@ -1,129 +1,156 @@
 [
     {"name":"Kings Ardah",
-     "img":"images/picturesLibraryDark.png"
+     "img":"images/picturesLibraryDark.png",
+     "is_poets":false
      },
      {
          "name":"Kings Ardah",
-         "img":"images/picturesLibraryLightmode.png"
+         "img":"images/picturesLibraryLightmode.png",
+         "is_poets":false
      },
      {
          "name":"Kings Ardah",
-         "img":"images/ardahbg.png"
+         "img":"images/ardahbg.png",
+         "is_poets":false
      },
      {
          "name":"Kings Ardah",
-         "img":"images/kingsalman.png"
+         "img":"images/kingsalman.png",
+         "is_poets":false
      },
      {"name":"Kings Ardah",
-      "img":"images/ardah1.png"
+      "img":"images/ardah1.png",
+      "is_poets":false
       
       },
 
       {
           "name":"Al-daha",
-          "img":"images/ardah5.jpg"
+          "img":"images/ardah5.jpg",
+          "is_poets":false
       },
        {
           "name":"Al-Qazwi",
-          "img":"images/ardah6jpeg.jpeg"
+          "img":"images/ardah6jpeg.jpeg",
+          "is_poets":false
       },
       {
           "name":"Southren Ardah",
-          "img":"images/ardah7.jpg"
+          "img":"images/ardah7.jpg",
+          "is_poets":false
       },
      {
           "name":"Southren Ardah",
-          "img":"images/ardah2.jpg"
+          "img":"images/ardah2.jpg",
+          "is_poets":false
       },
     {
     "name":"Muhammad bin Ma'id",
     "img":"images/aboJaeedi.jpg",
-    "city":"al Baha"
+    "city":"al Baha",
+    "is_poets":true
 
 },
 {
     "name":"Mubarak Abu Olag",
     "img":"images/aboolag.jpeg",
-    "city":"Al aqiq"
+    "city":"Al aqiq",
+    "is_poets":true
 },
 {
     "name":"Aaydah bin Tuwair",
     "img":"images/aidahalmalki.jpg",
-    "city":"Bakhir"
+    "city":"Bakhir",
+    "is_poets":true
 },
 {
    "name":"Abdulwaheed Al Zahrani",
     "img":"images/abdaluahid.jpg",
-    "city":"Al baha"
+    "city":"Al baha",
+
+    "is_poets":true
 },
 {
     "name":"Humīl bin Sharaf",
     "img":"images/hmialbinsharf.jpeg",
-    "city":"Al baha"
+    "city":"Al baha",
+    "is_poets":true
 },
 {
     "name":"mohammed bin thaib",
     "img":"images/mohammedbinthaib.jpg",
-    "city":"Bisah"
+    "city":"Bisah",
+    "is_poets":true
 
 },
 {
     "name":"Naser Alorainee",
     "img":"images/naserAlareeni.jpg",
-    "city":"al diriyah"
+    "city":"al diriyah",
+    "is_poets":true
 
 },
 {
     "name":"Abdullah Alsobai",
     "img":null,
-    "city":"Shaqra"
+    "city":"Shaqra",
+    "is_poets":true
 },
 {
     "name":"Mohammed Aloani",
     "img":"images/mohammedAloanii.jpg",
-    "city":"alrabieia"
+    "city":"alrabieia",
+    "is_poets":true
 },
 {
     "name":"Fhaed bin Dhaemm",
     "img":null,
-    "city":"Riyadh"
+    "city":"Riyadh",
+    "is_poets":true
 },
 {
     "name":"Abdurhman Alboardi",
     "img":null,
-    "city":"Shaqra"
+    "city":"Shaqra",
+    "is_poets":true
 },
 {
     "name":"salem aljbhl",
     "img":"images/salemdaha.jpg",
-    "city":"Abha"
+    "city":"Abha",
+    "is_poets":true
 
 },
 {
     "name":"Abdullah mushni",
     "img":"images/abdullahmashny.jpeg",
-    "city":"njd"
+    "city":"njd",
+    "is_poets":true
 },
 {
     "name":"Falah Al-Qarqah",
     "img":"images/flah.jpg",
-    "city":"Abha"
+    "city":"Abha",
+    "is_poets":true
 
 },
 {
     "name":"Muta'ab Al-Masfari",
     "img":"images/mutaib.jpg",
-    "city":"njd"
+    "city":"njd",
+    "is_poets":true
 },
 {
     "name":"Abdullah bin Shayiq",
     "img":"images/abdullahshaiq.jpg",
-    "city":"muzahimih"
+    "city":"muzahimih",
+    "is_poets":true
 },
 {
    "name":"Mohammed bin ksla",
     "img":"images/binksla.jpg",
-    "city":"Ahad Rafidah"
+    "city":"Ahad Rafidah",
+    "is_poets":true
 }
 
 

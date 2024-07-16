@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block style %}
+<style>
+    body{
+        background-color: #2c3e50;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="m-5 h-20 ">
+
+</div>
+
+<main class="pt-8 bg-[#faf3ef] dark:bg-[#1e1e1e] ">
+
+    <div class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
+        {% for info in info %}
+      <h2 class="text-2xl text-gray-800 font-semibold mb-4 mt-4 dark:text-[#e0e0e0]">{{ info.header }}</h2>
+
+      <p class="pb-6 dark:text-[#b0b0b0]">{{ info.body }}</p>
+
+      {% endfor %}
+  </main>
+{% endblock %}

@@ -9,5 +9,6 @@ urlpatterns = [
     path("qazwai/ardah/",views.qazwaiArdah_view,name="qazwaiArdah_view"),
     path("daha/ardah",views.dahaArdah,name="dahaArdah_view"),
     path("pictures/library/",views.picture_view,name="pictures_view"),
+    path("about/us/",views.about_view,name="about_view")
 
 ]

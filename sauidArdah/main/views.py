@@ -233,6 +233,28 @@ def picture_view(request:HttpRequest)->render:
         poets=json.load(file)
     return render(request,"main/pictures.html",context={"objects":poets})
 
-def download_image(request:HttpRequest,imagePath:str)->render:
-    with open(imagePath,"rb") as image:
-        response=FileResponse()
+def about_view(request:HttpRequest)->render:
+    infos=[
+        
+        {
+        "header":"Our Inspiration",
+        "body":'''I created this website to address the challenge of finding comprehensive information about Saudi Ardah. The scattered nature of available resources made research difficult, prompting me to develop a centralized platform where enthusiasts can easily access a wealth of knowledge on this rich cultural tradition.'''
+        },
+        {
+            "header":"Our Goal",
+            "body":'''This website aims to preserve and promote the rich tradition of Saudi Ardah by providing a comprehensive online resource. By documenting various Ardah styles, educating visitors about its history and techniques, and fostering a community of enthusiasts, we strive to ensure that this vibrant cultural art form continues to thrive for generations to come.'''
+                },
+                {
+                    "header":"Our Vision",
+                    "body":'''Our vision for this website extends beyond its current scope. We are committed to providing a comprehensive resource for all enthusiasts of Saudi Ardah. To this end, we have ambitious plans to expand our content and features. Our primary goal is to document and showcase the diverse range of Ardah styles found across Saudi Arabia, from the energetic rhythms of Najdi Ardah to the graceful movements of Southern Ardah. We aspire to create a virtual journey through the nation's rich cultural tapestry, highlighting the unique characteristics of each region's Ardah tradition. Additionally, we recognize the importance of preserving and passing on this art form to future generations. Therefore, we are developing a series of interactive tutorials that will break down the complex movements and rhythms of Ardah, making it accessible to learners of all levels.'''
+                },
+                {
+                    "header":"Embark on Your Ardah Journey",
+                    "body":'''We invite you to embark on a captivating journey through the world of Saudi Ardah. Explore the rich history, diverse styles, and passionate community that define this cherished cultural treasure. Whether you are a seasoned Ardah enthusiast or a curious newcomer, we hope our website provides valuable insights and inspiration. Together, let us celebrate and preserve the legacy of Saudi Ardah for generations to come.'''
+                }
+        ]
+    return render(request,"main/about.html",context={"info":infos})
+
+# def contact_view(request:HttpRequest):
+#     if request.method=="POST":
+#         form=ContactForm
