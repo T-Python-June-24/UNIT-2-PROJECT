@@ -91,7 +91,21 @@ body, html {
   }
 }
 
+.fixed-top{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  opacity: 1;
+}
 .in-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  opacity: 0;
   animation: showNavbar 1s 8s forwards;
 }
 
@@ -182,7 +196,8 @@ button.btn.my-2.my-sm-0 {
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
-  'opsz' 24
+  'opsz' 24;
+  color: #fff;
 }
 .cards {
 	background: green;
@@ -197,6 +212,9 @@ button.btn.my-2.my-sm-0 {
 }
 .number {
 	background: url('../images/banner1.jpg');
+}
+.number-dark {
+	background: url('../images/banner-dark.jpeg');
 }
 .features {
   background:linear-gradient(to left, #868585bf, #ffffff00);
@@ -335,4 +353,16 @@ button.btn.my-2.my-sm-0 {
 }
 .animate-on-scroll{
   opacity: 0;
+}
+.fixed-top.scrolled {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-radius: 20px  !important;
+  transition: all 200ms linear;
+  margin: 2rem;
+  box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.font-color{
+  color: #000 !important;
+  transition: all 200ms linear;
 }
