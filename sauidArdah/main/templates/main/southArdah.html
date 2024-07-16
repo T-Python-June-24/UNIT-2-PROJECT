@@ -1,0 +1,71 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block style %}
+<style>
+    body{
+        background-color: #2c3e50;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="m-5 h-20 ">
+
+</div>
+
+<main class="pt-8 bg-[#faf3ef] dark:bg-[#1e1e1e] ">
+
+    <div class="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative " style="height: 24em;">
+      <div class="absolute left-0 bottom-0 w-full h-full z-10 rounded-lg"
+        style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));"></div>
+      <video src="{% static 'viedos/southArdah.mp4' %}"  controls="controls" class="absolute left-0 top-0 w-full h-full z-0 object-cover rounded-lg" ></video>
+      
+      <div class="p-4 absolute bottom-0 left-0 z-20">
+        <h2 class="text-2xl font-semibold text-gray-100 leading-tight">
+            Southern Ardha  
+        </h2>
+        
+      </div>
+    </div>
+
+    <div class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
+        {% for info in info %}
+      <h2 class="text-2xl text-gray-800 font-semibold mb-4 mt-4 dark:text-[#e0e0e0]">{{ info.header }}</h2>
+
+      <p class="pb-6 dark:text-[#b0b0b0]">{{ info.body }}</p>
+
+      {% endfor %}
+        <!-- history  -->
+        
+        <h2 class="text-2xl text-gray-800 font-semibold mb-4 mt-4 dark:text-[#e0e0e0]">The most famous poets in southern ardha</h2>
+
+      
+<!-- component --><section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for poet in poets %}
+      <div class="w-full bg-[#e8e0db] dark:bg-[#333333] rounded-lg p-12 flex flex-col justify-center items-center">
+        
+        <div class="mb-8">
+          {% if poet.img %}
+            <img class="object-center object-cover rounded-full h-36 w-36" src="{% static poet.img %}" alt="{{ poet.name }}">
+          {% else %}
+          <span class="material-symbols-outlined text-9xl object-cover object-center dark:text-[#e0e0e0]">
+            account_circle
+            </span>
+          {% endif %}
+        </div>
+        <div class="text-center">
+          <p class="text-xl text-gray-700 font-bold mb-2 dark:text-[#e0e0e0]" >{{ poet.name }}</p>
+          <p class="text-base text-gray-400 font-normal">{{ poet.city }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+    </div>
+
+    
+ 
+  </main>
+{% endblock %}
