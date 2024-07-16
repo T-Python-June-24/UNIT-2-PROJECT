@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 *,
 *:after,
 *:before {
@@ -8,7 +9,7 @@
 }
 
 body{
-    background-color: #F3FF90;
+    background-color: #ffffcc;
     margin: 0;
     padding: 0;
     font-family: "Ubuntu", sans-serif;
@@ -18,13 +19,12 @@ body{
 .navbar{
     position: sticky;
     top: 0;
-    width: 100%;
     padding: 10px 0;
     z-index: 10;
-    margin-top: 42px;
+    height: 0.1px;
 }
 .navbar-container{
-    background-color: #059212;
+    background-color: #81818100;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -32,6 +32,16 @@ body{
     padding: 10px;
     border-radius: 0px 0px 30px 30px;
 
+}
+.navbar-logo{
+  font-size: 27px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.navbar-logo a{
+  text-decoration: none;
+  color:green;
 }
 
 .menu {
@@ -150,12 +160,17 @@ footer{
 }
 .footer-contact div ul {
     list-style: none;
+    gap: 50px;
     }
 .footer-contact-section{
     display: block;
     text-align: left;
     text-decoration: none;
-    color: white
+    color: white;
+    margin-bottom: 20px;
+}
+.footer-contact-section > * {
+    margin-bottom: 20px; 
 }
 .footer-contact-section a {
     text-decoration: none;

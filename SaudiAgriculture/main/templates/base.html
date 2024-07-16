@@ -19,11 +19,12 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
-    <di class="navbar">
+    <div class="navbar">
+        
       <div class="navbar-container">
-        <a herf="/"> Home</a>
+        <div class="navbar-logo"><a href="{% url 'home_view'%}"> Saudi Arabia</a></div>
         <div class="menu">
-          <a href="#" class="link">
+          <a href="{% url 'home_view'%}" class="link">
             <span class="link-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +40,7 @@
             </span>
             <span class="link-title">Home</span>
           </a>
-          <a href="#" class="link">
+          <a href="{% url 'agriculture_technologies_view'%}" class="link">
             <span class="link-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +57,7 @@
             <span class="link-title">Agriculture Tech</span>
           </a>
 
-          <a href="#" class="link">
+          <a href="{% url 'cities_view' %}" class="link">
             <span class="link-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +73,7 @@
             </span>
             <span class="link-title">Cities</span>
           </a>
-          <a href="#" class="link">
+          <a href="{% url 'about_view' %}" class="link">
             <span class="link-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -94,88 +95,23 @@
           <a><span class="material-symbols-outlined"> dark_mode </span></a>
         </div>
       </div>
-    </di>
+      </div>
+      {%block heroHome %} 
+        {% endblock%}
     {% block content %} {% endblock %}
     <footer>
       <div class="footer-container">
         <div class="footer-contact">
           <div class="footer-contact-section">
             <h3>Overview</h3>
-            <ul>
-              <li>
-                <a href="/about" title="about">About us</a>
-              </li>
-              <li>
-                <a href="/" title="Privacy and terms of use"
-                  >Privacy and terms of use</a
-                >
-              </li>
-
-              <li>
-                <a href="/" title="News and events">News and events</a>
-              </li>
-
-              <li>
-                <a href="/" title="Service level agreement statistics"
-                  >Service level agreement statistics</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-contact-section">
-            <h3>Contact & Support</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://www.my.gov.sa/wps/portal/snp/content/reportcorruption/!ut/p/z1/jY_LDoIwFES_hS_ovaUUXFZRCLGUytNuTFekiaIxxu_XdG9ldpOck8wQQyZiFvt2s325-2Kv3342_EJRFgUCVZk8bkDHJdOnlItOMzJ6oMY9lMhQAaMH0Hku6qTDCgdOzBq_ajKGAlCpONmC3slUiXZAgGSdDz8i4L9vPBJ64IHQRA8ENrT2SR63v"
-                  title="Report Corruption"
-                  >Report Corruption</a
-                >
-              </li>
-
-              <li>
-                <a
-                  href="/en/HowWeCanHelp/Pages/home.aspx"
-                  title="How we can Help"
-                  >How we can Help</a
-                >
-              </li>
-
-              <li>
-                <a
-                  href="/en/HowWeCanHelp/Help/FAQ/Pages/default.aspx"
-                  title="FAQ"
-                  >FAQ</a
-                >
-              </li>
-
-              <li>
-                <a
-                  href="https://csmnow.mewa.gov.sa/tss"
-                  title="Make a complaint"
-                  >Make a complaint</a
-                >
-              </li>
-
-              <li>
-                <a href="/ar/HowWeCanHelp/Pages/home.aspx" title="Contact us"
-                  >Contact us</a
-                >
-              </li>
-
-              <li>
-                <a
-                  href="https://deaf.dga.gov.sa/"
-                  title="Technical support in sign language"
-                  >Technical support in sign language</a
-                >
-              </li>
-            </ul>
+            <p><a href="https://www.visitsaudi.com/en" title="about" target="_blank">Visit Saudi</a></p>
+            <p><a href="https://www.vision2030.gov.sa/" title="2030 Vision" target="_blank">2030 Vision</a></p>
+             
           </div>
           <div class="footer-contact-section">
             <h3>Important links</h3>
-            <p>Email: contact@blogwebsite.com</p>
-            <p>Phone: +123 456 7890</p>
+            <p><a href="https://saudi-agriculture.com/"> Saudi Agriculture</a></p>
+            <p><a href="https://www.mewa.gov.sa/en/Pages/default.aspx#?" target="_blank">Ministry of Environment, Water and Agriculture</a></p> 
           </div>
           <div class="footer-contact-FollowUs">
             <div><h3 class="text-lg font-bold mb-2">Follow us on</h3></div>
@@ -191,7 +127,7 @@
           </div>
         </div>
         <div class="footer-rights">
-          <p>&copy; 2024 Blog Website. All rights reserved.</p>
+          <p>&copy; 2024 Saudi Arabia. All rights reserved.</p>
         </div>
       </div>
     </footer>

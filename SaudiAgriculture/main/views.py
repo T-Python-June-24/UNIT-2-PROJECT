@@ -6,13 +6,13 @@ def home_view(request: HttpRequest):
     return render(request, "home.html")
 
 def about_view(request: HttpRequest):
-    pass
+    return render(request, "testbase.html")
 
 def cities_view(request: HttpRequest):
-    pass
+   return render(request, "cities.html")
 
 def agriculture_technologies_view(request: HttpRequest):
-    pass
+    return render(request, "agricultureTechnologies.html")
 
 
 
