@@ -19,25 +19,10 @@ df = pd.read_csv("Tourister/static/data/data.csv").fillna(value=0)
 agent_tool = create_pandas_dataframe_agent(llm=model, df=df, verbose=True)
 
 CSV_PROMPT_SUFFIX = """
-- **ALWAYS** before giving the Final Answer, try another method.
-Then reflect on the answers of the two methods you did and ask yourself
-if it answers correctly the original question.
-If you are not sure, try another method.
-FORMAT 4 FIGURES OR MORE WITH COMMAS.
-- If the methods tried do not give the same result, reflect and
-try again until you have two methods that have the same result.
-- If you still cannot arrive to a consistent result, say that
-you are not sure of the answer.
-- If you are sure of the correct answer, create a beautiful
-and thorough response using Markdown.
-- **DO NOT MAKE UP AN ANSWER OR USE PRIOR KNOWLEDGE,
-ONLY USE THE RESULTS OF THE CALCULATIONS YOU HAVE DONE**.
-
 """
 
-
-
 properties = [
+    
     {"title": "Riyadh", "content": "Experience Riyadh, Saudi Arabia's vibrant capital and largest city, set amidst the desert on the Najd plateau. Renowned for its pivotal role since the 1950s, Riyadh captivates with its political, administrative, and economic importance, embodying the essence of modern Arabian dynamism.", "image": "riyadh.jpg","link":"https://en.wikipedia.org/wiki/Riyadh"},
     {"title": "Makkah","content": "Discover Mecca, Islam's holiest city and birthplace of Prophet Muhammad. With a population of 2.39 million in 2022, it is where the Quran was first revealed. Experience the spiritual essence of Mecca, home to the sacred Masjid al-Haram, the holiest mosque in Islam. offering a rich blend of spiritual and historical experiences.", "image": "makkah.jpg","link":"https://en.wikipedia.org/wiki/Mecca"},
     {"title": "Madinah","content": "Medina, or Al-Madinah al-Munawwarah, is a city of profound Islamic heritage, centered around Al-Masjid al-Nabawi, the mosque built by Prophet Muhammad. It's a key pilgrimage site with historical landmarks like Mount Uhud and the Quba Mosque, offering a rich blend of spiritual and historical experiences.", "image": "madinah.jpg","link":"https://en.wikipedia.org/wiki/Mecca"},

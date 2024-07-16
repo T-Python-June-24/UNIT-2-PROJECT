@@ -54,12 +54,12 @@
     }
 </style>
 
-<main class="container mx-auto my-8 p-8 bg-white rounded shadow">
-    <h2 class="text-2xl font-bold mb-4 text-center">Tourister Chatbot</h2>
+<main class="container mx-auto my-8 p-8 bg-teal-600 rounded shadow">
+    <h2 class="text-2xl font-bold mb-4 text-center text-white">Tourister Chatbot 🔍</h2>
     <div id="responseBox" class="p-4 mb-4 border rounded bg-gray-100"></div>
     <div class="input-container">
-        <input type="text" id="chat" class="border rounded p-2 w-full mr-2" placeholder="Type your message...">
-        <button onclick="sendMessage()" class="bg-blue-500 text-white p-2 rounded">Send</button>
+        <input type="text" id="chat" class="border rounded p-3 w-full mr-2" placeholder="Type your message..." style="border-color: teal; color: teal;">
+        <button onclick="sendMessage()" class="bg-teal-500 text-white pl-8 pb-2 pt-2 pr-8 rounded">Send</button>
     </div>
 </main>
 {% endblock %}

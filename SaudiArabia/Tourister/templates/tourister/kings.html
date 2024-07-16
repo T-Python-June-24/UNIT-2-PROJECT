@@ -14,6 +14,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+html.dark body {
+  background-color: #0b3d2a;
+  font-family: 'Roboto', sans-serif;
+}
+
 .header-text {
   text-align: center;
   color: white;
@@ -153,14 +158,14 @@ body {
 
 </style>
 
-<div class="img-animation">
+<div class="img-animation" >
     <div class="header-text">
         <img src="{% static 'images/pngegg.png' %}" alt="" class="w-1/4 mx-auto" style="border: none;">
-        <h1 style="color: #f6b800;" class="text-xl">History of Saudi Arabian Kings</h1>
-        <p style="color: #faeecc;" class="p-12">The lineage of the Saudi family goes back to the <span style="color: #f6b800;">Banu Hanifa Al-Bakriya Al-Wailiyya</span>, and the Banu Hanifa are the sons of: Hanifa bin Lujaim bin Saab bin Ali bin Bakr bin Wael bin Qasit bin Hanab bin Afsa bin Du’mi bin Jadila bin Asad bin Rabi’ah bin Nizar bin Ma’ad bin Adnan.
+        <h1 style="color: #f6b800;" class="text-4xl">History of Saudi Arabian Kings</h1>
+        <p style="color: #faeecc;" class="p-20 text-l">The lineage of the Saudi family goes back to the <span style="color: #f6b800;">Banu Hanifa Al-Bakriya Al-Wailiyya</span>, and the Banu Hanifa are the sons of: Hanifa bin Lujaim bin Saab bin Ali bin Bakr bin Wael bin Qasit bin Hanab bin Afsa bin Du’mi bin Jadila bin Asad bin Rabi’ah bin Nizar bin Ma’ad bin Adnan.
         As for the spatial aspect, Wadi Al-Ard, known as Wadi Hanifa in reference to Hanifa bin Lujaym, is the headquarters of the tribe of Bani Hanifa bin Lujaym bin Saab bin Ali bin Bakr bin Wael, known for it and known since the pre-Islamic era. Until Wadi Al-Yamamah was called: Wadi Hanifa.
         From this it becomes clear that the rule of the House of Saud extends its roots back to a long time in the heart of the Arabian Peninsula, and is linked to a long history and a past represented by the nobility of the ruling family and the antiquity of its history.</p>
-        <p style="color: #f6b800;">This timeline highlights the reigns of the Saudi Arabian kings from the founding of modern Saudi Arabia to the present day.</p>
+        <p style="color: #f6b800;" class="text-xl">Thw timeline highlights the reigns of the Saudi Arabian kings from the founding of modern Saudi Arabia to the present day.</p>
     </div>
 </div>
 
@@ -170,7 +175,7 @@ body {
       <h2 class="text-center capitalize font-semibold text-xl">Abdulaziz bin Abdul Rahman Al Saud</h2>
       <img src="{% static 'images/kingAbdulaziz.png' %}" alt="King Abdulaziz" class="timeline-image">
       <p>Reign: 1932 - 1953</p><br><br>
-      <p>King AbdulAziz bin AbdulRahman bin Faisal Al Saud,<br> (19 Dhul-Hijjah 1292 AH / 15 January 1876 AD - 2 Rabi’ al-Awwal 1373 AH / 9 November 1953 AD) is the founder of the modern Kingdom of Saudi Arabia, its first king, and the fourteenth ruler of the Al Saud dynasty. He was born in Riyadh to the ruling Al Saud family in Najd. When he was fifteen years old, he moved with his family to Qatar, then Bahrain, then to Kuwait by order of the Ottoman Empire, and its sheikh at the time, Muhammad Al-Sabah, received them after the victory of Muhammad bin Abdullah Al-Rashid, ruler of Hail, over Imam Abdul Rahman bin Faisal. Bin Turki Al Saud, the last imam of the second Saudi state.</p>
+      (19 Dhul-Hijjah 1292 AH / 15 January 1876 AD - 2 Rabi’ al-Awwal 1373 AH / 9 November 1953 AD) is the founder of the modern Kingdom of Saudi Arabia, its first king, and the fourteenth ruler of the Al Saud dynasty. He was born in Riyadh to the ruling Al Saud family in Najd.</p>
     </div>
   </div>
   <div class="container right" data-aos="fade-left">
@@ -196,7 +201,7 @@ body {
       <h2 class="text-center capitalize font-semibold ">King Khalid bin Abdulaziz Al Saud</h2>
       <img src="{% static 'images/KINGKHALID.jpg' %}" alt="King Khalid" class="timeline-image">
       <p>Reign: 1975 - 1982</p><br>
-      <p>Khalid bin Abdulaziz Al Saud (Arabic: خالد بن عبدالعزيز آل سعود‎ Khālid bin ʿAbd al ʿAzīz Āl Suʿūd; 13 February 1913 – 13 June 1982) was a Saudi Arabian statesman and politician who served as king of Saudi Arabia from 25 March 1975 to 13 June 1982. He was the fourth son of King Abdulaziz, the founder of modern Saudi Arabia.</p>
+      <p>Khalid bin Abdulaziz Al Saud (Arabic: خالد بن عبدالعزيز آل سعود Khālid bin ʿAbd al ʿAzīz Āl Suʿūd; 13 February 1913 – 13 June 1982) was a Saudi Arabian statesman and politician who served as king of Saudi Arabia from 25 March 1975 to 13 June 1982. He was the fourth son of King Abdulaziz, the founder of modern Saudi Arabia.</p>
     </div>
   </div>
   <div class="container left" data-aos="fade-right">
@@ -225,6 +230,7 @@ body {
       <p>Salman bin Abdulaziz Al Saud (Arabic: سلمان بن عبد العزیز آل سعود Salmān ibn ʿAbd al-ʿAzīz Āl Saʿūd; born 31 December 1935) is King of Saudi Arabia, reigning since 23 January 2015, and previously served as Deputy Governor and then Governor of Riyadh from 1963 to 2011.</p>
     </div>
   </div>
+  
 </div>
 
 {% endblock content %}

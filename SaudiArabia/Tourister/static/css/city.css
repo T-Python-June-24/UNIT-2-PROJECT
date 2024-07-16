@@ -1,26 +1,21 @@
 body {
-  background-color: white;
-  min-height: 100vh;
+  background-color: #f0f0f0;
+
+    min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.buler {
-  z-index: -1;
-  /* The image used */
-  background-image: url("photographer.jpg");
 
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-
-}
 
 html.dark body {
-  background-color: rgb(23, 39, 25);
-  min-height: 100vh;
+  background-color: #60b783;
+  background-image: linear-gradient(45deg, #60b783 0%, #000000 100%);
+
+  
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
