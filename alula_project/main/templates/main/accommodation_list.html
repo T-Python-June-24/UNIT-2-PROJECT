@@ -1,0 +1,21 @@
+{% extends "main/base.html" %}
+
+{% block title %}Accommodation List{% endblock %}
+
+{% block content %}
+<h1>Accommodation</h1>
+<div class="row">
+    {% for accommodation in accommodations %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <img class="card-img-top" src="{{ accommodation.images.first.image.url }}" alt="{{ accommodation.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ accommodation.name }}</h5>
+                <p class="card-text">{{ accommodation.type }}</p>
+                <a href="{% url 'accommodation_detail' accommodation.pk %}" class="btn btn-primary">More Info</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

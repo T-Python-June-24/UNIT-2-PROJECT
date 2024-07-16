@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+
+{% block title %}{{ accommodation.name }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>{{ accommodation.name }}</h1>
+        <p>{{ accommodation.location }}</p>
+        <p>{{ accommodation.type }}</p>
+
+        <h2>Amenities</h2>
+        <ul>
+            {% for amenity in accommodation.amenities.all %}
+                <li>{{ amenity.name }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Images</h2>
+        <div class="row">
+            {% for image in accommodation.images.all %}
+                <div class="col-md-4">
+                    <img src="{{ image.image.url }}" class="img-fluid mb-2" alt="Image for {{ accommodation.name }}">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
