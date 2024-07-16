@@ -18,3 +18,5 @@ const swiperHome = new Swiper('.home__swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+

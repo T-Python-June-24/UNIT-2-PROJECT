@@ -1,20 +1,13 @@
+{% extends 'main/base.html' %}
+
 {%load static%}
+{% block title %} الرئيسية{% endblock %}
+{% block content %}
 
 <!DOCTYPE html>
 <html lang="en" >
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet"></link>
-    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>{% block title %} {% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-</head>
-<body>
+    
     <main class="main">
         <section class="home">
 
@@ -84,6 +77,7 @@
         </div>
         
     </section>
+
     <section class="history">
         <div class="history-container">
             <div class="history-imgs">
@@ -99,5 +93,4 @@
     </main>
     <script src="{% static 'js/main.js' %}"></script>
 
-</body>
-</html>
+{%endblock%}
