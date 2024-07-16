@@ -9,8 +9,7 @@
   box-sizing: border-box;
 }
 
-
- body {
+body {
   background-color: #0b3d2a;
   font-family: 'Roboto', sans-serif;
 }
@@ -31,11 +30,14 @@
   content: '';
   position: absolute;
   width: 6px;
-  background-color: white;
-  top: 0;
+  background-color: #00873d;
+  background-image: linear-gradient(45deg, #00873d 0%, #ffffff 100%);
+    top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+  z-index: -1;
+
 }
 
 .container {
@@ -51,8 +53,8 @@
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: teal;
-  border: 4px solid gold;
+  background-color: #00873d;
+  background-image: linear-gradient(45deg, #00873d 0%, #ffffff 100%);
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -138,133 +140,91 @@
   }
 }
 
-
-
-.card {
-  display: flex;
-  align-items: center;
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 20px;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
-  margin: auto;
-}
-.card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.card-content {
-  flex: 1;
-  padding-right: 20px;
-}
-.card h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-.card p {
-  color: #666;
-  margin-bottom: 10px;
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
 }
 
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
 
 <div class="img-animation">
-        <div class="header-text">
-              <img src="{% static 'images/pngegg.png' %}" alt="" class="w-1/4 mx-auto" style="border: none;">
-              <h1 style="color: #f6b800;">History of Saudi Arabian Kings</h1>
-              <p style="color: #f6b800;">This timeline highlights the reigns of the Saudi Arabian kings from the founding of modern Saudi Arabia to the present day.</p>
-        </div>
+    <div class="header-text">
+        <img src="{% static 'images/pngegg.png' %}" alt="" class="w-1/4 mx-auto" style="border: none;">
+        <h1 style="color: #f6b800;" class="text-xl">History of Saudi Arabian Kings</h1>
+        <p style="color: #faeecc;" class="p-12">The lineage of the Saudi family goes back to the <span style="color: #f6b800;">Banu Hanifa Al-Bakriya Al-Wailiyya</span>, and the Banu Hanifa are the sons of: Hanifa bin Lujaim bin Saab bin Ali bin Bakr bin Wael bin Qasit bin Hanab bin Afsa bin Du’mi bin Jadila bin Asad bin Rabi’ah bin Nizar bin Ma’ad bin Adnan.
+        As for the spatial aspect, Wadi Al-Ard, known as Wadi Hanifa in reference to Hanifa bin Lujaym, is the headquarters of the tribe of Bani Hanifa bin Lujaym bin Saab bin Ali bin Bakr bin Wael, known for it and known since the pre-Islamic era. Until Wadi Al-Yamamah was called: Wadi Hanifa.
+        From this it becomes clear that the rule of the House of Saud extends its roots back to a long time in the heart of the Arabian Peninsula, and is linked to a long history and a past represented by the nobility of the ruling family and the antiquity of its history.</p>
+        <p style="color: #f6b800;">This timeline highlights the reigns of the Saudi Arabian kings from the founding of modern Saudi Arabia to the present day.</p>
+    </div>
 </div>
 
 <div class="timeline">
-  <div class="container left">
-    <div class="content animate__animated animate__fadeInLeft">
+  <div class="container left" data-aos="fade-right">
+    <div class="content">
       <h2 class="text-center capitalize font-semibold text-xl">Abdulaziz bin Abdul Rahman Al Saud</h2>
       <img src="{% static 'images/kingAbdulaziz.png' %}" alt="King Abdulaziz" class="timeline-image">
       <p>Reign: 1932 - 1953</p><br><br>
       <p>King AbdulAziz bin AbdulRahman bin Faisal Al Saud,<br> (19 Dhul-Hijjah 1292 AH / 15 January 1876 AD - 2 Rabi’ al-Awwal 1373 AH / 9 November 1953 AD) is the founder of the modern Kingdom of Saudi Arabia, its first king, and the fourteenth ruler of the Al Saud dynasty. He was born in Riyadh to the ruling Al Saud family in Najd. When he was fifteen years old, he moved with his family to Qatar, then Bahrain, then to Kuwait by order of the Ottoman Empire, and its sheikh at the time, Muhammad Al-Sabah, received them after the victory of Muhammad bin Abdullah Al-Rashid, ruler of Hail, over Imam Abdul Rahman bin Faisal. Bin Turki Al Saud, the last imam of the second Saudi state.</p>
     </div>
   </div>
-  <div class="container right">
-    <div class="content animate__animated animate__fadeInRight">
+  <div class="container right" data-aos="fade-left">
+    <div class="content">
       <h2 class="text-center capitalize font-semibold text-xl italic">King Saud bin Abdulaziz Al Saud</h2>
       <img src="{% static 'images/KINGSAUD.jpg' %}" alt="King Saud" class="timeline-image">
       <p>Reign: 1953 - 1964</p>
       <br>
       <p>Saud bin Abdulaziz Al Saud (romanized: Suʿūd bin ʿAbd al ʿAzīz Āl Suʿūd; 15 January 1902 – 23 February 1969) was King of Saudi Arabia from 9 November 1953 until his abdication on 2 November 1964. During his reign, he served as Prime Minister of Saudi Arabia from 1953 to 1954 and from 1960 to 1962. Prior to his accession, Saud was the country's crown prince from 11 May 1933 to 9 November 1953. He was the second son of King Abdulaziz, the founder of Saudi Arabia.
       </p>
-      
     </div>
   </div>
-  <div class="container left">
-    <div class="content animate__animated animate__fadeInLeft">
+  <div class="container left" data-aos="fade-right">
+    <div class="content">
       <h2 class="text-center capitalize font-semibold ">King Faisal bin Abdulaziz Al Saud</h2>
       <img src="{% static 'images/KINGFAISAL.jpg' %}" alt="King Faisal" class="timeline-image">
       <p>Reign: 1964 - 1975</p><br>
-      <p>Faisal bin Abdulaziz Al Saud (Arabic: فيصل بن عبدالعزيز آل سعود Fayṣal ibn ʿAbd al ʿAzīz Āl Suʿūd, Najdi Arabic 14 April 1906 – 25 March 1975) was a Saudi Arabian statesman and diplomat who was King of Saudi Arabia from 2 November 1964 until his assassination in 1975. Before his ascension, he served as Crown Prince of Saudi Arabia from 9 November 1953 to 2 November 1964, and he was briefly regent to his half-brother King Saud in 1964. He was prime minister from 1954 to 1960 and from 1962 to 1975. Faisal was the third son of King Abdulaziz, the founder of modern Saudi Arabia.</p>
+      <p>Faisal bin Abdulaziz Al Saud (Arabic: فيصل بن عبدالعزيز آل سعود Faṣel bin ʿAbd al ʿAzīz Āl Suʿūd; 14 April 1906 – 25 March 1975) was King of Saudi Arabia from 1964 to 1975. He was the third son of King Abdulaziz. As king, he is credited with rescuing the country's finances and implementing a policy of modernization and reform while his main foreign policy themes were pan-Islamism, anti-Communism, and pro-Palestinian nationalism.</p>
     </div>
   </div>
-  <div class="container right">
-    <div class="content animate__animated animate__fadeInRight">
-      <h2 class="text-center capitalize font-semibold">King Khalid bin Abdulaziz Al Saud</h2>
-      <img src="{% static 'images/kingKhalid.jpg' %}" alt="King Khalid" class="timeline-image">
+  <div class="container right" data-aos="fade-left">
+    <div class="content">
+      <h2 class="text-center capitalize font-semibold ">King Khalid bin Abdulaziz Al Saud</h2>
+      <img src="{% static 'images/KINGKHALID.jpg' %}" alt="King Khalid" class="timeline-image">
       <p>Reign: 1975 - 1982</p><br>
-      <p>Khalid bin Abdulaziz Al Saud (Arabic: خالد بن عبد العزيز آل سعود, romanized: Khālid bin ʿAbd al ʿAzīz Āl Suʿūd; 13 February 1913 – 13 June 1982) was the king and prime minister of Saudi Arabia from 25 March 1975 to his death in 1982. Before his ascension, he was the crown prince of Saudi Arabia. He was the fifth son of King Abdulaziz, the founder of modern Saudi Arabia.</p>
+      <p>Khalid bin Abdulaziz Al Saud (Arabic: خالد بن عبدالعزيز آل سعود‎ Khālid bin ʿAbd al ʿAzīz Āl Suʿūd; 13 February 1913 – 13 June 1982) was a Saudi Arabian statesman and politician who served as king of Saudi Arabia from 25 March 1975 to 13 June 1982. He was the fourth son of King Abdulaziz, the founder of modern Saudi Arabia.</p>
     </div>
   </div>
-  <div class="container left">
-    <div class="content animate__animated animate__fadeInLeft">
+  <div class="container left" data-aos="fade-right">
+    <div class="content">
       <h2 class="text-center capitalize font-semibold">King Fahd bin Abdulaziz Al Saud</h2>
-      <img src="{% static 'images/kingFahd.jpg' %}" alt="King Fahd" class="timeline-image">
+      <img src="{% static 'images/KINGFAHD.jpg' %}" alt="King Fahd" class="timeline-image">
       <p>Reign: 1982 - 2005</p><br>
-      <p>Fahd bin Abdulaziz Al Saud (Arabic: فهد بن عبد العزيز آل سعود, romanized: Fahd bin ʿAbd al-ʿAzīz Āl Suʿūd; 1920, 1921 or 1923 – 1 August 2005) was King and Prime Minister of Saudi Arabia from 13 June 1982 until his death in 2005. Prior to his ascension, he was Crown Prince of Saudi Arabia from 1975 to 1982. He was the eighth son of King Abdulaziz, the founder of modern Saudi Arabia.</p>
+      <p>Fahd bin Abdulaziz Al Saud (Arabic: فهد بن عبد العزيز آل سعود Fahd ibn ‘Abd al-‘Azīz Āl Sa‘ūd, 1921 – 1 August 2005) was King of Saudi Arabia from 13 June 1982 to 1 August 2005. He was the eighth son of King Abdulaziz, the founder of modern Saudi Arabia, and the eldest of the Sudairi Seven. He served as a minister of education and a minister of interior during his father's reign. He was appointed crown prince when his half-brother Khalid became king.
+      </p>
     </div>
   </div>
-  <div class="container right">
-    <div class="content animate__animated animate__fadeInRight">
+  <div class="container right" data-aos="fade-left">
+    <div class="content">
       <h2 class="text-center capitalize font-semibold">King Abdullah bin Abdulaziz Al Saud</h2>
-      <img src="{% static 'images/kingAbdullah.jpg' %}" alt="King Abdullah" class="timeline-image">
+      <img src="{% static 'images/KINGABDULLAH.jpg' %}" alt="King Abdullah" class="timeline-image">
       <p>Reign: 2005 - 2015</p><br>
-      <p>Abdullah bin Abdulaziz Al Saud (Arabic: عبد الله بن عبدالعزيز آل سعود ʿAbd Allāh ibn ʿAbd al ʿAzīz Āl Saʿūd, Najdi Arabic 1 August 1924 – 23 January 2015) was King and Prime Minister of Saudi Arabia from 1 August 2005 until his death in 2015. Prior to his ascension, he was Crown Prince of Saudi Arabia since 13 June 1982. He was the tenth son of King Abdulaziz, the founder of Saudi Arabia.</p>
+      <p>Abdullah bin Abdulaziz Al Saud (Arabic: عبد الله بن عبد العزيز آل سعود ʿAbd Allāh ibn ʿAbd al-ʿAzīz Āl Suʿūd; 1 August 1924 – 23 January 2015) was King of Saudi Arabia from 1 August 2005 until his death in 2015. He was Commander of the Saudi National Guard from 1963 to 2010 and Crown Prince of Saudi Arabia from 1982 to 2005 before ascending the throne following the death of his half-brother, King Fahd.
+      </p>
     </div>
   </div>
-  <div class="container left">
-    <div class="content animate__animated animate__fadeInLeft">
-      <h2 class="text-center capitalize font-semibold text-xl	">King Salman bin Abdulaziz Al Saud</h2>
-      <img src="{% static 'images/kingSalman.jpg' %}" alt="King Salman" class="timeline-image">
-      <p>Reign: 2015 - Present</p><br><br>
-      <p>Salman bin Abdulaziz Al Saud (Arabic: سلمان بن عبدالعزیز آل سعود, romanized: Salmān bin ʿAbd al-ʿAzīz Āl Su‘ūd; born 31 December 1935) is King of Saudi Arabia, reigning since 2015, and was also Prime Minister of Saudi Arabia from 2015 to 2022. The 25th son of King Abdulaziz, the founder of Saudi Arabia, he assumed the throne on 23 January 2015. Prior to his accession, he was Crown Prince of Saudi Arabia from 18 June 2012 to 23 January 2015. Salman is the third oldest living head of state, the oldest living monarch, and Saudi Arabia's first head of state born after the unification of Saudi Arabia. He has a reported personal wealth of at least $18 billion, which makes him the third wealthiest royal in the world and one of the wealthiest individuals in the world.</p>
+  <div class="container left" data-aos="fade-right">
+    <div class="content">
+      <h2 class="text-center capitalize font-semibold ">King Salman bin Abdulaziz Al Saud</h2>
+      <img src="{% static 'images/KINGSALMAN.jpg' %}" alt="King Salman" class="timeline-image">
+      <p>Reign: 2015 - Present</p><br>
+      <p>Salman bin Abdulaziz Al Saud (Arabic: سلمان بن عبد العزیز آل سعود Salmān ibn ʿAbd al-ʿAzīz Āl Saʿūd; born 31 December 1935) is King of Saudi Arabia, reigning since 23 January 2015, and previously served as Deputy Governor and then Governor of Riyadh from 1963 to 2011.</p>
     </div>
   </div>
 </div>
 
-<br><br>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const animateOnScroll = document.querySelectorAll('.animate-on-scroll');
-    
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate__animated', 'animate__fadeIn');
-        } else {
-          entry.target.classList.remove('animate__animated', 'animate__fadeIn');
-        }
-      });
-    }, { threshold: 0.5 }); // Adjust threshold as needed
-    
-    animateOnScroll.forEach(item => {
-      observer.observe(item);
-    });
-  });
-</script>
-
-{% endblock %}
+{% endblock content %}
