@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% block title %}Accommodation{% endblock %}
+{% block content %}
+<h1>Accommodation</h1>
+<div class="row">
+    {% for accommodation in accommodations %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <img class="card-img-top" src="{{ accommodation.images.url }}" alt="{{ accommodation.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ accommodation.name }}</h5>
+                <p class="card-text">{{ accommodation.type }}</p>
+                <p>{{ accommodation.amenities }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
