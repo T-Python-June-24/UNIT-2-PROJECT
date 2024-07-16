@@ -11,8 +11,11 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- Bootstrap CSS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpQaxXX2+U5Bkn/d57c9rrwGxKPJ8l/PSO4h6+/cboCd+1s9f6gkZ5js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha384-ZvpUoO/+PpQaxXX2+U5Bkn/d57c9rrwGxKPJ8l/PSO4h6+/cboCd+1s9f6gkZ5js"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet"
@@ -21,47 +24,55 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
   <title>{%block title%}{% endblock%}</title>
+  {% if request.COOKIES.mode == 'dark' %}
+  <style>
+    ::-webkit-scrollbar-track {
+      background-color: #000000;
+    }
+  </style>
+  {% endif %}
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-md navbar-dark {% block ClassNav%} {% endblock%} fixed-top hidden background"
-      id="navbar">
-      <a class="navbar-brand" href="#"><img id="logo" src="{% static 'images/logo-white.png' %}" style="height: 70px;"
-          alt=""></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul class="navbar-nav mr-auto justify-content-center d-flex">
-          <li class="nav-item active">
-            <a class="nav-link color" href="#">الرئيسية <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link color" href="#">المقالات</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link color" href="#">مدري هنا</a>
-          </li>
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <a href="{% if request.COOKIES.mode == 'dark' %}{% url 'ClientPages:light' %}{% else %}{% url 'ClientPages:dark' %}{% endif %}">
-            <span class="material-symbols-outlined color">
-              {% if request.COOKIES.mode == 'dark' %}light_mode{% else %}dark_mode{% endif %}
-            </span>
-          </a>
-          
-          <button class="btn my-2 my-sm-0 color" type="submit">sign in</button>
-          <button class="btn btn-outline-success my-2 my-sm-0 color" type="submit">Registry</button>
-        </form>
-      </div>
-    </nav>
-  
+<body class="{% if request.COOKIES.mode == 'dark' %}background-dark-body{%endif%}">
+  <nav class="navbar navbar-expand-md navbar-dark {% block ClassNav%} {% endblock%} fixed-top {% if request.COOKIES.mode == 'dark' %} dark {%else%}light{%endif%} hidden background"
+    id="navbar">
+    <a class="navbar-brand" href="#"><img id="logo" src="{% static 'images/logo-white.png' %}" style="height: 70px;"
+        alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mr-auto justify-content-center d-flex">
+        <li class="nav-item active">
+          <a class="nav-link color" href="#">الرئيسية <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link color" href="#">المقالات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link color" href="#">مدري هنا</a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <a
+          href="{% if request.COOKIES.mode == 'dark' %}{% url 'ClientPages:light' %}{% else %}{% url 'ClientPages:dark' %}{% endif %}">
+          <span class="material-symbols-outlined color">
+            {% if request.COOKIES.mode == 'dark' %}light_mode{% else %}dark_mode{% endif %}
+          </span>
+        </a>
+
+        <button class="btn my-2 my-sm-0 color" type="submit">sign in</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 color" type="submit">Registry</button>
+      </form>
+    </div>
+  </nav>
+
   {% block display%}
   {%endblock%}
 
 
-  <footer class="bg-dark text-white py-4">
+  <footer class=" text-white py-4 {% if request.COOKIES.mode == 'dark' %} background-dark {%else%}bg-dark{%endif%}">
     <div class="container">
       <div class="div-img animate-on-scroll">
         <img class="logo-bottom" src="{% static 'images/logo-white.png'%}" alt="">
@@ -102,8 +113,12 @@
   </footer>
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"

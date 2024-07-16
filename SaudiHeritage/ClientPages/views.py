@@ -8,7 +8,7 @@ def index(request:HttpRequest):
     return render(request , 'index.html')
 
 def base(request:HttpRequest):
-    return render(request , 'base.html')
+    return render(request , 'test.html')
 
 
 def light_mode(request:HttpRequest):

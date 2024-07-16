@@ -19,52 +19,56 @@
   </div>
 </section>
 
-<section class="historical-cities">
+<section class="historical-cities {% if request.COOKIES.mode == 'dark' %}background-dark-body text-white{%endif%}">
   <div class="container">
-    <h2 class="animate-on-scroll text-center mb-5"> المناطق <snap style="color: green;">التاريخية</snap>
+    <div class="stylish-line animate-on-scroll"></div>
+    <div class="stylish-line1 animate-on-scroll"></div>
+    
+    <h2 class="animate-on-scroll text-center mb-5 {% if request.COOKIES.mode == 'dark' %} text-white{%endif%}"> المناطق <snap style="color: green;">التاريخية</snap>
     </h2>
+  
     <div class="row">
       <div class="col-md-4 mb-4 animate-on-scroll">
         <div class="card ">
           <img src="{% static 'images/alanga.jpg' %}" class="card-img-top" alt="مدينة 1">
-          <div class="card-body">
+          <div class="card-body {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">
             <h5 class="card-title">قلعة العنقة </h5>
             <p class="card-text"> القرية تطل على سهول تهامة و تتميز بموقعها الاستراتيجي وصلابة مبانيها وهي من ديار آل
               سلمى من آل يعلى من آل كثير من بني مالك.</p>
-            <a href="#" class="btn btn-primary">اقرأ المزيد</a>
+            <a href="#" class="btn btn-primary {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">اقرأ المزيد</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4 animate-on-scroll">
         <div class="card">
           <img src="{% static 'images/alma.jpg' %}" class="card-img-top" alt="مدينة 2">
-          <div class="card-body">
+          <div class="card-body {% if request.COOKIES.mode == 'dark' %} background-dark {%endif%}">
             <h5 class="card-title">رجال المع</h5>
             <p class="card-text">قرية رجال ألمع التراثية هي قرية تراثية تقع في محافظة رجال ألمع الواقعة بمنطقة عسير جنوب
               غرب السعودية، وتبعد عن مدينة أبها حوالي 52 كم باتجاه الغرب. يزيد تاريخ بناءها عن 900 سنة.</p>
-            <a href="#" class="btn btn-primary">اقرأ المزيد</a>
+            <a href="#" class="btn btn-primary {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">اقرأ المزيد</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4 animate-on-scroll">
         <div class="card">
           <img src="{% static 'images/mard.jpg' %}" class="card-img-top" alt="مدينة 3">
-          <div class="card-body">
+          <div class="card-body {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">
             <h5 class="card-title">قلعة مارد</h5>
             <p class="card-text">تقع قلعة مارد على جبل أو تل صخري يبلغ ارتفاعها 600م في حي الدرع بدومة الجندل التابعة
               لمنطقة الجوف، ويعود سبب تسميتها بهذا الاسم إلى تمردها واستعصائها على كل من حاول اقتحامها</p>
-            <a href="#" class="btn btn-primary">اقرأ المزيد</a>
+            <a href="#" class="btn btn-primary  {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">اقرأ المزيد</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="historical-cities {% if request.COOKIES.mode == 'dark' %}number-dark{%else%}number{%endif%}">
+<section class="historical-cities {% if request.COOKIES.mode == 'dark' %}background-dark-body text-white{%endif%}">
   <div class="container">
     <div class="row nums">
       <div class="col-md-4 mr animate-on-scroll">
-        <div class="card">
+        <div class="card {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">
           <div class="cards">
             <span class="material-symbols-outlined">
               groups
@@ -77,10 +81,10 @@
         </div>
       </div>
       <div class="col-md-4 mr animate-on-scroll">
-        <div class="card">
+        <div class="card {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">
           <div class="cards">
             <span class="material-symbols-outlined">
-              groups
+              pin_drop
             </span>
           </div>
           <div class="card-body">
@@ -90,10 +94,10 @@
         </div>
       </div>
       <div class="col-md-4 mr animate-on-scroll">
-        <div class="card">
+        <div class="card {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">
           <div class="cards">
             <span class="material-symbols-outlined">
-              groups
+              moving_ministry
             </span>
           </div>
           <div class="card-body">
@@ -105,12 +109,12 @@
     </div>
   </div>
 </section>
-<section class="features" id="naif">
+<section class="features {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}" id="naif">
 
-  <h1 class="styled-text">مميزات السياحة في <span class="title"> السعودية</span>
+  <h1 class="styled-text {% if request.COOKIES.mode == 'dark' %} text-white{%endif%}">مميزات السياحة في <span class="title"> السعودية</span>
   </h1>
 
-  <div class="feature-item animate-on-scroll">
+  <div class="feature-item animate-on-scroll {% if request.COOKIES.mode == 'dark' %} color-white{%endif%}">
     <div class="feature-icon">
       <span class="material-symbols-outlined">
         sunny
@@ -120,7 +124,7 @@
     <p>يضم صحاري شاسعة مثل الربع الخالي، جبالاً شاهقة مثل جبال السروات والحجاز، وشواطئ ساحرة على البحر الأحمر والخليج
       العربي توفر فرصًا للغوص والاستجمام</p>
   </div>
-  <div class="feature-item animate-on-scroll">
+  <div class="feature-item animate-on-scroll {% if request.COOKIES.mode == 'dark' %} color-white{%endif%}">
     <div class="feature-icon">
       <span class="material-symbols-outlined">
         date_range
@@ -130,7 +134,7 @@
     <p> تضم مدائن صالح المدرجة ضمن التراث العالمي لليونسكو، الدرعية العاصمة التاريخية، ومدينة جدة التاريخية ببيوتها
       التقليدية وأسواقها القديمة</p>
   </div>
-  <div class="feature-item animate-on-scroll">
+  <div class="feature-item animate-on-scroll {% if request.COOKIES.mode == 'dark' %} color-white{%endif%}">
     <div class="feature-icon">
       <span class="material-symbols-outlined">
         tour
