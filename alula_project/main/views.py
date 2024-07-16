@@ -31,3 +31,7 @@ def accommodation_list(request):
 def accommodation_detail(request, pk):
     accommodation = get_object_or_404(Accommodation, pk=pk)
     return render(request, 'main/accommodation_detail.html', {'accommodation': accommodation})
+
+def dining_detail(request, pk):
+    dining = get_object_or_404(Dining, pk=pk)
+    return render(request, 'main/dining_detail.html', {'dining': dining})

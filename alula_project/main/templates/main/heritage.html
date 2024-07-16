@@ -5,8 +5,10 @@
 <div class="row">
     {% for site in sites %}
     <div class="col-md-4">
-        <div class="card mb-4">
-            <img class="card-img-top" src="{{ site.images.url }}" alt="{{ site.name }}">
+        <div class="card mb-4 card-fixed-size">
+            <a href="#">
+                <img class="card-img-top fixed-size" src="{{ site.images.url }}" alt="{{ site.name }}">
+            </a>
             <div class="card-body">
                 <h5 class="card-title">{{ site.name }}</h5>
                 <p class="card-text">{{ site.description }}</p>

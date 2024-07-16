@@ -1,16 +1,21 @@
 {% extends 'main/base.html' %}
+
 {% block title %}Dining{% endblock %}
+
 {% block content %}
 <h1>Dining</h1>
 <div class="row">
     {% for dining_place in dining_places %}
     <div class="col-md-4">
-        <div class="card mb-4">
-            <img class="card-img-top" src="{{ dining_place.images.url }}" alt="{{ dining_place.name }}">
+        <div class="card mb-4 card-fixed-size">
+            <a href="{% url 'dining_detail' dining_place.pk %}" >
+            <img class="card-img-top fixed-size" src="{{ dining_place.images.first.image.url }}" alt="{{ dining_place.name }}">
+            </a>
             <div class="card-body">
                 <h5 class="card-title">{{ dining_place.name }}</h5>
-                <p class="card-text">{{ dining_place.cuisine }}</p>
-                <p>{{ dining_place.menu }}</p>
+                <p class="card-text"><strong>Cuisine: </strong>{{ dining_place.cuisine }}</p>
+                <!--<p>{{ dining_place.menu }}</p>-->
+                
             </div>
         </div>
     </div>

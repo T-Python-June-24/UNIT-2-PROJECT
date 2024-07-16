@@ -34,11 +34,17 @@ class Dining(models.Model):
     name = models.CharField(max_length=200)
     cuisine = models.CharField(max_length=100)
     location = models.CharField(max_length=200)
-    images = models.ImageField(upload_to='dining_images')
     menu = models.TextField()
 
     def __str__(self):
         return self.name
+    
+class DiningImage(models.Model):
+    dining = models.ForeignKey(Dining, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='dining_images')
+
+    def __str__(self):
+        return f"Image for {self.dining.name}"
 
 class Amenity(models.Model):
     name = models.CharField(max_length=100)
