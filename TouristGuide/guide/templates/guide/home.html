@@ -1,0 +1,29 @@
+{% extends 'guide/base.html' %}
+
+{% block title %} Tourist Guide Home {% endblock %}
+{% block content %}
+<div class="container flex-column mt-5 mb-5">
+    <div class="w-50">
+         <h1 class="h1-text"> FIND YOUR DREAMS</h1>
+        <h6>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties</h6>
+        <a class="btn btn-dark rounded-4 mt-4" href="{% url 'guide:pictures' %}">Explore Pictures</a>
+    </div>
+</div>
+
+<div class="container d-flex flex-column pt-2 mt-1 align-items-center justify-content-center bg-white rounded-5 w-50 ">
+    <div class="d-flex justify-content-center flex-grow gap-5">
+        <span class="all material-symbols-outlined p-2 rounded-4">home</span>
+        <span class="properties material-symbols-outlined p-2 rounded-4" >factory</span>
+        <span class="hotel material-symbols-outlined p-2 rounded-4">hotel</span>
+        <span class="villa material-symbols-outlined p-2 rounded-4">villa</span>
+    </div>
+    <div class="d-flex justify-content-center flex-grow gap-4">
+        <p class="all-text">ALL</p>
+        <p class="properties-text">PROPERTIES</p>
+        <p class="hotel-text" >HOTEL</p>
+        <p class="villa-text">VILLA</p>
+
+    </div>
+</div>
+
+{% endblock %}
