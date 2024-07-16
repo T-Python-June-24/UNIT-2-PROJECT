@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
-from django.http import HttpRequest,HttpResponse 
+from django.http import HttpRequest,HttpResponse ,FileResponse
+import json
 
 # Create your views here.
 
@@ -226,3 +227,12 @@ Qazou'i is a martial folk dance from the Asir region of Saudi Arabia. Performed 
 
 
     return render(request,"main/qazwai.html",context={"info":infos,"poets":poets})
+
+def picture_view(request:HttpRequest)->render:
+    with open ("C:/Users/saeed/python-cam-lab/UNIT-2-PROJECT/sauidArdah/main/static/picturesLibrary/pictures.json",'r',encoding='UTF-8') as file:
+        poets=json.load(file)
+    return render(request,"main/pictures.html",context={"objects":poets})
+
+def download_image(request:HttpRequest,imagePath:str)->render:
+    with open(imagePath,"rb") as image:
+        response=FileResponse()

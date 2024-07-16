@@ -1,0 +1,130 @@
+[
+    {"name":"Kings Ardah",
+     "img":"images/picturesLibraryDark.png"
+     },
+     {
+         "name":"Kings Ardah",
+         "img":"images/picturesLibraryLightmode.png"
+     },
+     {
+         "name":"Kings Ardah",
+         "img":"images/ardahbg.png"
+     },
+     {
+         "name":"Kings Ardah",
+         "img":"images/kingsalman.png"
+     },
+     {"name":"Kings Ardah",
+      "img":"images/ardah1.png"
+      
+      },
+
+      {
+          "name":"Al-daha",
+          "img":"images/ardah5.jpg"
+      },
+       {
+          "name":"Al-Qazwi",
+          "img":"images/ardah6jpeg.jpeg"
+      },
+      {
+          "name":"Southren Ardah",
+          "img":"images/ardah7.jpg"
+      },
+     {
+          "name":"Southren Ardah",
+          "img":"images/ardah2.jpg"
+      },
+    {
+    "name":"Muhammad bin Ma'id",
+    "img":"images/aboJaeedi.jpg",
+    "city":"al Baha"
+
+},
+{
+    "name":"Mubarak Abu Olag",
+    "img":"images/aboolag.jpeg",
+    "city":"Al aqiq"
+},
+{
+    "name":"Aaydah bin Tuwair",
+    "img":"images/aidahalmalki.jpg",
+    "city":"Bakhir"
+},
+{
+   "name":"Abdulwaheed Al Zahrani",
+    "img":"images/abdaluahid.jpg",
+    "city":"Al baha"
+},
+{
+    "name":"Humīl bin Sharaf",
+    "img":"images/hmialbinsharf.jpeg",
+    "city":"Al baha"
+},
+{
+    "name":"mohammed bin thaib",
+    "img":"images/mohammedbinthaib.jpg",
+    "city":"Bisah"
+
+},
+{
+    "name":"Naser Alorainee",
+    "img":"images/naserAlareeni.jpg",
+    "city":"al diriyah"
+
+},
+{
+    "name":"Abdullah Alsobai",
+    "img":null,
+    "city":"Shaqra"
+},
+{
+    "name":"Mohammed Aloani",
+    "img":"images/mohammedAloanii.jpg",
+    "city":"alrabieia"
+},
+{
+    "name":"Fhaed bin Dhaemm",
+    "img":null,
+    "city":"Riyadh"
+},
+{
+    "name":"Abdurhman Alboardi",
+    "img":null,
+    "city":"Shaqra"
+},
+{
+    "name":"salem aljbhl",
+    "img":"images/salemdaha.jpg",
+    "city":"Abha"
+
+},
+{
+    "name":"Abdullah mushni",
+    "img":"images/abdullahmashny.jpeg",
+    "city":"njd"
+},
+{
+    "name":"Falah Al-Qarqah",
+    "img":"images/flah.jpg",
+    "city":"Abha"
+
+},
+{
+    "name":"Muta'ab Al-Masfari",
+    "img":"images/mutaib.jpg",
+    "city":"njd"
+},
+{
+    "name":"Abdullah bin Shayiq",
+    "img":"images/abdullahshaiq.jpg",
+    "city":"muzahimih"
+},
+{
+   "name":"Mohammed bin ksla",
+    "img":"images/binksla.jpg",
+    "city":"Ahad Rafidah"
+}
+
+
+]

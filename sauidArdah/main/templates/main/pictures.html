@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <div class="m-5 h-20">
+
+    </div>
+    <main class="pt-8 pl-52 pt-8 bg-[#faf3ef] dark:bg-[#1e1e1e]"> 
+           <div>
+        <h2 class="text-2xl text-gray-800 font-semibold mb-4 mt-4 dark:text-[#e0e0e0]">Sauid Ardah Pictures</h2>
+    </div>
+    <div class="flex flex-row flex-wrap gap-4">
+        {% for img in objects %}
+            {% if img.img != None %}
+                <div class="da relative flex  flex-col justify-center overflow-hidden ">
+                    <div class="absolute inset-0 bg-center dark:bg-black"></div>
+                    <div class="group relative m-0 flex h-72 w-96 rounded-xl shadow-xl ring-gray-900/5 sm:mx-auto sm:max-w-lg">
+                    <div class="z-10 h-full w-full overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
+                        <img src="{% static img.img %}" class="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110" alt="" />
+                    </div>
+                    <div class="absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110">
+                        <h1 class="font-serif text-2xl font-bold text-[#ffffff]">{{ img.name }}</h1>
+                    </div>
+                    </div>
+                </div>
+            {% endif %}
+      {% endfor %}
+    </div>
+           
+    </main>
+
+
+{% endblock %}
