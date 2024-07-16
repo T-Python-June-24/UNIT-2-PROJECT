@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <h1>المناطق</h1>
+    <ul class="list-group">
+        {% for region in regions %}
+        <li class="list-group-item">
+            <h2>{{ region.name }}</h2>
+            <p>{{ region.description }}</p>
+            <h3>الوصفات</h3>
+            <ul>
+                {% for recipe in recipes %}
+                    {% if recipe.region == region.name %}
+                        <li>
+                            <a href="{% url 'main:recipe_detail' recipe.name %}">{{ recipe.name }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
