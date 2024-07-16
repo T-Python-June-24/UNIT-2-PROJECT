@@ -281,7 +281,7 @@ align-items: center;
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
-
+margin-bottom: -3rem;
 }
 
 
@@ -341,3 +341,43 @@ align-items: center;
     color: rgb(3, 3, 3);
 
 }
+.history-imgs {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.history-imgs img {
+    width: 800px;
+    height: 800px;
+    object-fit: cover; 
+}
+
+
+.history-title {
+    font-family: 'Tajawal', sans-serif;
+    color: rgb(118, 118, 112);
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-right: 3%; 
+    text-align: center; 
+}
+.history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.history-paragraph{
+    font-family: 'Tajawal', sans-serif;
+    color: rgb(152, 152, 132);
+    font-size: 1.4rem;
+    text-align: center; 
+    width: 80%; 
+    max-width: 600px; 
+    margin-top: 4rem; 
+    white-space: normal;
+}
+
+ 
