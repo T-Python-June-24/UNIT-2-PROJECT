@@ -5,5 +5,7 @@ urlpatterns = [
     path('',views.home_view,name="home_view"),
     path("changeTheme/",views.change_theme,name="change_theme"),
     path("njdi/ardah/",views.njdiArdah_view,name="njdiArdah_view"),
-    path("south/ardah/",views.southArdah_view,name="southArdah_view")
+    path("south/ardah/",views.southArdah_view,name="southArdah_view"),
+    path("qazwai/ardah/",views.qazwaiArdah_view,name="qazwaiArdah_view"),
+    path("daha/ardah",views.dahaArdah,name="dahaArdah_view")
 ]

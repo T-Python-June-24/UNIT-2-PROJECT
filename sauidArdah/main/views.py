@@ -134,3 +134,95 @@ I hope this translation is helpful. Please let me know if you have any other que
 
     ]
     return render(request,"main/southArdah.html",context={"info":infos,"poets":poets})
+
+
+def dahaArdah(request:HttpRequest)->render:
+
+    infos=[
+                
+                {
+                "header":"Al-dahha",
+                "body":'''Al-dahha, as it is called by the people of the Arabian Peninsula, is a Bedouin dance practiced in Jordan, the Negev region of Palestine, northern Saudi Arabia, some Gulf states, the valleys of Syria and Iraq, Hauran, and the Sinai Peninsula. Al-dahha was practiced in ancient times before wars to stir up enthusiasm among the members of the tribe, and at the end of ancient battles, it was used to describe the battle and the heroism and actions that took place in it. Now it is practiced on wedding occasions, holidays, and other celebrations, and it combines the art of poetry, dance, and chants.'''
+                }
+                ,
+                {
+                    "header":"Origin",
+                    "body":'''The origin of this dance is traced back to a popular story: "A caravan of pilgrims was passing through the desert when they noticed thieves watching them while they slept at night. Fearing for their lives, they agreed to clap their hands and make sounds like the rumbling of camels to make the thieves believe they were a large group and scare them off. This strategy was successful in driving away the thieves, and the dance, known as al-dahha, spread as a folk dance. However, the notion that it is linked to the Battle of Dhi Qar is a misconception. The details of the Battle of Dhi Qar are well-documented in history books, and there is no mention of al-dahha.
+
+        '''
+                                },
+                                {
+                    "header":"Performance",
+                    "body":'''Al-dahha is performed as a group dance. The men line up in one or two facing rows, and the poet, who stands in the middle of one row, sings his chanted poem, which resembles the hajini style. The rows respond in turn (al-raddadah). The agreed-upon line is gradually passed between each verse recited by the poet. The poems vary from praise and pride to remembrance and praise of God, joy, and love. It is performed in a narrative style, which is the essence of what has been agreed upon as a narrative storytelling position for a battle or a description of a homeland or satire or praise. Sometimes, the hashsh or mahoushi stands in front of the row or between the rows and performs the mahoushi dance between the rows.
+
+        The movement of the dahha comes at the end of the poem, and clapping is used as a rhythmic sound. Al-dahha is distinguished by its enthusiasm in its kinetic performance and requires the participant to reconcile his kinetic and respiratory performance so that he can keep pace with the rest of the participants. The poet of al-dahha is called the bad'a, and the poem of al-dahha is known to others as the bid'ah.'''
+                                },
+                    {
+                        "header":"Intangible Heritage List",
+                        "body":"In 2018, UNESCO inscribed al-dahha, as it is called in Jordan, on the Representative List of the Intangible Cultural Heritage of Humanity, during the annual meeting of the Committee for the Safeguarding of Intangible Cultural Heritage held in Port Louis, Mauritius."
+                    }
+                ]
+    poets=[{
+        "name":"salem aljbhl",
+        "img":"images/salemdaha.jpg",
+        "city":"Abha"
+
+    },
+    {
+        "name":"Abdullah mushni",
+        "img":"images/abdullahmashny.jpeg",
+        "city":"njd"
+    },
+    ]
+    
+    
+
+
+
+    return render(request,"main/daha.html",context={"info":infos,"poets":poets})
+
+
+def qazwaiArdah_view(request:HttpRequest)->render:
+    infos=[
+        
+        {
+        "header":"The Qazwai Ardha",
+        "body":'''A Martial Folk Art of Saudi Arabia
+Qazou'i is a martial folk dance from the Asir region of Saudi Arabia. Performed at celebrations like weddings and in victory parades, it is a vibrant display of coordinated footwork and powerful vocalizations.'''
+        }
+        ,
+        {
+            "header":"The Qazou'i Performance",
+            "body":'''The Qazou'i performance typically takes place in a semi-circular formation with two separate arched rows. A poet, or sometimes two or even four poets, stands in the center, engaging in a two-way, four-way, or six-way dialogue on a specific theme or topic. Each pair of poets exchanges verses, while one or two, three, or four, or even more individuals from the arranged rows regulate the movement by descending and stamping their feet. The central performer is referred to as the "muza'if" or "mahwiz." Among the Yaam tribes, the performance takes place in a continuous circle with minor variations in some movements.'''
+                            },
+        ]
+    
+    poets=[{
+        "name":"Falah Al-Qarqah",
+        "img":"images/flah.jpg",
+        "city":"Abha"
+
+    },
+    {
+        "name":"Muta'ab Al-Masfari",
+        "img":"images/mutaib.jpg",
+        "city":"njd"
+    },
+    {
+        "name":"Abdullah bin Shayiq",
+        "img":"images/abdullahshaiq.jpg",
+        "city":"muzahimih"
+    },
+    {
+       "name":"Mohammed bin ksla",
+        "img":"images/binksla.jpg",
+        "city":"Ahad Rafidah"
+    },
+    
+
+    ]
+    
+
+
+
+    return render(request,"main/qazwai.html",context={"info":infos,"poets":poets})
