@@ -2,7 +2,35 @@
 {% block title %}
 Home page 
 {% endblock %}
-
+{% load static %}
 {% block content %}
-<h1 class="text-blue-600 text-3xl"> Welcome to Saudi Arabia</h1>
+<main>
+  <div class="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="{% static 'images/image.png' %}" alt="Background Image" class="object-cover object-center w-full h-full" />
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+    </div>
+    
+    <div class="font-nunito relative z-10 flex flex-col justify-center items-center h-full text-center">
+      <h1 class="text-5xl font-bold leading-tight mb-4">Welcome to Saudi Arabia</h1>
+      <p class="text-lg text-gray-300 mb-8">Discover the Magic of Saudi Arabia: Where Ancient Heritage Meets Modern Wonders!</p>
+      <a href="#next" class="border text-gray-50 hover:text-gray-800 hover:bg-gray-50 py-2 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get Started</a>
+    </div>
+  </div>
+  <div class="py-36" id="next">
+    <p class="mx-40 text-center text-xl text-goldenDates font-fredoka ">Tourism in Saudi Arabia offers a captivating blend of ancient history, vibrant culture, and modern attractions. From the historic city of Diriyah, a UNESCO World Heritage site, to the futuristic skyline of Riyadh, the kingdom provides an array of experiences for travelers. Visitors can explore the stunning landscapes of the Empty Quarter, the largest contiguous sand desert in the world, or dive into the pristine waters of the Red Sea, known for its rich marine life. The ancient rock carvings of AlUla and the Nabatean tombs of Madain Saleh reflect the region's deep historical roots. With its recent opening to international tourists, Saudi Arabia is rapidly emerging as a must-visit destination, offering unique insights into its rich cultural heritage and ambitious Vision 2030 plans, which aim to create a sustainable and diversified tourism industry.</p>
+  </div>
+    <h1 class="mt-12 mb-32 mx-40 text-3xl">Top Destinations</h1>
+    <div class="flex flex-row flex-wrap w-full mx-32">
+      {% for image in images %}
+      <div class="w-1/4 relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 mx-4 mt-24 mb-5">
+        <img src="{% static image.url %}" alt="{{ image.alt }}" class="absolute inset-0 h-full w-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+        <h3 class="z-10 my-3 text-3xl font-bold text-white">{{ image.title }}</h3>
+        <a href="{{ image.link }}" class="z-10 gap-y-3 overflow-hidden w-16 border-0 rounded-full text-center bg-slate-400 text-sm leading-6 text-black">Explore</a>
+      </div>
+      {% endfor %}
+    </div>
+  
+</main>
 {% endblock %}

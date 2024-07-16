@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Events page 
+{% endblock %}
+{% load static %}
+{% block content %}
+<main class="bg-gray-50">
+  <div class="flex flex-row px-24 py-32 items-center bg-white">
+    <div class="basis-2/3">
+      <h1 class="text-3xl font-semibold pb-10">Culture</h1>
+      <p class="text-left text-sm">Saudi Arabia’s rich heritage and traditions have been shaped by its position as a historic trade hub and the birthplace of Islam. In recent years, the Kingdom has undergone a significant cultural transformation, evolving centuy-old customs to fit the contemporary world we live in today.</p>
+    </div>
+    <div class="basis-1/3">
+      <img src="https://scth.scene7.com/is/image/scthacc/about-saudi-pictogram:crop-275x275?defaultImage=about-saudi-pictogram&fmt=png-alpha">
+    </div>
+  </div>
+  <div class="mx-24 mt-60 mb-32">
+    <h1 class="text-3xl font-semibold pb-10">Language</h1>
+    <p class="text-left text-sm pr-10">Arabic is the official language of Saudi Arabia and the primary language used in all dealings and public transactions. English serves as an informal second language in the Kingdom and is spoken by a large section of its society. All road signs are bilingual, showing information in both Arabic and English.</p>
+  </div>
+  <h1 class="pt-60 px-24 pb-10 text-3xl font-semibold">Laws & Etiquette</h1>
+  <div class="flex flex-row px-24 gap-8 pb-60">
+    <div class="flex flex-col gap-5 bg-gray-100 w-1/2 p-6 border-0 rounded-3xl">
+      <h1>ETIQUETTE</h1>
+      <img class="w-10" src="https://scth.scene7.com/is/image/scthacc/star-1:crop-600x600?defaultImage=star-1&fmt=png-alpha">
+      <p>Bad language, loud behavior, and encroaching on other people’s boundaries are considered disrespectful. Respectful public decorum is always advised.</p>
+    </div>
+    <div class="flex flex-col gap-5 bg-gray-100 w-1/2 p-6 border-0 rounded-3xl">
+      <h1>ALCOHOL & SUBSTANCES</h1>
+      <img class="w-10"  src="https://scth.scene7.com/is/image/scthacc/explamation-mark:crop-600x600?defaultImage=explamation-mark&fmt=png-alpha" >
+      <p>The sale, purchase, and consumption of alcohol and drugs is illegal in Saudi Arabia</p>
+    </div>
+  </div>
+  <div class="flex flex-row px-24 py-32 gap-6 items-center bg-white">
+    <div class="basis-2/3">
+      <h1 class="text-3xl font-semibold pb-10">Religion</h1>
+      <p class="text-left text-sm">Certain shops close briefly during prayer times to allow time for worship. During the holy month of Ramadan, the rhythm of the country changes into a mellow, spiritual one.</p>
+    </div>
+    <div class="basis-1/2 w-2/3">
+      <img src="https://www.nusuk.sa/_next/image?url=%2Fuploads%2FCurrency_9560c0b13a.jpg&w=1920&q=75">
+    </div>
+  </div>
+</main>
+{% endblock %}

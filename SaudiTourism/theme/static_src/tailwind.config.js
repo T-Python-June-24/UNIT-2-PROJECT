@@ -42,7 +42,20 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+          colors: {
+            desertSand: '#EDC9AF',
+            oasisGreen: '#009B77',
+            royalBlue: '#4169E1',
+            sunsetOrange: '#FF4500',
+            goldenDates: '#DAA520',
+            duneBrown: '#8B4513',
+          },
+          fontFamily: {
+            nunito: ['Nunito', 'sans-serif'],
+            fredoka: ['Fredoka One', 'sans-serif'],
+          },
+        },
     },
     plugins: [
         /**
