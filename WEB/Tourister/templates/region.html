@@ -29,7 +29,7 @@
     .image {
         max-width: 130%; 
         height: 150%; 
-        border: 1px solid Green; 
+        border: 1px solid rgb(0, 0, 0); 
         float: left; 
         border-radius: 30px;
         margin-Top: 50px;
@@ -37,10 +37,7 @@
         width:180%
 
     }
-    body.region {
-    background: url('../images/1.jpg') ;
-
-}
+   
 
 .card-cont {
     display: flex;
@@ -50,17 +47,19 @@
     width:100%
 
 }
+.container{
+    background-image: url("{% static 'images/yan.jpeg' %}");
+}
 .region-page {
-
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 </style>
-<body class="region-page">
-<div class="row">
+
+<div class="row region-page" >
     <div class="col">
-        <h1 class="glow">مدينة ينبع السياحية</h1>
+        <h1 class="glow" style="margin:1% 0%">مدينة ينبع الصناعية</h1>
 
         <div class="square-border">
             <p class="highlighted-paragraph">ينبع الصناعية مدينة توجد في المملكة العربية السعودية على الساحل الغربي غرب منطقة المدينة المنورة مطلة على البحر الأحمر، تعد ثاني أكبر مجمع صناعي في السعودية، وقاعدة من قواعد التصنيع الثقيل
@@ -75,5 +74,5 @@
     </div>
 
 </div>
-</body>
+
 {% endblock %}

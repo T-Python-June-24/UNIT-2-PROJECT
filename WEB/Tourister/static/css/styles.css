@@ -1,23 +1,8 @@
-.highlighted-paragraph {
-    font-family: 'Arial', sans-serif;
-    color: #000; 
-    font-size: 35px; 
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    line-height: 1.6; 
-    margin-bottom: 20px; 
-    text-align: center; 
-    max-width: 80%; 
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .image-frame {
     border: 2px solid #ccc;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -62,20 +47,14 @@
     width: 100%;
 }
 
-.content-frame {
-    border: 2px solid #ccc;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 h1{
 color:black;
 font-size:60px;
 }
 .content-frame {
     border: 2px solid #ccc;
-    padding: 10px;
+    padding: 0px;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -86,7 +65,7 @@ font-size:60px;
     padding: 10px;
     border-radius: 10px;
     background-color: #f9f9f9;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
 }
 
 .video-frame {
@@ -98,42 +77,13 @@ font-size:60px;
 }
 
 
-.highlighted-paragraph {
-    font-family: 'Arial', sans-serif;
-    color: #333; 
-    font-size: 22px; 
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    line-height: 1.8; 
-    margin-bottom: 20px; 
-    text-align: center; 
-    max-width: 90%; 
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.3s ease-in-out;
-}
+
 
 .highlighted-paragraph:hover {
     transform: translateY(-10px); 
 }
 
-.highlighted-paragraph {
-    font-family: 'Arial', sans-serif;
-    color: #000; 
-    font-size: 35px; 
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    line-height: 1.6; 
-    margin-bottom: 20px; 
-    text-align: center; 
-    max-width: 80%; 
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .image-frame {
     border: 2px solid #ccc;
@@ -166,6 +116,7 @@ font-size:60px;
     width: 100%;
     height: 100%;
     object-fit: cover; 
+    background-image: url();
 }
 
 .image-container:hover {
@@ -185,7 +136,7 @@ font-size:60px;
 
 .content-frame {
     border: 2px solid #ccc;
-    padding: 10px;
+    padding: 5%;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -193,13 +144,6 @@ font-size:60px;
 h1{
 color:black;
 font-size:60px;
-}
-.content-frame {
-    border: 2px solid #ccc;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .inner-frame {
@@ -223,16 +167,17 @@ font-size:60px;
     color: #333; 
     font-size: 22px; 
     background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 1%;
+    border-radius: 1px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     line-height: 1.8; 
-    margin-bottom: 20px;
+    margin-top:  0%;
+    margin-bottom: 50px;
     text-align: center; 
     max-width: 90%; 
     margin-left: auto;
     margin-right: auto;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
 
 .highlighted-paragraph:hover {

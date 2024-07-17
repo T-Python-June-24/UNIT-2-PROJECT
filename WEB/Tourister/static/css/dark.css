@@ -1,6 +1,5 @@
 body.dark-mode {
-    background-color: #121212; 
-    color: #000; 
+   background-color: #000; 
 }
 
 body.dark-mode header {
@@ -47,7 +46,9 @@ body.dark-mode .card:hover {
 }
 
 body.dark-mode .container {
-    background-color: #181818; 
+    background-color: #181818;
+
+    
 }
 
 body.dark-mode p {
