@@ -2,7 +2,52 @@
 
 {% block title %} Tourist Guide Home {% endblock %}
 {% block content %}
-<div class="container flex-column mt-5 mb-5">
+<div class ="text-video">
+    <div class="homePhrase">
+        <h1>Welcome To Saudi Arabia</h1>
+        <p>Visiting Saudi Arabia is an enticing invitation for travelers, showcasing its captivating allure and encouraging exploration. With its rich cultural heritage, stunning desert landscapes, and modern developments, Saudi Arabia promises a unique and rewarding experience for those seeking adventure and cultural immersion in the Middle East.</p>
+    </div>
+    <video id="autoplayVideo" width="560" controls autoplay muted>
+        <source src="https://res.cloudinary.com/dirlusg8s/video/upload/v1721128860/tourism_saudi_a3lndf.mp4" type="video/mp4">
+    </video>
+    <div class="video-container">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var video = document.getElementById('autoplayVideo');
+                video.play().then(() => {
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                    } else if (video.mozRequestFullScreen) { // Firefox
+                        video.mozRequestFullScreen();
+                    } else if (video.webkitRequestFullscreen) { // Chrome, Safari, Opera
+                        video.webkitRequestFullscreen();
+                    } else if (video.msRequestFullscreen) { // IE/Edge
+                        video.msRequestFullscreen();
+                    }
+    
+                    video.addEventListener('ended', function() {
+                        if (document.fullscreenElement) {
+                            document.exitFullscreen();
+                        } else if (document.mozFullScreenElement) {
+                            document.mozCancelFullScreen();
+                        } else if (document.webkitFullscreenElement) {
+                            document.webkitExitFullscreen();
+                        } else if (document.msFullscreenElement) {
+                            document.msExitFullscreen();
+                        }
+    
+                        video.style.display = 'none';
+                    });
+                }).catch((error) => {
+                    console.log("Autoplay was prevented: " + error);
+                });
+            });
+        </script>
+    </div>
+</div>
+
+
+<!-- <div class="container flex-column mt-5 mb-5">
     <div class="w-50">
          <h1 class="h1-text"> FIND YOUR DREAMS</h1>
         <h6>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties</h6>
@@ -24,6 +69,6 @@
         <p class="villa-text">VILLA</p>
 
     </div>
-</div>
+</div> -->
 
 {% endblock %}

@@ -39,7 +39,13 @@
   <body>
         <section class="header">
             <nav>
-                <a href="{% url 'guide:home' %}"><img src="static/images/logo.jpg" ></a>
+                <a href="{% url 'guide:home' %}"><img src="static/images/logo.png" ></a>
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
                 <div class="navbar">
                     <ul>
                         <li><a href="{% url 'guide:home' %}"> Home</a></li>
@@ -51,18 +57,10 @@
                     </ul>
                 </div>
             </nav>
-            <div class="homePhrase">
-            <h1>Welcome To Saudi Arabia</h1>
-            <p>Visiting Saudi Arabia is an enticing invitation for travelers, showcasing its captivating allure and encouraging exploration. With its rich cultural heritage, stunning desert landscapes, and modern developments, Saudi Arabia promises a unique and rewarding experience for those seeking adventure and cultural immersion in the Middle East.
-
-
-
-            </p>
-            </div>
             
 
-        </section>
-
+        
+        
 
 
 
@@ -70,7 +68,7 @@
         <a href="{% url 'guide:darkMode' %}" ><span class="material-symbols-outlined">dark_mode</span></a>
         {% block content %}   
         {% endblock %}
-
+    </section>      
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

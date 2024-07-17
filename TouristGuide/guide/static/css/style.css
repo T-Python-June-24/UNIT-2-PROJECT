@@ -1,33 +1,45 @@
 *{
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .header{
-min-height: 140vh;
 width: 100%;
 background-position: center;
 background-size: cover;
 position: relative;
-
-background-color: #16a1c1;
+background-color: #edf6f8;
+}
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2% 6%;
+}
 
+@keyframes orbitLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+
+    }
 }
-nav img{
-    width: 100px;
+ nav img {
+    position: relative;
+    width: 120px;
+    height: 100px;
     border-radius: 50%;
-}
+    animation: orbitLogo 10s linear infinite;
+ }
 
 .navbar{
 flex: 1;
 text-align: right;
 }
+
 
 .navbar ul li{
     list-style:none;
@@ -37,7 +49,7 @@ text-align: right;
 }
 
 .navbar ul li a{
-    color:white;
+    color:rgb(5, 49, 86);
     text-decoration: none;
 }
 
@@ -48,32 +60,86 @@ text-align: right;
 }
 
 .homePhrase{
-    width:90%;
-    color:white;
-    position:absolute;
-    top: 30%;
-    width: 50%;
+    position:relative;
+    width:65%;
     text-align:left;
     margin-left: 10px;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #FF5733;
+    }
+    33% {
+        color: #0ab626;
+    }
+    66% {
+        color: #1599e5;
+    }
+    100% {
+        color: #FF33A1;
+    }
+   
 }
 
 .homePhrase h1{
     font-family: "Playwrite CU", cursive;
     font-optical-sizing: auto;
-    font-size: 60px;
-    font-weight: bold;
+    font-size: 65px;
+    font-weight: 600;
+    font-weight:bolder;
     font-style:normal;
     margin-left: 10px;
-  }
+    animation: colorChange 4s infinite;
+}
   
 .homePhrase p{
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin: 10px 0px 30px;
-    font-size: 22px;
-    color : white;
+    margin: 10px 10px 30px;
+    font-size: 20px;
+    color : rgb(69, 116, 174);
 }
+.text-video{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
+}
+video{
+    padding-top: 0,
+    
+}
+@media(max-width:700px){
+    .homePhrase h1{
+    font-size: 20px;
+    }
+    .homePhrase p{
+    font-size: 14px;
+    }
+    .navbar ul li{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        background: grey;
+        height: 100vhhd;
+        width: 150px;
+        top: 0px;
+        right: 0px;
+        text-align: left;
+        z-index: 2;
+    }
+}
+
+
+
+
+
 
 
 
