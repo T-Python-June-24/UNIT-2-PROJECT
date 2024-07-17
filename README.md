@@ -45,7 +45,7 @@ To get started with the project, follow these steps:
 
 ## Interface Photos
 
-![MacbookM1](C:/Users/saeed/python-cam-lab/UNIT-2-PROJECT/MacbookM1.png) | ![MO2](C:/Users/saeed/python-cam-lab/UNIT-2-PROJECT/MO2.png)
+![MacbookM1](./MacbookM1.png) | ![MO2](./MO2.png)
 
 
 ## Contributing
