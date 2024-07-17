@@ -255,6 +255,5 @@ def about_view(request:HttpRequest)->render:
         ]
     return render(request,"main/about.html",context={"info":infos})
 
-# def contact_view(request:HttpRequest):
-#     if request.method=="POST":
-#         form=ContactForm
+def contact_view(request:HttpRequest):
+    return render(request,"main/contact.html")
