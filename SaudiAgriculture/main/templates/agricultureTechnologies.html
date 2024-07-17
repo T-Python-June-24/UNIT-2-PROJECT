@@ -1,6 +1,96 @@
-{% extends 'base.html' %}
-{% load static%}
-{%block title %} Agriculture Tech {% endblock %}
-{% block content %} 
+{% extends 'base.html' %} {% load static%} 
+{%block title %} Agriculture Tech {%endblock %} 
+{% block content %}
+<div class="hero-background">
+  <video autoplay muted loop id="hero-video">
+    <source
+      src="https://res.cloudinary.com/dp5hwcef0/video/upload/v1721127541/Mozell_Films-farm-and-solar-field-aerials-207358-filmsupply_kkhjkb.mp4"
+      type="video/mp4"
+    />
+  </video>
+  <div class="hero-content">
+    <h1>Agriculture Technologies in Saudi Arabia</h1>
+    <a href="#" class="hero-button">Get Started</a>
+  </div>
+</div>
+<div class="tech-container">
+  <h2>
+    Latest Advancements in agriculture technologies and solutions are targeted
+    by SAUDI Agriculture 2024
+  </h2>
+  <div class="tech-content">
+    <div class="tech-content-text">
+      <h3>
+        Saudi Arabia is distributing approximately $220 Million on high-tech
+        greenhouses between 2021 and 2025
+      </h3>
+      One area of the CAE farming approach is seen in Vertical Farms. This new
+      space-saving and controlled environment farming approach is gaining
+      traction in Saudi Arabia. With lifestyle changes and the demand of salads
+      and other greens rising, the Agricultural Development Fund of Saudi Arabia
+      is distributing approximately $220 Million on high-tech greenhouses
+      between 2021 and 2025. This will include funds for vertical farming.
+      Imports of the technologies and materials required for the expansion of
+      vertical farming will accelerate to expand the sub-sector.
+    </div>
+    <div class="tech-content-image">
+      <img src="{% static 'images/tech-2.jpg' %}" />
+    </div>
+  </div>
+  <div class="tech-content">
+    <div class="tech-content-text">
+      <h3>Drones & Aerial Imaging are amongst latest needed technologies</h3>
+      Drones are amongst latest technologies expected to significantly impact
+      the agricultural sector. Drones play a major role in farm mapping, aerial
+      crop health monitoring, soil assessment, crop spraying, irrigation,
+      inspection, and other agricultural applications. Farming comes with huge
+      responsibility involving continuous supervision to ensure everything is
+      growing correctly and no disease has struck the crop. Farmers have
+      introduced drones to fly around taking photos and capture data for
+      analysis. The exhibition will facilitate the discovery of latest
+      technologies that will reduce labor intensive farming activities and
+      expedite the monitoring process crucial for successful efficient
+      production.
+    </div>
+    <div class="tech-content-image">
+      <img src="{% static 'images/tech1.jpg' %}" />
+    </div>
+  </div>
+  <div class="tech-content">
+    <div class="tech-content-text">
+      <h3>(CEA) Controlled Environment Agriculture</h3>
+      Business opportunities to provide the technologies for CEA farms are
+      accelerating as the demand for food and food security increases.
+      Innovative CEA farming regulates the growing environment. Temperature,
+      humidity, carbon dioxide, light, and nutrient concentration is controlled
+      maximise crop yields and reduces pests and plant disease using technology.
+      Solar panels for energy efficiency, LED lighting, low-energy
+      dehumidifiers, nutrient and temperature control systems are also needed to
+      create a new generation of food production facilities that rely on
+      imported technologies.
+    </div>
+    <div class="tech-content-image">
+      <img src="{% static 'images/tech-4.jpg' %}" />
+    </div>
+  </div>
+  <div class="tech-content">
+    <div class="tech-content-text">
+      <h3>
+        By 2030 the global agriculture robotics market is predicted to be valued
+        at $24 Billion
+      </h3>
+      The Kingdom’s agriculture technologies adoption is following the global
+      trends, encouraged by Kingdom’s officials and sector technology leaders
+      such as NEOM agriculture. By 2030 the global agriculture robotics market
+      is predicted to be valued at $24 Billion. Particular application of
+      interest in the Kingdom is for greenhouse automation in planting,
+      spraying, picking; to increase crop yields, production efficiencies and
+      farm logistics.
+    </div>
+    <div class="tech-content-image">
+      <img src="{% static 'images/tech-3.jpg' %}" />
+    </div>
+  </div>
+</div>
 
 {% endblock %}
