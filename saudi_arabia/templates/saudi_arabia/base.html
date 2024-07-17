@@ -1,42 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
-<html
-  lang="en"
-  class="{% if request.COOKIES.dark_mode == 'true' %}dark{% endif %}"
->
+<html lang="en" class="{% if dark_mode %}dark{% endif %}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Discover Saudi Arabia{% endblock %}</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.5/dist/gsap.min.js"></script>
     <script
       type="module"
       src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"
     ></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-      };
-    </script>
+  <script>
+    tailwind.config = {
+        darkMode: 'class',
+    }
+  </script>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="{% static 'images/logo/kingdom-center.png' %}"
-    />
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logo/kingdom-center.png' %}" >
     {% block extra_css %}{% endblock %}
     <style>
       #blurred-circles-container {
@@ -173,12 +158,7 @@
               <input
                 class="cb"
                 type="checkbox"
-                {%
-                if
-                dark_mode
-                %}checked{%
-                endif
-                %}
+                {% if dark_mode %}checked{% endif %}
                 onchange="toggleDarkMode(this.checked)"
               />
               <span class="toggle">
@@ -218,12 +198,7 @@
             <input
               class="cb"
               type="checkbox"
-              {%
-              if
-              dark_mode
-              %}checked{%
-              endif
-              %}
+              {% if dark_mode %}checked{% endif %}
               onchange="toggleDarkMode(this.checked)"
             />
             <span class="toggle">
@@ -240,15 +215,64 @@
     </main>
 
     <script src="{% static 'js/main.js' %}"></script>
-    {% block extra_js %}{% endblock %}
     <script>
       function toggleDarkMode(isDarkMode) {
-        if (isDarkMode) {
-          window.location.href = "{% url 'saudi_arabia:dark_mode' %}";
-        } else {
-          window.location.href = "{% url 'saudi_arabia:light_mode' %}";
+        setTimeout(() => {
+          if (isDarkMode) {
+            window.location.href = "{% url 'saudi_arabia:dark_mode' %}";
+          } else {
+            window.location.href = "{% url 'saudi_arabia:light_mode' %}";
+          }
+        }, 200); // 200ms delay
+      }
+
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          const menuToggle = this.querySelector("svg");
+
+          mobileMenu.classList.toggle("show");
+          menuToggle.style.transform = mobileMenu.classList.contains("show") ? "rotate(45deg)" : "rotate(0deg)";
+        });
+
+      function createGlowEffects() {
+        const container = document.getElementById("blurred-circles-container");
+        const colors = ["#4ecdc4", "#45aaf2", "#7ed56f", "#2ecc71", "#16a085"];
+
+        for (let i = 0; i < 10; i++) {
+          const circle = document.createElement("div");
+          circle.classList.add("blurred-circle");
+          circle.style.width = `${Math.random() * 300 + 100}px`;
+          circle.style.height = circle.style.width;
+          circle.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          circle.style.left = `${Math.random() * 100}%`;
+          circle.style.top = `${Math.random() * 100}%`;
+
+          container.appendChild(circle);
+
+          animateCircle(circle);
         }
       }
+
+      function animateCircle(circle) {
+        const xDistance = Math.random() * 400 - 100;
+        const yDistance = Math.random() * 400 - 100;
+
+        gsap.to(circle, {
+          x: xDistance,
+          y: yDistance,
+          duration: 3,
+          ease: "sine.inOut",
+          repeat: -1,
+          yoyo: true
+        });
+      }
+
+
+      createGlowEffects();
     </script>
+    {% block extra_js %}{% endblock %}
   </body>
 </html>
