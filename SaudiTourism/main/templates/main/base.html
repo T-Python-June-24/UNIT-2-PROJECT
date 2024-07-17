@@ -1,6 +1,6 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,22 +10,27 @@
       scroll-behavior: smooth;
     }
   </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
   {% tailwind_css %}
 </head>
-<body>
+<body class="dark:bg-gray-900 dark:text-white">
       <nav
-        class="sticky top-0 z-10 block w-full max-w-full px-4 py-2 text-black bg-white border rounded-none shadow-md h-max border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
+        class="sticky top-0 z-10 block w-full max-w-full px-4 py-2 text-black bg-white border rounded-none shadow-md h-max dark:bg-gray-600 dark:border-0 dark:text-white border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
         <div class="flex items-center justify-between text-blue-gray-900">
-          <a href="/"
-            class="mr-4 block cursor-pointer">
-            <img class="w-1/5 h-1/5" src="{% static 'images/logo.png'%}">
-          </a>
+          <a href="/" class="mr-4 block cursor-pointer dark:text-white text-black"> Visit Saudi </a>
           <div class="flex items-center gap-4">
             <div class="hidden mr-4 lg:block">
               <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
                 <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
                   <a href="{% url 'main:about_view' %}" class="flex items-center">
-                    About
+                    About Saudi
                   </a>
                 </li>
                 <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
@@ -36,6 +41,16 @@
                 <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
                   <a href="#" class="flex items-center">
                     Docs
+                  </a>
+                </li>
+                <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                  <a href="javascript:void(0);" id="theme-toggle-on" class="flex items-center">
+                  <span class="material-symbols-outlined">toggle_on</span>
+                  </a>
+                  <a href="javascript:void(0);" id="theme-toggle-off" class="flex items-center hidden">
+                    <span class="material-symbols-outlined">
+                      toggle_off
+                    </span>
                   </a>
                 </li>
               </ul>
@@ -58,11 +73,39 @@
   {% block content %}
   
   {% endblock %}
-  <footer class="bg-zinc-50 text-center lg:text-left">
+  <footer class="bg-zinc-50 dark:bg-gray-600 text-center lg:text-left">
     <div class="bg-black/5 p-4 text-center text-surface">
       © 2023 Copyright:
       <a href="/">Saudi Arabia Tourism</a>
     </div>
   </footer>
+  <script>
+    const themeToggleOn = document.getElementById('theme-toggle-on');
+    const themeToggleOff = document.getElementById('theme-toggle-off');
+
+    function updateToggleButton() {
+      if (document.documentElement.classList.contains('dark')) {
+        themeToggleOn.classList.add('hidden');
+        themeToggleOff.classList.remove('hidden');
+      } else {
+        themeToggleOn.classList.remove('hidden');
+        themeToggleOff.classList.add('hidden');
+      }
+    }
+
+    themeToggleOn.addEventListener('click', () => {
+      document.documentElement.classList.add('dark');
+      localStorage.theme = 'dark';
+      updateToggleButton();
+    });
+
+    themeToggleOff.addEventListener('click', () => {
+      document.documentElement.classList.remove('dark');
+      localStorage.theme = 'light';
+      updateToggleButton();
+    });
+
+    updateToggleButton();
+  </script>
 </body>
 </html>
