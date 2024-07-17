@@ -7,7 +7,7 @@
 <div class="row">
     {% for dining_place in dining_places %}
     <div class="col-md-4">
-        <div class="card mb-4 card-fixed-size">
+        <div class="card mb-4 ">
             <a href="{% url 'dining_detail' dining_place.pk %}" >
             <img class="card-img-top fixed-size" src="{{ dining_place.images.first.image.url }}" alt="{{ dining_place.name }}">
             </a>

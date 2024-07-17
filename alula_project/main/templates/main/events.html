@@ -5,14 +5,14 @@
 <div class="row">
     {% for event in events %}
     <div class="col-md-4">
-        <div class="card mb-4">
-            <img class="card-img-top" src="{{ event.images.url }}" alt="{{ event.name }}">
+        <div class="card mb-4 ">
+            <img class="card-img-top fixed-size" src="{{ event.images.url }}" alt="{{ event.name }}">
             <div class="card-body">
                 <h5 class="card-title">{{ event.name }}</h5>
-                <p class="card-text">{{ event.description }}</p>
-                <p><strong>Date:</strong> {{ event.date }}</p>
-                <p><strong>Location:</strong> {{ event.location }}</p>
-                <p>{{ event.ticket_info }}</p>
+                <p class="card-text"><strong>Overview: </strong> {{ event.description }}</p>
+                <p><strong>Date: </strong> {{ event.date }}</p>
+                <p><strong>Location: </strong> {{ event.location }}</p>
+                <p><strong>Ticket info: </strong>{{ event.ticket_info }}</p>
             </div>
         </div>
     </div>

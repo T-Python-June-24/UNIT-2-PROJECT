@@ -3,20 +3,24 @@
 {% block title %}{{ dining.name }}{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-8">
-        <h1>{{ dining.name }}</h1>
-        <p> <strong>Cuisine: </strong> {{ dining.cuisine }}</p>
-        <p> <strong>Location: </strong> {{ dining.location }}</p>
-        <p> <strong>Menu: </strong> {{ dining.menu }}</p>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>{{ dining.name }}</h1>
+            <p> <strong>Cuisine: </strong> {{ dining.cuisine }}</p>
+            <p> <strong>Location: </strong> {{ dining.location }}</p>
+            <p> <strong>Menu: </strong> {{ dining.menu }}</p>
 
-        <h2>Images</h2>
-        <div class="row">
-            {% for image in dining.images.all %}
-                <div class="col-md-4">
-                    <img src="{{ image.image.url }}" class="img-fluid mb-2" alt="Image for {{ dining.name }}">
-                </div>
-            {% endfor %}
+            <h2>Images</h2>
+            <div class="row">
+                {% for image in dining.images.all %}
+                    <div class="col-md-4">
+                        <a href="{{ image.image.url }}" data-lightbox="dining-gallery" data-title="{{ dining.name }}">
+                            <img src="{{ image.image.url }}" class="img-fluid mb-2" alt="Image for {{ dining.name }}">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>

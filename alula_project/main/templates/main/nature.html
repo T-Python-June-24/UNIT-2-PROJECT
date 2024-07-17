@@ -6,11 +6,11 @@
     {% for activity in activities %}
     <div class="col-md-4">
         <div class="card mb-4">
-            <img class="card-img-top" src="{{ activity.images.url }}" alt="{{ activity.name }}">
+            <img class="card-img-top fixed-size" src="{{ activity.images.url }}" alt="{{ activity.name }}">
             <div class="card-body">
                 <h5 class="card-title">{{ activity.name }}</h5>
-                <p class="card-text">{{ activity.description }}</p>
-                <p><strong>Difficulty:</strong> {{ activity.difficulty_level }}</p>
+                <p class="card-text"><strong>Overview: </strong> {{ activity.description }}</p>
+                <p><strong>Difficulty: </strong> {{ activity.difficulty_level }}</p>
             </div>
         </div>
     </div>

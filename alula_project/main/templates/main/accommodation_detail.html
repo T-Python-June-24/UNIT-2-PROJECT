@@ -3,26 +3,31 @@
 {% block title %}{{ accommodation.name }}{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-8">
-        <h1>{{ accommodation.name }}</h1>
-        <p><strong>Location: </strong> {{ accommodation.location }}</p>
-        <p><strong>Type: </strong> {{ accommodation.type }}</p>
 
-        <h2>Amenities</h2>
-        <ul>
-            {% for amenity in accommodation.amenities.all %}
-                <li>{{ amenity.name }}</li>
-            {% endfor %}
-        </ul>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>{{ accommodation.name }}</h1>
+            <p><strong>Location: </strong> {{ accommodation.location }}</p>
+            <p><strong>Type: </strong> {{ accommodation.type }}</p>
 
-        <h2>Images</h2>
-        <div class="row">
-            {% for image in accommodation.images.all %}
-                <div class="col-md-4">
-                    <img src="{{ image.image.url }}" class="img-fluid mb-2" alt="Image for {{ accommodation.name }}">
-                </div>
-            {% endfor %}
+            <h2>Amenities</h2>
+            <ul>
+                {% for amenity in accommodation.amenities.all %}
+                    <li>{{ amenity.name }}</li>
+                {% endfor %}
+            </ul>
+
+            <h2>Images</h2>
+            <div class="row">
+                {% for image in accommodation.images.all %}
+                    <div class="col-md-4">
+                        <a href="{{ image.image.url }}" data-lightbox="accommodation-gallery" data-title="{{ accommodation.name }}">
+                            <img src="{{ image.image.url }}" class="img-fluid mb-2" alt="Image for {{ accommodation.name }}">
+                        </a>                    
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>

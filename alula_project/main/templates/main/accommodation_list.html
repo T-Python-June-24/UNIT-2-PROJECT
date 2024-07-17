@@ -7,7 +7,7 @@
 <div class="row">
     {% for accommodation in accommodations %}
     <div class="col-md-4">
-        <div class="card mb-4 card-fixed-size">
+        <div class="card mb-4 ">
             <a href="{% url 'accommodation_detail' accommodation.pk %}">
                 <img class="card-img-top fixed-size" src="{{ accommodation.images.first.image.url }}" alt="{{ accommodation.name }}">
             </a>
