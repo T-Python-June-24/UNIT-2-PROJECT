@@ -11,11 +11,11 @@
       type="module"
       src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"
     ></script>
-  <script>
-    tailwind.config = {
+    <script>
+      tailwind.config = {
         darkMode: 'class',
-    }
-  </script>
+      }
+    </script>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap"
@@ -110,169 +110,169 @@
           <a
             href="{% url 'saudi_arabia:index' %}"
             class="text-3xl font-bold gradient-text transition-colors duration-500 logo-text"
-            >Saudi Arabia</a
-          >
-          <button class="md:hidden" id="menu-toggle">
-            <svg
-              class="w-6 h-6 transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+          >Saudi Arabia</a
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-          <div class="hidden md:flex space-x-10 items-center" id="menu">
-            <a
-              href="{% url 'saudi_arabia:index' %}"
-              class="nav-item {% if request.resolver_match.url_name == 'index' %}active{% endif %}"
+            <button class="md:hidden" id="menu-toggle">
+              <svg
+                class="w-6 h-6 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+            <div class="hidden md:flex space-x-10 items-center" id="menu">
+              <a
+                href="{% url 'saudi_arabia:index' %}"
+                class="nav-item {% if request.resolver_match.url_name == 'index' %}active{% endif %}"
               >Home</a
-            >
-            <a
-              href="{% url 'saudi_arabia:history' %}"
-              class="nav-item {% if request.resolver_match.url_name == 'history' %}active{% endif %}"
-              >History</a
-            >
-            <a
-              href="{% url 'saudi_arabia:cuisine' %}"
-              class="nav-item {% if request.resolver_match.url_name == 'cuisine' %}active{% endif %}"
-              >Cuisines</a
-            >
-            <a
-              href="{% url 'saudi_arabia:kings' %}"
-              class="nav-item {% if request.resolver_match.url_name == 'kings' %}active{% endif %}"
-              >Kings of Saudi Arabia</a
-            >
-            <a
-              href="{% url 'saudi_arabia:future' %}"
-              class="nav-item {% if request.resolver_match.url_name == 'future' %}active{% endif %}"
-              >Future</a
-            >
-            <label class="switch">
-              <input
-                class="cb"
-                type="checkbox"
-                {% if dark_mode %}checked{% endif %}
-                onchange="toggleDarkMode(this.checked)"
-              />
-              <span class="toggle">
-                <span class="left">off</span>
-                <span class="right">on</span>
-              </span>
-            </label>
-          </div>
-        </div>
-        <div class="md:hidden mt-4" id="mobile-menu">
-          <a
-            href="{% url 'saudi_arabia:index' %}"
-            class="block py-2 nav-item {% if request.resolver_match.url_name == 'index' %}active{% endif %}"
-            >Home</a
-          >
-          <a
-            href="{% url 'saudi_arabia:history' %}"
-            class="block py-2 nav-item {% if request.resolver_match.url_name == 'history' %}active{% endif %}"
-            >History</a
-          >
-          <a
-            href="{% url 'saudi_arabia:cuisine' %}"
-            class="block py-2 nav-item {% if request.resolver_match.url_name == 'cuisine' %}active{% endif %}"
-            >Cuisines</a
-          >
-          <a
-            href="{% url 'saudi_arabia:kings' %}"
-            class="block py-2 nav-item {% if request.resolver_match.url_name == 'kings' %}active{% endif %}"
-            >Kings of Saudi Arabia</a
-          >
-          <a
-            href="{% url 'saudi_arabia:future' %}"
-            class="block py-2 nav-item {% if request.resolver_match.url_name == 'future' %}active{% endif %}"
-            >Future</a
-          >
-          <label class="switch mt-2 block">
-            <input
-              class="cb"
-              type="checkbox"
-              {% if dark_mode %}checked{% endif %}
-              onchange="toggleDarkMode(this.checked)"
-            />
-            <span class="toggle">
-              <span class="left">off</span>
-              <span class="right">on</span>
-            </span>
-          </label>
-        </div>
-      </nav>
-    </header>
+                >
+                <a
+                  href="{% url 'saudi_arabia:history' %}"
+                  class="nav-item {% if request.resolver_match.url_name == 'history' %}active{% endif %}"
+                >History</a
+                  >
+                  <a
+                    href="{% url 'saudi_arabia:cuisine' %}"
+                    class="nav-item {% if request.resolver_match.url_name == 'cuisine' %}active{% endif %}"
+                  >Cuisines</a
+                    >
+                    <a
+                      href="{% url 'saudi_arabia:kings' %}"
+                      class="nav-item {% if request.resolver_match.url_name == 'kings' %}active{% endif %}"
+                    >Kings of Saudi Arabia</a
+                      >
+                      <a
+                        href="{% url 'saudi_arabia:future' %}"
+                        class="nav-item {% if request.resolver_match.url_name == 'future' %}active{% endif %}"
+                      >Future</a
+                        >
+                        <label class="switch">
+                          <input
+                            class="cb"
+                            type="checkbox"
+                            {% if dark_mode %}checked{% endif %}
+                            onchange="toggleDarkMode(this.checked)"
+                          />
+                          <span class="toggle">
+                            <span class="left">off</span>
+                            <span class="right">on</span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="md:hidden mt-4" id="mobile-menu">
+                      <a
+                        href="{% url 'saudi_arabia:index' %}"
+                        class="block py-2 nav-item {% if request.resolver_match.url_name == 'index' %}active{% endif %}"
+                      >Home</a
+                        >
+                        <a
+                          href="{% url 'saudi_arabia:history' %}"
+                          class="block py-2 nav-item {% if request.resolver_match.url_name == 'history' %}active{% endif %}"
+                        >History</a
+                          >
+                          <a
+                            href="{% url 'saudi_arabia:cuisine' %}"
+                            class="block py-2 nav-item {% if request.resolver_match.url_name == 'cuisine' %}active{% endif %}"
+                          >Cuisines</a
+                            >
+                            <a
+                              href="{% url 'saudi_arabia:kings' %}"
+                              class="block py-2 nav-item {% if request.resolver_match.url_name == 'kings' %}active{% endif %}"
+                            >Kings of Saudi Arabia</a
+                              >
+                              <a
+                                href="{% url 'saudi_arabia:future' %}"
+                                class="block py-2 nav-item {% if request.resolver_match.url_name == 'future' %}active{% endif %}"
+                              >Future</a
+                                >
+                                <label class="switch mt-2 block">
+                                  <input
+                                    class="cb"
+                                    type="checkbox"
+                                    {% if dark_mode %}checked{% endif %}
+                                    onchange="toggleDarkMode(this.checked)"
+                                  />
+                                  <span class="toggle">
+                                    <span class="left">off</span>
+                                    <span class="right">on</span>
+                                  </span>
+                                </label>
+                              </div>
+                            </nav>
+                          </header>
 
-    <main class="container mx-auto px-4 pt-12 mt-4 pb-12">
-      {% block content %}{% endblock %}
-    </main>
+                          <main class="container mx-auto px-4 pt-12 mt-4 pb-12">
+                            {% block content %}{% endblock %}
+                          </main>
 
-    <script src="{% static 'js/main.js' %}"></script>
-    <script>
-      function toggleDarkMode(isDarkMode) {
-        setTimeout(() => {
-          if (isDarkMode) {
-            window.location.href = "{% url 'saudi_arabia:dark_mode' %}";
-          } else {
-            window.location.href = "{% url 'saudi_arabia:light_mode' %}";
-          }
-        }, 200); // 200ms delay
-      }
+                          <script src="{% static 'js/main.js' %}"></script>
+                          <script>
+                            function toggleDarkMode(isDarkMode) {
+                              setTimeout(() => {
+                                if (isDarkMode) {
+                                  window.location.href = "{% url 'saudi_arabia:dark_mode' %}";
+                                } else {
+                                  window.location.href = "{% url 'saudi_arabia:light_mode' %}";
+                                }
+                              }, 200); // 200ms delay
+                            }
 
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("click", function () {
-          const mobileMenu = document.getElementById("mobile-menu");
-          const menuToggle = this.querySelector("svg");
+                            document
+                              .getElementById("menu-toggle")
+                              .addEventListener("click", function () {
+                                const mobileMenu = document.getElementById("mobile-menu");
+                                const menuToggle = this.querySelector("svg");
 
-          mobileMenu.classList.toggle("show");
-          menuToggle.style.transform = mobileMenu.classList.contains("show") ? "rotate(45deg)" : "rotate(0deg)";
-        });
+                                mobileMenu.classList.toggle("show");
+                                menuToggle.style.transform = mobileMenu.classList.contains("show") ? "rotate(45deg)" : "rotate(0deg)";
+                              });
 
-      function createGlowEffects() {
-        const container = document.getElementById("blurred-circles-container");
-        const colors = ["#4ecdc4", "#45aaf2", "#7ed56f", "#2ecc71", "#16a085"];
+                            function createGlowEffects() {
+                              const container = document.getElementById("blurred-circles-container");
+                              const colors = ["#4ecdc4", "#45aaf2", "#7ed56f", "#2ecc71", "#16a085"];
 
-        for (let i = 0; i < 10; i++) {
-          const circle = document.createElement("div");
-          circle.classList.add("blurred-circle");
-          circle.style.width = `${Math.random() * 300 + 100}px`;
-          circle.style.height = circle.style.width;
-          circle.style.backgroundColor =
-            colors[Math.floor(Math.random() * colors.length)];
-          circle.style.left = `${Math.random() * 100}%`;
-          circle.style.top = `${Math.random() * 100}%`;
+                              for (let i = 0; i < 10; i++) {
+                                const circle = document.createElement("div");
+                                circle.classList.add("blurred-circle");
+                                circle.style.width = `${Math.random() * 300 + 100}px`;
+                                circle.style.height = circle.style.width;
+                                circle.style.backgroundColor =
+                                  colors[Math.floor(Math.random() * colors.length)];
+                                circle.style.left = `${Math.random() * 100}%`;
+                                circle.style.top = `${Math.random() * 100}%`;
 
-          container.appendChild(circle);
+                                container.appendChild(circle);
 
-          animateCircle(circle);
-        }
-      }
+                                animateCircle(circle);
+                              }
+                            }
 
-      function animateCircle(circle) {
-        const xDistance = Math.random() * 400 - 100;
-        const yDistance = Math.random() * 400 - 100;
+                            function animateCircle(circle) {
+                              const xDistance = Math.random() * 400 - 100;
+                              const yDistance = Math.random() * 400 - 100;
 
-        gsap.to(circle, {
-          x: xDistance,
-          y: yDistance,
-          duration: 3,
-          ease: "sine.inOut",
-          repeat: -1,
-          yoyo: true
-        });
-      }
+                              gsap.to(circle, {
+                                x: xDistance,
+                                y: yDistance,
+                                duration: 3,
+                                ease: "sine.inOut",
+                                repeat: -1,
+                                yoyo: true
+                              });
+                            }
 
 
-      createGlowEffects();
-    </script>
-    {% block extra_js %}{% endblock %}
-  </body>
-</html>
+                            createGlowEffects();
+                          </script>
+                          {% block extra_js %}{% endblock %}
+                        </body>
+                      </html>
