@@ -1,4 +1,38 @@
 {% extends 'main/base.html' %}
+{% load static %}
 {% block title %} Teams {% endblock %}
 {% block content %}
+<div class="container">
+<div class="row">
+    <div class="col"><h1>Prominent eSports Teams in Saudi Arabia</h1></div>
+</div>
+<div class="row">
+    <div class="col"><h2>Team Falcons</h2></div>
+    <div class="col"><img src="{% static 'images/falcons_logo.jpg' %}" alt="Team Falcons logo"></div>
+</div>
+<div class="row">
+    <div class="col">Members</div>
+    <div class="col">Win Rate</div>
+    <div class="col">Highest Streak</div>
+</div>
+<div class="row">
+    <div class="col">43</div>
+    <div class="col">57.02%</div>
+    <div class="col">13</div>
+</div>
+<div class="row">
+    <div class="col">Twisted Minds</div>
+    <div class="col"><img src="{% static 'images/twisted_minds_logo.jpg' %}" alt="Twisted Minds logo"></div>
+</div>
+<div class="row">
+    <div class="col">Members</div>
+    <div class="col">Win Rate</div>
+    <div class="col">Highest Streak</div>
+</div>
+<div class="row">
+    <div class="col">53</div>
+    <div class="col">54.84%</div>
+    <div class="col">0</div>
+</div>
+</div>
 {% endblock %}
