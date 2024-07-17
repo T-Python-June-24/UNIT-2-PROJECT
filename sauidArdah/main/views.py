@@ -6,6 +6,9 @@ from email.message import EmailMessage
 import ssl
 import smtplib
 import os
+from django.contrib.auth.models import User
+from django.contrib.auth import login
+from django.contrib import messages
 
 # Create your views here.
 
@@ -293,3 +296,27 @@ def contact_view(request:HttpRequest):
 
 
  return render(request,"main/contact.html")
+
+
+
+def sign_up(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        repeated_password = request.POST['repeatedpass']
+        
+        if password == repeated_password:
+            if User.objects.filter(username=username).exists():
+                messages.error(request, 'Username already exists')
+            elif User.objects.filter(email=email).exists():
+                messages.error(request, 'Email already exists')
+            else:
+                user = User.objects.create_user(username=username, email=email, password=password)
+                user.save()
+                login(request, user)
+                return redirect("main:home_view")
+        else:
+            messages.error(request, 'Passwords do not match')
+    
+    return render(request, 'main/signup.html')

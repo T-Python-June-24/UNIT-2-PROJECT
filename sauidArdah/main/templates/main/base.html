@@ -5,7 +5,8 @@
 <html lang="en" {% if "true" in request.COOKIES.dark_theme %} class="dark  scroll-smooth" {% else %} class="scroll-smooth" {% endif %} >
 	<head>
     <title>{% block title %}    {% endblock %}</title>
-    
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://kit.fontawesome.com/956e34dfa0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">

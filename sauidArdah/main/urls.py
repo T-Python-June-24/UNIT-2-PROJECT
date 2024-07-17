@@ -10,6 +10,7 @@ urlpatterns = [
     path("daha/ardah",views.dahaArdah,name="dahaArdah_view"),
     path("pictures/library/",views.picture_view,name="pictures_view"),
     path("about/us/",views.about_view,name="about_view"),
-    path("contact/us",views.contact_view,name="contact_view")
+    path("contact/us",views.contact_view,name="contact_view"),
+    path("sing/up",views.sign_up,name="signup_view")
 
 ]
