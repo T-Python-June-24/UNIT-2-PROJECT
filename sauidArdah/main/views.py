@@ -1,6 +1,11 @@
 from django.shortcuts import render,redirect
 from django.http import HttpRequest,HttpResponse ,FileResponse
 import json
+from . import forms
+from email.message import EmailMessage
+import ssl
+import smtplib
+import os
 
 # Create your views here.
 
@@ -256,4 +261,35 @@ def about_view(request:HttpRequest)->render:
     return render(request,"main/about.html",context={"info":infos})
 
 def contact_view(request:HttpRequest):
-    return render(request,"main/contact.html")
+ if request.method=="POST":
+    form=forms.ContactForm(request.POST)
+    if form.is_valid():
+      name = request.POST['name']
+      phone = request.POST['phone']
+      subject=request.POST["subject"]
+      message = request.POST['message']
+      emailSender=os.environ.get('my_email')
+      emailSender=os.environ.get('my_email')
+      password=os.environ.get('pass_key_gmail')
+      email_subject=subject
+      body=name+phone+message
+      em=EmailMessage()
+      em['From']=emailSender
+      em['To']="saeed.abdullah.alghamdi@outlook.sa"
+      em['Subject']=subject
+      em.set_content(message+f"\n By : {name}\n {phone} ")
+      context=ssl.create_default_context()
+      try:
+          with smtplib.SMTP_SSL('smtp.gmail.com',465,context=context) as smtp:
+              smtp.login(emailSender, password)
+              smtp.sendmail(emailSender,"saeed.abdullah.alghamdi@outlook.sa",em.as_string())
+      except Exception as e:
+          print("something went wrong! ")
+
+
+
+        # Process the data here (e.g., send email)
+      print(f"Name: {name}, Phone: {phone}, Subject: {subject}, Message: {message}")
+
+
+ return render(request,"main/contact.html")

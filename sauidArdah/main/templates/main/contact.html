@@ -11,6 +11,7 @@
 
 <!-- component -->
  <main class="pt-32 pb-32">
+    
 
 <div class="w-full bg-[#faf3ef] h-screen dark:bg-[#1e1e1e]" >
     <div class="bg-gradient-to-b  h-80 "></div>
@@ -18,27 +19,28 @@
         <div class="bg-[#d9d9d9] w-full shadow rounded p-8 sm:p-12 -mt-72 dark:bg-[#333333]">
             <p class="text-3xl font-bold leading-7 text-center text-[#333333] dark:text-gray-100 ">Contact Us</p>
             <form action="{% url 'main:contact_view' %}" method="post">
+                {% csrf_token %}
                 <div class="md:flex items-center mt-12">
                     <div class="w-full md:w-1/2 flex flex-col">
                         <label class="font-semibold leading-none text-[#333333] dark:text-gray-100">Name</label>
-                        <input type="text" class="leading-none text-gray-700 dark:text-gray-400 p-3 focus:outline-none focus:border-gray-600 mt-4 border-0 bg-[#f2f2f2] dark:bg-[#4C4C4C] rounded" />
+                        <input name="name" type="text" class="leading-none text-gray-700 dark:text-gray-400 p-3 focus:outline-none focus:border-gray-600 mt-4 border-0 bg-[#f2f2f2] dark:bg-[#4C4C4C] rounded" />
                     </div>
                     <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none text-[#333333] dark:text-gray-100">Phone</label>
-                        <input type="email" class="leading-none text-gray-700 p-3  dark:text-gray-400 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-[#f2f2f2] dark:bg-[#4C4C4C]  rounded"/>
+                        <input name="phone" type="text" class="leading-none text-gray-700 p-3  dark:text-gray-400 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-[#f2f2f2] dark:bg-[#4C4C4C]  rounded"/>
                     </div>
                 </div>
                 <div class="md:flex items-center mt-8">
                     <div class="w-full flex flex-col">
                         <label class="font-semibold leading-none text-[#333333] dark:text-gray-100">Subject</label>
-                        <input type="text" class="leading-none text-gray-700 p-3 dark:text-gray-400 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-[#f2f2f2] dark:bg-[#4C4C4C]  rounded"/>
+                        <input name="subject" type="text" class="leading-none text-gray-700 p-3 dark:text-gray-400 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-[#f2f2f2] dark:bg-[#4C4C4C]  rounded"/>
                     </div>
                     
                 </div>
                 <div>
                     <div class="w-full flex flex-col mt-8">
                         <label class="font-semibold leading-none text-[#333333] dark:text-gray-100">Message</label>
-                        <textarea type="text" class="h-40 text-base leading-none dark:text-gray-400 text-gray-700 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-[#f2f2f2] dark:bg-[#4C4C4C] border-0 rounded"></textarea>
+                        <textarea name="message" type="text" class="h-40 text-base leading-none dark:text-gray-400  text-gray-700 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-[#f2f2f2] dark:bg-[#4C4C4C] border-0 rounded"></textarea>
                     </div>
                 </div>
                 <div class="flex items-center justify-center w-full">
