@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: 'Amiri', serif;
+  font-family: 'Tajwal', serif;
 
 } 
 
@@ -26,4 +26,49 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover; /* لضمان تغطية الصورة لمساحة الكاروسيل بالكامل */
+}
+
+.properties-wrapper {
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.property-card {
+
+  display: flex;
+  flex-direction: column;
+  margin: .6rem .4rem 0  0;
+  padding: 0;
+  background-color: #d0d0d078;
+  border-radius: 2rem;
+
+}
+
+.property-card img {
+  width: 380px;
+  height: 300px;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.property-card div {
+  padding-left: 1rem;
+  font-weight: bold;
+  font-size: large;
+
+}
+
+.btn {
+
+  position: relative;
+  right: 0;
+}
+
+#carouselExampleCrossfade img {
+
+  object-fit: fill;
 }

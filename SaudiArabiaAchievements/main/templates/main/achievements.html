@@ -6,7 +6,7 @@
 {% block content %}
 
 
-<div id="carouselExampleCrossfade" class="relative shadow-md shadow-slate-950" data-twe-carousel-init data-twe-ride="carousel">
+<div id="carouselExampleCrossfade" class="relative shadow-md shadow-slate-950 " data-twe-carousel-init data-twe-ride="carousel">
     <!--Carousel indicators-->
     <div class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-6"
         data-twe-carousel-indicators>
@@ -26,17 +26,17 @@
         <!--First item-->
         <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-twe-carousel-fade data-twe-carousel-item data-twe-carousel-active>
-            <img src="{%static 'img/achieve1.jpeg'%}" class="block w-full" alt="Wild Landscape" />
+            <img src="{%static 'img/achieve2.jpeg'%}" class="block object-contain " alt="image" />
         </div>
         <!--Second item-->
         <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-twe-carousel-fade data-twe-carousel-item>
-            <img src="{%static 'img/achieve2.jpeg'%}" class="block w-full" alt="Camera" />
+            <img src="{%static 'img/bg2.jpeg'%}" class="block w-full object-contain " alt="image" />
         </div>
         <!--Third item-->
         <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-twe-carousel-fade data-twe-carousel-item>
-            <img src="{%static 'img/achieve3.jpeg'%}" class="block w-full" alt="Exotic Fruits" />
+            <img src="{%static 'img/b3.jpeg'%}" class="block w-full object-contain " alt="image" />
         </div>
     </div>
 
@@ -68,37 +68,30 @@
     </button>
 </div>
 
-<div class=" flex justify-center w-full h-full">
-    <div
-  class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
-  <div
-    class="relative overflow-hidden bg-cover bg-no-repeat"
-    data-twe-ripple-init
-    data-twe-ripple-color="light">
-    <img
-      class="rounded-t-lg"
-      src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
-      alt="" />
-    <a href="#!">
-      <div
-        class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-    </a>
-  </div>
-  <div class="p-6 text-surface dark:text-white">
-    <h5 class="mb-2 text-xl font-medium leading-tight">Card title</h5>
-    <p class="mb-4 text-base">
-      Some quick example text to build on the card title and make up the
-      bulk of the card's content.
-    </p>
-    <button
-      type="button"
-      class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-      data-twe-ripple-init
-      data-twe-ripple-color="light">
-      Button
-    </button>
-  </div>
-</div>
-</div>
+
+<section class="w-full h-screen">
+    <div class="properties-wrapper relative isolate inset-y-20 ">
+        {% for i in achievements %}
+        <div class="property-card mx-6">
+            <img src="{% static i.image %}" alt="{{ i.title }}">
+
+            <div>
+                {{ i.title }}
+
+            </div>
+            <div>
+                <br><a href="#" class="btn">more</a>
+
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
 
 {% endblock content %}
+
+
+
+
