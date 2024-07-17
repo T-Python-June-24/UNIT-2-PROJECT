@@ -1,6 +1,133 @@
-{% extends 'base.html' %}
-{% load static%}
-{%block title %} About Saudi {% endblock %}
-{% block content %} 
+{% extends 'base.html' %} {% load static%} 
+{%block title %} About Saudi{% endblock %} 
+{% block content %}
 
-{% endblock %}
+<div class="-hero-content">
+  <div class="about-hero-content">
+    <p>
+      The Agricultural and Food Industries sectors are one of the most important
+      contributors in the development of the national economy.
+    </p>
+      <img src="{% static 'images/about-3.jpeg' %}" class="hero-image" />
+
+  </div>
+</div>
+<div class="about-content-container">
+  <div class="content">
+    <h2>The agricultural sector is a major contributor to GDP…</h2>
+    The Agricultural and Food Industries sectors are one of the most important
+    contributors in the development of the national economy in the Kingdom of
+    Saudi Arabia and meeting Vision 2030 goals, and has a major role in
+    achieving food security. The agricultural contribution to GDP witnessed over <strong> 38% growth in 2022 to reach $26.6 Billion.</strong>
+  </div>
+  <div class="content">
+    <h2>Major expansion is underway in multiple segments</h2>
+    <ul>
+      <li>
+        Aquaculture production jumped by 183% during the past 5 years from
+        30,000 tons to 85,000 tons.
+      </li>
+      <li>
+        During the same period, broiler chickens’ production grew to over 60% of
+        domestic demand.
+      </li>
+      <li>
+        Greenhouse’s production increased by 58% from 257,000 tons to about
+        407,000 tons.
+      </li>
+      <li>
+        Organic food farming increased by 18% to 52.800 tons during the same
+        period.
+      </li>
+    </ul>
+    </div>
+    
+    <div class="content-2">
+      <h2>Self-Sufficiency</h2>
+      <p>
+        Saudi Arabia succeeded in achieving self-sufficiency in many important
+        and vital crops and agricultural and animal products during 2021,
+        especially those based on modern technologies, due to its reliance on
+        integrated water management, which contributed to reducing agricultural
+        consumption from 86% to less than 70%.
+      </p>
+      <p>
+        According to data issued by the Ministry of Environment, Water and
+        Agriculture, the increase in production led to an increase in exports by
+        25.9 percent, reaching 307.8 thousand tons, compared to 244.6 thousand
+        tons in 2020.
+      </p>
+    <div class="card-container">
+      <div class="card">
+        <h2>The results of the Agricultural Statistics</h2>
+        <div class="stats">
+          <div class="stat">
+                  <img src="{% static 'icons/crops.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="5.7">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Agricultural crops</p>
+              </div>
+          <div class="stat">
+            <img src="{% static 'icons/fruit.png' %}" style="width: 50px;">
+            <p class="number" data-target="120">0</p>
+            <p class="label">Fruit</p>
+          </div>
+              <div class="stat">
+                  <img src="{% static 'icons/fish.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="40">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Fish</p>
+              </div>
+              <div class="stat">
+                  <img src="{% static 'icons/meat.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="43">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Meat</p>
+              </div>
+              <div class="stat">
+                  <img src="{% static 'icons/chicken.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="66">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Chicken</p>
+              </div>
+              <div class="stat">
+                  <img src="{% static 'icons/dairy.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="121">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Dairy products</p>
+              </div>
+          <div class="stat">
+            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+              <rect fill="none" height="256" width="256" />
+              <path
+                d="M208,152a80,80,0,0,1-160,0C48,88,96,24,128,24S208,88,208,152Z"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+            </svg>
+            <div class="number-container">
+                      <p class="number" data-target="112">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">egg</p>
+          </div>
+        </div>
+      </div>
+      <script src="{% static 'js/script.js' %}"></script>
+    </div>
+  </div>
+</div>
+{%endblock%}

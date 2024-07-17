@@ -6,7 +6,7 @@ def home_view(request: HttpRequest):
     return render(request, "home.html")
 
 def about_view(request: HttpRequest):
-    return render(request, "testbase.html")
+    return render(request, "about.html")
 
 def cities_view(request: HttpRequest):
    return render(request, "cities.html")
