@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Travel Guide page 
+{% endblock %}
+{% load static %}
+{% block content %}
+<main>
+  <div class="flex flex-col mx-44 mb-32">
+    <h1 class="mt-20 mb-8 text-5xl">Saudi Travel Guide</h1>
+    <h3 class="mb-8 text-lg">Useful Information for Your Visit</h3>
+    <p class="w-1/2 text-xl font-thin mb-20">We’re so excited that you’re considering a journey to Saudi. It is an enchanting land of rich heritage, warm hospitality and breathtaking views. We understand that navigating the logistics of daily life in a new country can seem overwhelming, so we’ve gathered some essential information to make exploring Saudi as seamless and enjoyable as possible. From getting around to communicating to paying for purchases and everything in between, we’ve got you covered.</p>
+  </div>
+  <div class="flex flex-col px-44 mb-16 bg-gray-50 dark:bg-zinc-700">
+    <h1 class="mt-20 mb-8 text-5xl">A Guide to Saudi’s Seasons</h1>
+    <h3 class="mb-8 text-lg">When are you visiting?</h3>
+    <div class="flex flex-row dark:text-gray-800 gap-8 pb-60">
+      <div class="flex flex-col gap-5 bg-gray-100 w-1/2 p-6 border-0 rounded-3xl">
+        <h1 class="font-bold">SUMMER</h1>
+        <span class="material-symbols-outlined text-3xl">sunny</span>
+        <p>Though the early mornings and long evenings are more temperate, summer is a great time to take advantage of the warm seas to explore Saudi’s world-class scuba diving sites, or to try sailing and snorkeling. Escape the heat in the mountainous city of Taif or take a swim in the gulf waters of Dammam for a cool respite.</p>
+      </div>
+      <div class="flex flex-col gap-5 bg-gray-100 w-1/2 p-6 border-0 rounded-3xl">
+        <h1 class="font-bold">WINTER</h1>
+        <span class="material-symbols-outlined text-3xl">cloudy_snowing</span>
+        <p>Winter is balmy by day, cool by night and ideal for camping, rock climbing or exploring Saudi’s bustling cities. AlUla is a must in winter, too — check out the ancient tombs during mild days and huddle around campfires at night. You may see snow in the northern regions and the Aseer Province.</p>
+      </div>
+      <div class="flex flex-col gap-5 bg-gray-100 w-1/2 p-6 border-0 rounded-3xl">
+        <h1 class="font-bold">SPRING</h1>
+        <span class="material-symbols-outlined text-3xl">nature</span>
+        <p>Spring in Saudi offers diverse weather: a bit brisk in the north (nighttime lows under 15 degrees C) and warmer in the central and southern regions (lows around 20 degrees C). You could encounter rain if you head to Saudi’s centrally located Aseer Mountains, so pack accordingly. Riyadh is mild this time of year; consider hiking and dune bashing.</p>
+      </div>
+      <div class="flex flex-col gap-5 bg-gray-100 w-1/2 p-6 border-0 rounded-3xl">
+        <h1 class="font-bold">FALL</h1>
+        <span class="material-symbols-outlined text-3xl">air</span>
+        <p>Autumn brings gentler weather and cool breezes to Saudi’s northern regions and the southwestern highlands. While daytime temperatures remain warm and can exceed 30 degrees C in early fall, evenings are milder and fit for outdoor strolling, dining alfresco or visiting Al Ahsa’s cool desert springs.</p>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col mx-44 mb-32">
+    <h1 class="mt-20 mb-8 text-5xl">Saudi Visa Requirements</h1>
+    <h3 class="mb-8 text-lg">For Umrah visit</h3>
+    <p class="w-1/2 text-xl font-thin mb-10">Nusuk is your Gateway to perform Umrah or Ziyarah, discover the website for more details, and you can download the app to pre-plan, book and support your rituals.</p>
+    <a href="https://www.nusuk.sa/ar" class="text-blue-500 hover:text-blue-950">Nusuk</a>
+  </div>
+</main>
+{% endblock %}

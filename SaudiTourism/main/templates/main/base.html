@@ -24,7 +24,7 @@
       <nav
         class="sticky top-0 z-10 block w-full max-w-full px-4 py-2 text-black bg-white border rounded-none shadow-md h-max dark:bg-gray-600 dark:border-0 dark:text-white border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
         <div class="flex items-center justify-between text-blue-gray-900">
-          <a href="/" class="mr-4 block cursor-pointer dark:text-white text-black"> Visit Saudi </a>
+          <a href="/" class="mr-4 block cursor-pointer dark:text-white text-black"> Saudi </a>
           <div class="flex items-center gap-4">
             <div class="hidden mr-4 lg:block">
               <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -34,13 +34,13 @@
                   </a>
                 </li>
                 <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                  <a href="#" class="flex items-center">
-                    Blocks
+                  <a href="{% url 'main:destination_view' %}" class="flex items-center">
+                    Destinations
                   </a>
                 </li>
                 <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                  <a href="#" class="flex items-center">
-                    Docs
+                  <a href="{% url 'main:guide_view' %}" class="flex items-center">
+                    Travel Guide
                   </a>
                 </li>
                 <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">

@@ -1,12 +1,55 @@
 {% extends 'main/base.html' %}
 {% block title %}
-History page 
+Destinations page 
 {% endblock %}
 {% load static %}
 {% block content %}
   <main>
-    <p>
-      Saudi Arabia, officially known as the Kingdom of Saudi Arabia, has a rich and complex history that dates back thousands of years. The region has been home to various ancient civilizations, including the Nabateans, who built the rock city of Al-Ula. Islam, which emerged in the 7th century CE in the city of Mecca, profoundly shaped the history of the Arabian Peninsula. The unification of Saudi Arabia as a modern nation began in the early 20th century under the leadership of Abdulaziz Ibn Saud, who founded the Kingdom in 1932. The discovery of vast oil reserves in the 1930s transformed Saudi Arabia into a global economic powerhouse and a pivotal player in regional and international politics. The country has since undergone rapid modernization, balancing its rich cultural heritage and Islamic traditions with economic and social reforms.
-    </p>
+    <div class="my-52 mx-24 flex flex-row gap-7">
+      <a href="/city/riyadh">
+        <div class="max-w-sm dark:bg-slate-500 rounded overflow-hidden shadow-lg">
+          <img class="w-[400px] h-[300px]" src="{% static 'images/riyadh.png' %}" alt="">
+          <div class="px-6 py-8">
+            <div class="font-bold text-xl mb-4 dark:text-slate-300">Riyadh</div>
+            <p class="text-gray-700 text-base">
+              CULTURE & HISTORY, NATURE, SHOPPING
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/city/abha">
+        <div class="max-w-sm dark:bg-slate-500 rounded overflow-hidden shadow-lg">
+          <img class="w-[400px] h-[300px]" src="{% static 'images/abha.png' %}" alt="">
+          <div class="px-6 py-8">
+            <div class="font-bold text-xl mb-4 dark:text-slate-300">Abha</div>
+            <p class="text-gray-700 text-base">
+              CULTURE & HISTORY, NATURE, SHOPPING
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/city/alula">
+        <div class="max-w-sm dark:bg-slate-500 rounded overflow-hidden shadow-lg">
+          <img class="w-[400px] h-[300px]" src="{% static 'images/alula.png' %}" alt="">
+          <div class="px-6 py-8">
+            <div class="font-bold text-xl mb-4 dark:text-slate-300">AlUla</div>
+            <p class="text-gray-700 text-base">
+              CULTURE & HISTORY, NATURE, SHOPPING
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/city/mekkah">
+        <div class="max-w-sm dark:bg-slate-500 rounded overflow-hidden shadow-lg">
+          <img class="w-[400px] h-[300px]" src="{% static 'images/mekkah.png' %}" alt="">
+          <div class="px-6 py-8">
+            <div class="font-bold text-xl mb-4 dark:text-slate-300">Mekkah</div>
+            <p class="text-gray-700 text-base">
+              CULTURE & HISTORY, NATURE, SHOPPING
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
   </main>
 {% endblock %}

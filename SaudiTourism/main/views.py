@@ -34,11 +34,14 @@ def home_view(request: HttpRequest):
   }
   return render(request, "main/index.html", context)
 
-def history_view(request: HttpRequest):
-   return render(request, "main/history.html")
+def destination_view(request: HttpRequest):
+   return render(request, "main/destination.html")
 
 def about_view(request: HttpRequest):
    return render(request, "main/about.html")
+
+def guide_view(request: HttpRequest):
+   return render(request, "main/guide.html")
 
 def city_view(request: HttpRequest, city_name: str):
     city_data = {
