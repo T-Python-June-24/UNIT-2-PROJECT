@@ -1,0 +1,65 @@
+{% extends "tourister/base.html" %}
+{% load static %}
+
+{% block content %}
+<link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
+<script>
+    async function sendMessage() {
+        const userInput = document.getElementById('chat').value;
+        const responseBox = document.getElementById('responseBox');
+
+        if (userInput.trim() === '') return;
+
+        const response = await fetch('{% url "Tourister:chatbot" %}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: JSON.stringify({ message: userInput })
+        });
+
+        const data = await response.json();
+        responseBox.innerHTML += `
+            <div class="bg-gray-200 p-2 rounded my-2 text-left">
+                <strong>You:</strong> ${userInput}
+            </div> <br>`;
+        responseBox.innerHTML += `
+            <div class="bg-blue-100 p-2 rounded my-2 text-left">
+                <strong>AI:</strong> ${data.response} </div> <br>`;
+        responseBox.scrollTop = responseBox.scrollHeight; // Scroll to the bottom
+        document.getElementById('chat').value = '';
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #3cff76;
+        background-image: linear-gradient(225deg, #3cffc8 0%, #17503b 50%, #2B86C5 100%);
+        justify-content: center;
+    }
+
+    #responseBox {
+        height: 60vh;
+        overflow-y: auto;
+    }
+
+    .input-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+
+<main class="container mx-auto my-8 p-8 bg-teal-600 rounded shadow">
+    <h2 class="text-2xl font-bold mb-4 text-center text-white">Tourister Chatbot 🔍</h2>
+    <div id="responseBox" class="p-4 mb-4 border rounded bg-gray-100"></div>
+    <div class="input-container">
+        <input type="text" id="chat" class="border rounded p-3 w-full mr-2" placeholder="Type your message..." style="border-color: teal; color: teal;">
+        <button onclick="sendMessage()" class="bg-teal-500 text-white pl-8 pb-2 pt-2 pr-8 rounded">Send</button>
+    </div>
+</main>
+{% endblock %}
