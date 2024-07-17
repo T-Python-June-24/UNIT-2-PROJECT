@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}منطقة ينبع التاريخية  {% endblock %}
+{% block content %}
+<style>
+     .y-page {
+    background-image: url("{% static 'images/t.jpg' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
+<body class="y-page">
+ <h1 class="glow">منطقة ينبع التاريخية </h1>
+
+<div class="content-frame">
+    <div class="image-row">
+        <div class="image-container">
+            <img src="{% static 'images/ya1.jpg' %}" alt="صورة 1">
+
+        </div>
+        <div class="image-container">
+            <img src="{% static 'images/ya2.jpg' %}" alt="صورة 2">
+
+        </div>
+        <div class="image-container">
+            <img src="{% static 'images/ya3.jpg' %}" alt="صورة 3">
+
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="paragraph-frame">
+        <p class="highlighted-paragraph">منطقة ينبع التاريخية هي منطقة يقدر عمرها بحوالي 2500 عام و شهدت أحداث تاريخية ومن أهمها أحداث حرب بريطانيا ضد الاتراك وغزوة العشير التي بدأت في عهد الرسول صلى الله عليه وسلم، سكن في مدينة ينبع العديد من الشخصيات الهامة ومن اهمهم لورانس العرب و عبد الله بن الحسن بن الحسن بن علي بن أبي طالب و الصحابي أبو عبد الله حرملة المدلجي رضي الله عنه، حاليا أصبحت منطقة ينبع التاريخية كمتحف تراثي يأتي له العديد من السياح من كل مكان للنظر إلى التاريخ العريق لمدينة ينبع</p>
+    </div>
+</div>
+</boby>
+{% endblock %}

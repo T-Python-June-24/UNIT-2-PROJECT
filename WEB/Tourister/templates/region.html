@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<style>
+     .square-border {
+        border: 1px solid #000;
+        border-radius: 30px;
+        padding: 17px;
+        margin: 10px 0;
+    }
+    .highlight {
+        font-size: 20px;
+        padding: 5px;
+        color:#000;
+        margin-bottom: 15px;
+    }
+    .glow {
+        font-size: 24px; 
+        color: ##000; 
+
+        animation: glow-animation 1.5s infinite alternate; 
+    }
+
+
+
+    .image {
+        max-width: 130%; 
+        height: 150%; 
+        border: 1px solid Green; 
+        float: left; 
+        border-radius: 30px;
+        margin-Top: 50px;
+        margin-right: 15px; 
+        width:180%
+
+    }
+    body.region {
+    background: url('../images/1.jpg') ;
+
+}
+
+.card-cont {
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: flex;
+    margin-right: 5%; 
+    width:100%
+
+}
+.region-page {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+</style>
+<body class="region-page">
+<div class="row">
+    <div class="col">
+        <h1 class="glow">مدينة ينبع السياحية</h1>
+
+        <div class="square-border">
+            <p class="highlighted-paragraph">ينبع الصناعية مدينة توجد في المملكة العربية السعودية على الساحل الغربي غرب منطقة المدينة المنورة مطلة على البحر الأحمر، تعد ثاني أكبر مجمع صناعي في السعودية، وقاعدة من قواعد التصنيع الثقيل
+            مدينة ينبع الصناعية مركزًا رئيسيًا للاستثمار الصناعي في المملكة العربية السعودية إذ تستقطب العديد من الشركات الوطنية والعالمية لإقامة مشاريعها في المدينة الصناعية، التي توفر بيئة ملائمة وجذابة للأعمال، إلى جانب الاهتمام الكبير بالتنمية المستدامة، والحفاظ على البيئة، حتى أصبحت نموذجًا للتنمية الصناعية الخضراء.</p>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card-cont">
+            <img src="{% static '/images/yanbu dark.jpeg' %}" alt="ينبع السياحية" class="image">
+        </div>
+    </div>
+    </div>
+
+</div>
+</body>
+{% endblock %}

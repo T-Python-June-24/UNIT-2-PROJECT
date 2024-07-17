@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+    .home-page {
+    background-image: url("{% static 'images/lm.jpg' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-page.dark-mode {
+    background-image: url("{% static 'images/dm.jpg' %}");
+    color: #ffffff;
+}
+
+</style>
+<body class="home-page">
+<br><br><br><br>
+
+<div class="row">
+
+    <div class="col">
+    <h2 >السياحة في المملكة العربيه السعوديه</h2>
+        <br><br><br><br>
+    <p >مرحبًا بك في موقعنا الذي يستعرض جمال وثقافة المملكة العربية السعودية.</p>
+    <br> <br><br><br><br> <br><br><br><br>
+    <button id="exploreBtn" type="button">استكشاف</button>
+    <br><br><br>
+                </div>
+    <br><br><br><br><br>
+                <div class="col">
+                    <div class="card-container">
+                        <a href="{% url 'region' %}">
+                        <div class="card card1">
+            <h5 style="font-size:15px"> ينبع الصناعيه</h5>
+            <p style="font-size:10px">الوصف “ينبع الصناعية”: وجه من وجوه المملكة المشرقة</p>
+        </div>
+                        </a>
+                    <div class="col">
+                        <a href="{% url 'nawras_island' %}">
+                        <div class="card card2">
+            <h5 style="font-size:15px"> جزيرة النورس</h5>
+            <p style="font-size:10px">الوصف : جزيرة النورس ،جوهرة السياحة البيئية</p>
+        </div>
+                        </a>
+
+            </div>
+                    </div>
+        </div>
+        <div class="col">
+            <div class="card-container">
+                 <a href="{% url 'yanbu' %}">
+            <div class="card card3">
+            <h5 style="font-size:15px">ينبع التاريخيه</h5>
+            <p style="font-size:10px">الوصف : ينبع، مهد التراث والهوية العربية</p>
+        </div>
+                 </a>
+
+                <div class="col">
+    <a href="{% url 'festival' %}"> 
+        <div class="card card4">
+            <h5 style="font-size:15px">مهرجان الزهور</h5>
+            <p style="font-size:10px">الوصف : الزهور مصدر الجمال في العالم</p>
+        </div>
+    </a>
+</div>
+
+        </div>
+
+
+           
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p style="color:rgb(0, 0, 0);font-size:20px">السعودية تعتبر جزءً أساسيًا من البعد الحضاري والتاريخي سواء من الناحية الدينية أو الاقتصادية حيث تتبنى الدولة مفهوم السياحة الحديثة الذي يركز على الفوائد المتعددة للسياحة في الجوانب الاقتصادية والثقافية والتراثية والاجتماعية والبيئية.</p>
+            <p style="color:rgb(0, 0, 0);font-size:20px">كما تحتوي المتاحف السعودية على قطع أثرية تعود لفترات تاريخية مختلفة، تشمل العصور القديمة والوسطى والحديثة.</p>
+        </div>
+    </div> </div>
+
+</div>
+
+
+    <script>
+        window.addEventListener('load', function() {
+            document.querySelector('.loader').style.display = 'none';
+        });
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("exploreBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+{% endblock %}

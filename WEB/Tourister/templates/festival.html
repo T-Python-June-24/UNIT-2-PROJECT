@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}مهرجان الزهور{% endblock %}
+
+{% block content %}
+<body class="festival-page">
+<h1>مهرجان الزهور</h1>
+
+<div class="content-frame">
+    <div class="inner-frame">
+        <div class="video-frame">
+            <video width="70%" height="auto" controls>
+                <source src="{% static 'videos/festival_video.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="inner-frame">
+        <div class="paragraph-frame">
+            <p class="highlighted-paragraph">يُعدّ مهرجان الزهور والحدائق بينبع وجهة مثالية لفئات المجتمع كافة، وقد حظي بجماهيرية نوعية خلال المواسم السابقة، فأصبح الوجهة التي يقصدها الزائر المحلي والدولي. ويُعد المهرجان الذي صمم على شكل تلال من الزهور أيقونة فنية طبيعية تسمح للزوار بالتجول في ثنايا أكبر حديقة مفتوحة من الزهور الطبيعية في المملكة.</p>
+        </div>
+    </div>
+</div>
+</body>
+
+{% endblock %}

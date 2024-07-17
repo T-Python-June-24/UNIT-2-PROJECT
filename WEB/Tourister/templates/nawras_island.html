@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}جزيرة النورس{% endblock %}
+
+{% block content %}
+<style>
+    .nawras-page {
+    background-image: url("{% static 'images/na1.jpg' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
+<body class="nawras-page">
+ <h1 class="glow">جزيرة النورس</h1>
+
+<div class="content-frame">
+    <div class="image-row">
+        <div class="image-container">
+            <img src="{% static 'images/na1.jpg' %}" alt="صورة 1">
+
+        </div>
+        <div class="image-container">
+            <img src="{% static 'images/na2.jpg' %}" alt="صورة 2">
+
+        </div>
+        <div class="image-container">
+            <img src="{% static 'images/na3.jpeg' %}" alt="صورة 3">
+
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="paragraph-frame">
+        <p class="highlighted-paragraph">جزيرة النورس إحدى مشاريع الواجهة البحرية في بينبع المملكة العربية السعودية التي تمتد على طول 11 كيلومتراً.<br>
+        تعد جزيرة النورس بالواجهة البحرية بمدينة ينبع الصناعية رافداً اقتصادياً مهماً ومعلماً مميزاً بطابع عمراني وبيئي يضاهي أجمل المناطق العالمية بجمالها وروعة تخطيطها الشاملة بكل المقاييس للمراحل التطورية لمشروع الواجهة البحرية، حيث تضم المراحل الإنشائية للجزيرة مرافق استثمارية متنوعة ومتنزهات خضراء وشواطئ رملية ومناطق تخييم ومنتجعات ومناطق ترفيهية ومطاعم</p>
+    </div>
+</div>
+</body>
+
+{% endblock %}

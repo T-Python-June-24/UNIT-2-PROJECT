@@ -1,0 +1,185 @@
+body.dark-mode {
+    background-color: #121212; 
+    color: #000; 
+}
+
+body.dark-mode header {
+    background-color: rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); 
+}
+
+body.dark-mode header .nav a {
+    color: #fff; 
+}
+
+body.dark-mode header .nav a:hover {
+    color: #ffcc00;
+}
+
+body.dark-mode .navbar img.logo {
+    color: #fff;
+}
+
+body.dark-mode .navbar nav ul li a {
+    color: #fff;
+}
+
+body.dark-mode .navbar nav ul li a:hover {
+    color: #ffcc00;
+}
+
+body.dark-mode main {
+    padding: 0px;
+}
+
+body.dark-mode footer p {
+    color: #fff; 
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e; 
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); 
+}
+
+body.dark-mode .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2); 
+}
+
+body.dark-mode .container {
+    background-color: #181818; 
+}
+
+body.dark-mode p {
+    color: #fff; 
+}
+
+body.dark-mode button {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-mode button:hover {
+    background: #444;
+}
+
+body.dark-mode button:active {
+    background: #555;
+}
+
+body.dark-mode .card-container {
+    margin-right: 10%;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e; 
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); 
+}
+
+body.dark-mode .card:hover {
+    transform: translate(10px);
+}
+
+body.dark-mode h5 {
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+
+body.dark-mode .card p {
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+
+body.dark-mode .loader div {
+    background: #fff;
+}
+
+body.dark-mode .loader .text {
+    color: #fff;
+}
+
+body.dark-mode .logo {
+    animation: jump 0.6s infinite alternate; 
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-mode .modal-content {
+    background-color: rgba(50, 50, 50, 0.9); 
+    color: #fff;
+}
+
+body.dark-mode .close {
+    color: #ccc;
+}
+
+body.dark-mode .close:hover,
+body.dark-mode .close:focus {
+    color: #fff;
+}
+
+body.dark-mode .home-container {
+    background-color: #000; 
+}
+
+body.dark-mode .overlay {
+    color: #fff;
+}
+
+body.dark-mode .overlay button {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-mode .overlay button:hover {
+    background: #444;
+}
+
+body.dark-mode .highlighted-paragraph {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .image-frame {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .image-container .description {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #000;
+}
+
+body.dark-mode .content-frame {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .inner-frame {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .video-frame {
+    background-color: #000;
+}
+
+body.dark-mode .highlighted-paragraph {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .image-container:hover {
+    transform: translateY(-10px);
+}
+
+body.dark-mode h1 {
+    color: #fff;
+}
