@@ -7,7 +7,7 @@ import ssl
 import smtplib
 import os
 from django.contrib.auth.models import User
-from django.contrib.auth import login
+from django.contrib.auth import login,authenticate
 from django.contrib import messages
 
 # Create your views here.
@@ -320,3 +320,19 @@ def sign_up(request):
             messages.error(request, 'Passwords do not match')
     
     return render(request, 'main/signup.html')
+
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('main:home_view')
+        else:
+            messages.error(request, 'Invalid username or password')
+
+    return render(request, 'main/login.html')
+
