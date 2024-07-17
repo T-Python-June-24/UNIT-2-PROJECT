@@ -43,7 +43,11 @@ To get started with the project, follow these steps:
     npm run dev
     ```
 
+## Interface Photos
+
+![MacbookM1](C:/Users/saeed/python-cam-lab/UNIT-2-PROJECT/MacbookM1.png) | ![MO2](C:/Users/saeed/python-cam-lab/UNIT-2-PROJECT/MO2.png)
+
+
 ## Contributing
 
 We welcome contributions! Please fork the repository and submit a pull request.
-
