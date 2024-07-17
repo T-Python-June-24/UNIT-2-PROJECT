@@ -68,45 +68,23 @@
 
         </section>
         <section class="sub">
-            <div class="section-title">اكتشف جمال المدن السعودية   </div>
+            <div class="section-title">اكتشف جمال المدن السعودية</div>
             <div class="cites__card">
-                <article class="cites__article">
-                    <a href="{% url 'main:AlUla' %}"><img src="/static/images/alula-landscape.jpg" alt=""></a>
-                    <h2 class="citie title">العلا</h2>
-
-                </article>
-
-                <article class="cites__article">
-                    <a href=""><img src="/static/images/edge-of-the-world.jpg" alt=""></a>
-                    <h2 class="citie title">الرياض</h2>
-
-                </article>
-
-                <article class="cites__article">
-                    <a href=""><img src="/static/images/albaha.jpg" alt=""></a>
-                    <h2 class="citie title">الباحه</h2>
-
-                </article>
-
-                <article class="cites__article">
-                    <a href="{% url 'main:Aseer' %}"><img src="/static/images/aseer.webp" alt=""></a>
-                    <h2 class="citie title">عسير</h2>
-
-                </article>
-                <article class="cites__article">
-                    <a href=""><img src="/static/images/jeaddah-poster.jpg" alt=""></a>
-                    <h2 class="citie title">جده</h2>
-
-                </article>
-                <article class="cites__article">
-                    <a href=""><img src="/static/images/about-taif.webp" alt=""></a>
-                    <h2 class="citie title">الطائف</h2>
-
-                </article>
+                {% for city in cities %}
+                    <article class="cites__article">
+                        {% if city.url %}
+                            <a href="{% url city.url %}">
+                                <img src="{{ city.image }}" alt="{{ city.title }}">
+                            </a>
+                        {% else %}
+                            <a href="#">
+                                <img src="{{ city.image }}" alt="{{ city.title }}">
+                            </a>
+                        {% endif %}
+                        <h2 class="citie title">{{ city.title }}</h2>
+                    </article>
+                {% endfor %}
             </div>
-
-
-            
         </section>
 
     </main>
