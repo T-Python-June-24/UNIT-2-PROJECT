@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}موقع سياحة {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styless.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dark.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/mode-toggle.js' %}" defer></script>
+
+
+</head >
+<body >
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="text">جار التحميل...</div>
+    </div>
+
+    <header>
+        <div class="navbar">
+            <img src="{% static 'images/logo.png' %}" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">الرئيسية</a></li>
+                </ul>
+            </nav>
+
+            <button id="mode-toggle" class="mode-toggle">🌙</button>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer >
+        <p> Tourism in the Kingdom of Saudi Arabia (Yanbu Industrial City)</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>السعودية تعتبر جزءً أساسيًا من البعد الحضاري والتاريخي سواء من الناحية الدينية أو الاقتصادية حيث تتبنى الدولة مفهوم السياحة الحديثة الذي يركز على الفوائد المتعددة للسياحة في الجوانب الاقتصادية والثقافية والتراثية والاجتماعية والبيئية.</p>
+            <p>كما تحتوي المتاحف السعودية على قطع أثرية تعود لفترات تاريخية مختلفة، تشمل العصور القديمة والوسطى والحديثة.</p>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.querySelector('.loader').style.display = 'none';
+        });
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("exploreBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
