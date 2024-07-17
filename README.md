@@ -1,64 +1,49 @@
-# UNIT-2-PROJECT
+# Saudi Ardah Website
 
-## Using Django create a project about our beloved kingdom of your choosing. Examples :
-- Tourism in Saudi Arabia.
-- Culture & Heritage in Saudi Arabia.
-- Manufacturing & Industries in Saudi Arabia.
-- Agriculture in Saudi Arabia.
-- Science in Saudi Arabia.
-- History of Saudi Arabia.
-- etc.....
+Welcome to the Saudi Ardah website, dedicated to providing comprehensive information about various types of Ardah. Our website focuses on four main types:
 
+1. **Southern Ardah**
+2. **Daha**
+3. **Qazwai**
+4. **Najd Ardah**
 
-# Minumum Requirements
-- Use Django.
-- Use templates & templates inheritance.
-- Use dynamic urls where applicable.
-- Use static files where applicable.
-- homepage + other 4 pages.
-- Coherent, uniform design .
-- Implement dark and light mode.
-- You can use a CSS library to style your website (such as Bootstrap or equivalent)
-- You can use a cdn or a cloud storage to host large files such as large videos (example: Goolge Firebase Cloud Storage: https://firebase.google.com/docs/storage)
+## Overview
 
+This project aims to give a clear and detailed view of these Ardah types, covering their history, notable performers, and famous poets. Additionally, we offer a picture library to visually enrich your understanding of Saudi Ardah.
 
+## Features
 
-# Example : TOURISM-PROJECT
+- **Detailed Information:** Learn about the history, performers, and famous poets associated with each type of Ardah.
+- **Picture Library:** Explore a rich collection of images related to Ardah.
+- **User Registration:** Create an account to access personalized features.
+- **Dark Mode/Light Mode:** Switch between dark and light themes for a comfortable browsing experience.
 
-## Using Django create a website for Tourism in Saudi Arabia . The project name is : Tourister
+## Technologies Used
 
-### Your website has the following pages :
+- **Tailwind CSS:** For styling and responsive design.
 
-#### "" : home page , with the following content:
-- Title of the page , with a catchy phrase about tourism in Saudi Arabia
-- A single wide image covering the page.
-- A paragraph about the tourism in Saudi Arabia in General.
-- A list of cities pages with links to them (the pages are listed down below).
+## Getting Started
 
+To get started with the project, follow these steps:
 
-#### "city/Riyadh/"
-- Title of city with a catchy phrase
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/9twy/UNIT-2-PROJECT.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd UNIT-2-PROJECT
+    ```
+3. Install the necessary dependencies:
+    ```sh
+    npm install
+    ```
+4. Start the development server:
+    ```sh
+    npm run dev
+    ```
 
-#### "city/Abha/"
-- Title of city with a catchy phrase.
-- Top Attractions in the city.
-- A brief about the city.
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
+## Contributing
 
-#### "city/Mekkah/"
-- Title of city with a catchy phrase.
-- Top Attractions in the city.
-- A brief about the city.
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
-
-#### "city/AlUla/"
-- Title of city with a catchy phrase.
-- Top Attractions in the city.
-- A brief about the city.
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
+We welcome contributions! Please fork the repository and submit a pull request.
 
