@@ -7,9 +7,11 @@ from django.http import HttpRequest , HttpResponse
 def index(request:HttpRequest):
     return render(request , 'index.html')
 
-def base(request:HttpRequest):
-    return render(request , 'test.html')
+def Regions(request:HttpRequest):
+    return render(request , 'Regions.html')
 
+def abha(request:HttpRequest):
+    return render(request , 'base-caty.html')
 
 def light_mode(request:HttpRequest):
     response = redirect(request.META.get('HTTP_REFERER', '/'))
