@@ -55,6 +55,8 @@ module.exports = {
           fontFamily: {
             nunito: ['Nunito', 'sans-serif'],
             fredoka: ['Fredoka One', 'sans-serif'],
+            'plex-mono': ['"IBM Plex Mono"', 'monospace'],
+            'plex-sans-condensed': ['"IBM Plex Sans Condensed"', 'sans-serif'],
           },
         },
     },
