@@ -5,7 +5,7 @@
 # 🍽️ SAUDI TRADITIONAL FOOD PROJECT 🇸🇦
 
 ## Project Description
-Using Django, create a website dedicated to showcasing the rich and diverse traditional foods of Saudi Arabia. The project name is: Saudi Traditional Food.
+Using Django, a website dedicated to showcasing the rich and diverse traditional foods of Saudi Arabia was created. It's name is: Saudi Traditional Food 🌟
 
 ### Project Features
 - 🏠 A homepage that provides an overview of Saudi traditional cuisine.
