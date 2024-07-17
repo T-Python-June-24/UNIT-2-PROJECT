@@ -12,11 +12,14 @@ def home_page(request):
         {"title": "عسير", "url": "main:Aseer", "image": "/static/images/aseer.webp"},
         {"title": "جده", "url": "", "image": "/static/images/jeaddah-poster.jpg"},
         {"title": "الطائف", "url": "", "image": "/static/images/about-taif.webp"},
-        # {"title": "الاحساء","url":"","image":"/static/images/alahsa-oasis.jpg"},
-        # {"title": "المدينة المنورة","url":"","image":"/static/images/madeenah.webp"}
+        {"title": "المدينة المنورة", "url": "", "image": "/static/images/madenah.webp"},
+        {"title": " ينبع", "url": "", "image": "/static/images/yanbu.webp"},
+        {"title": " جازان", "url": "", "image": "/static/images/jazan.webp"},
+        {"title": " حائل", "url": "", "image": "/static/images/hail.jpg"},
     ]
     return render(request, "main/index.html", {"cities": cities})
-
+def about(request):
+   return render(request, "main/about.html")
 def Aseer(request):
   return render(request, "main/Aseer.html")
 def Sarawat(request):

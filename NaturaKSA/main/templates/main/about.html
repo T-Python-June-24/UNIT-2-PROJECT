@@ -1,0 +1,144 @@
+{% extends 'main/base.html' %}
+
+{%load static%}
+{% block title %} من نحن{% endblock %}
+{% block content %}
+    <style>
+        :root {
+    --background-color: rgb(242, 242, 238);
+    --text-color: #555555;
+    --main--text-color:#rgb(90, 87, 87);
+    --paragraph-color: rgb(152, 152, 132);
+    --obosite-color:rgb(152, 152, 132);
+  }
+  
+  [data-theme="dark"] {
+    --background-color: #333333;
+    --text-color:beige;
+    --main--text-color:beige;
+    --paragraph-color: rgb(216, 216, 192);
+    --obosite-color:#555555;
+  }
+    .mode-icons-container .dark-mode {
+    background-color: var(--text-color);
+    border-radius: 50%;
+    text-decoration: none;
+    color:var(--background-color);
+}
+.mode-icons-container .light-mode {
+    background-color:var(--text-color);
+    border-radius: 50%;
+    color:var(--background-color);
+}
+.mode-icons-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    margin-right: 2rem;
+
+}
+        body, html {
+            background-color: var(--background-color);
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            font-family:  'Tajawal',sans-serif;
+
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        section {
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            overflow: hidden; 
+        }
+        .line {
+            position: absolute;
+            height: 2px;
+            background-color:var(--text-color);
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+        .line.top {
+            top: 0;
+            left: 50%;
+        }
+        .line.bottom {
+            bottom: 0;
+            right: 50%;
+        }
+        .content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+        h1, h2 {
+            color: var(--main--text-color);
+        }
+        p, ul {
+            color: var(--text-color);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10.px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="line top"></div> <!-- خط أعلى الصفحة -->
+        <div class="line bottom"></div> <!-- خط أسفل الصفحة -->
+        <div class="content">
+            <h1>من نحن</h1>
+            <h2>مرحبًا بكم في  موقعنا </h2>
+        </div>
+        <div class="content">
+            <p>محطتكم الأولى لاستكشاف جمال المملكة العربية السعودية...</p>
+        </div>
+        <div class="content">
+            <h2>رؤيتنا</h2>
+            <p>نسعى في موقعنا إلى تقديم تجربة استكشافية فريدة...</p>
+        </div>
+        <div class="content">
+            <h2>مهمتنا</h2>
+            <p>إبراز الجمال الطبيعي والتراثي للمملكة...</p>
+        </div>
+        <div class="content">
+            <h2>قيمنا</h2>
+            <ul>
+                <li>الاستدامة: نعمل بشكل مستمر على دعم وترويج الممارسات البيئية...</li>
+                <li>الأصالة: نحترم التراث الثقافي ونبرزه...</li>
+                <li>الابتكار: نستخدم أحدث الأساليب والتقنيات...</li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        window.onload = function() {
+            const contents = document.querySelectorAll('.content');
+            const lines = document.querySelectorAll('.line');
+            const delayIncrement = 500; 
+
+            lines.forEach(line => {
+                line.style.width = '100%';
+            });
+
+            contents.forEach((content, index) => {
+                setTimeout(() => {
+                    content.style.opacity = '1';
+                    content.style.transform = 'translateY(0)';
+                }, 1000 + delayIncrement * index); 
+            });
+        };
+    </script>
+{% endblock %}
