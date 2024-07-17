@@ -174,7 +174,7 @@ footer a:hover {
 }
 
 .dark-mode footer {
-    background-color: #333;
+    background-color: #9f8383 !important;
     color: #fff;
 }
 
