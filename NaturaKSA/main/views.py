@@ -11,7 +11,9 @@ def home_page(request):
         {"title": "الباحه", "url": "", "image": "/static/images/albaha.jpg"},
         {"title": "عسير", "url": "main:Aseer", "image": "/static/images/aseer.webp"},
         {"title": "جده", "url": "", "image": "/static/images/jeaddah-poster.jpg"},
-        {"title": "الطائف", "url": "", "image": "/static/images/about-taif.webp"}
+        {"title": "الطائف", "url": "", "image": "/static/images/about-taif.webp"},
+        # {"title": "الاحساء","url":"","image":"/static/images/alahsa-oasis.jpg"},
+        # {"title": "المدينة المنورة","url":"","image":"/static/images/madeenah.webp"}
     ]
     return render(request, "main/index.html", {"cities": cities})
 
