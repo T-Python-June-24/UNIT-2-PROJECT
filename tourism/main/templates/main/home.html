@@ -1,0 +1,127 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Tourism in KSA
+{% endblock %}
+
+{% block content %}
+
+  
+<div>
+    <div class="row justify-content-center align-self-center text-center bg-success-subtle">
+        <div class="p-0 b-0 blank-0 col-sm sidenav justify-content-center align-self-center object-fit-none">
+                    
+            <iframe width="100%" height="350px"
+                src="https://www.youtube.com/embed/2nukQd8XGCM?autoplay=1&mute=1" frameborder="0" allowfullscreen>
+            </iframe>
+                    
+        </div>
+  
+        <div class="p-0 b-0 blank-0 col-sm object-fit-none">
+            <div class="image-container">
+                <img src="{% static 'images/riyadh.jpg' %}" width="100%" height="350px" class="float">
+                <div class="centered text-white">Discover Saudi Arabia</div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  
+<div class="d-flex album bg-success-subtle py-5 justify-content-center align-self-center align-items-end">
+    <div class="row-2 b-2"><h1>Discover new destinations</h1></div>
+</div>
+
+  <div class="album py-5 bg-success-subtle">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/riyadh3.jpg' %}">
+            <div class="card-body">
+              <p class="card-text">Riyadh The Capital</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'main:riyadh' %}" class="text-decoration-none text-black"> Learn More</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/j1.jpeg' %}">
+            <div class="card-body">
+              <p class="card-text">Pride of the Red Sea</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'main:jeddah' %}" class="text-decoration-none text-black"> Learn More</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/h1.jpg' %}">
+            <div class="card-body">
+              <p class="card-text">Where Your Soul is destined to</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'main:holy' %}" class="text-decoration-none text-black"> Learn More</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/u1.jpg' %}">
+            <div class="card-body">
+              <p class="card-text">The desert Gem</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'main:ula' %}" class="text-decoration-none text-black"> Learn More</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/q1.jpg' %}">
+            <div class="card-body">
+              <p class="card-text">The Eastern coast Gem</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'main:qatif' %}" class="text-decoration-none text-black"> Learn More</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/a1.jpg' %}">
+            <div class="card-body">
+              <p class="card-text">The Oasis of NoWhere</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'main:ahsa' %}" class="text-decoration-none text-black"> Learn More</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-5 p-4 bg-dark text-white text-center">
+    <p>Footer</p>
+  </div>
+
+
+{% endblock %}
