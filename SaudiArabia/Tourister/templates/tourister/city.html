@@ -5,14 +5,14 @@
 <div class="scale-up-center">
 
     <div class="content-home-padding">
-        <h1 class="bold-font-prop">Saudi Arabia Major Citys</h1>
+        <h1 class="bold-font-prop tilt-in-fwd-bl">Saudi Arabia Major Citys</h1>
     
         <div class="card-grid">
             {% for property in properties %}
                 <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 overflow-hidden">
                     <img src="{% static 'images/' %}{{ property.image }}" alt="card-image" class="w-full h-56 object-cover rounded-t-xl" />
                     <div class="p-6">
-                        <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+                        <p class="block font-sans text-base antialiased font-bold leading-relaxed text-inherit ">
                             {{ property.title }}
                         </p>
                     </div>
