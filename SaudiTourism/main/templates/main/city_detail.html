@@ -5,13 +5,13 @@ Home page
 {% load static %}
 {% block content %}
 <main>
-  <div class="flex flex-col mx-24 mb-60">
+  <div class="flex flex-col mx-44 mb-60">
     <h1 class="mt-20 mb-8 text-5xl">{{ title }}</h1>
     <h3 class="mb-8 text-lg">About the City</h3>
     <p class="w-1/2 text-xl font-thin mb-20">{{ brief }}</p>
   </div>
-    <h2 class="mx-24 text-xl mb-10 ">Top Attractions</h2>
-  <div class="grid grid-cols-1 gap-4 mx-24 sm:grid-cols-2 md:grid-cols-3 mb-64">
+  <h2 class="mx-44 text-xl mb-10 ">Top Attractions</h2>
+  <div class="grid grid-cols-1 gap-4 mx-44 sm:grid-cols-2 md:grid-cols-3 mb-64">
     {% for attraction in top_attractions %}
       <div class="flex flex-col flex-wrap justify-start gap-4">
         <img class="object-cover object-center w-full h-40 max-w-full rounded-lg "

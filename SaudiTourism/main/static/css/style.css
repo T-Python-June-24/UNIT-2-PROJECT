@@ -2,6 +2,9 @@ h1 {
   font-family: 'IBM Plex Mono', monospace;
 }
 
+h2 {
+  font-family: 'IBM Plex Mono', monospace;
+}
 p {
   font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
@@ -13,4 +16,10 @@ a {
 }
 html {
   scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .animate-fadeIn {
+      animation: fadeIn 2s ease-in-out;
+  }
 }
