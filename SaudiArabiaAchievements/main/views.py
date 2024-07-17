@@ -6,6 +6,11 @@ def home(request:HttpRequest):
     return render(request,'main/home.html')
 
 
+def achievements(request:HttpRequest):
+
+    return render(request,'main/achievements.html')
+
+
 def dark_mode(request:HttpRequest):
 
     response =  redirect(request.META.get('HTTP_REFERER', '/'))  
@@ -19,3 +24,4 @@ def light_mode(request:HttpRequest):
     response.delete_cookie("mode")
 
     return response
+
