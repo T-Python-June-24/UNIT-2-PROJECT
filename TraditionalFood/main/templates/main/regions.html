@@ -1,23 +1,68 @@
 {% extends 'main/base.html' %}
 
+{% load static %}
+
+{% block banner %}
+    <div class="row align-items-center intro-section m-0" style="height: 70vh; width: 100vw;">
+        <div class="col-12 p-0 bannerimage rg d-flex align-items-center justify-content-center h-100">
+            <div class="text-white text-left ml-5 pl-5">
+                <h1 class="intro-title">المناطق</h1>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1>المناطق</h1>
-    <ul class="list-group">
+    <div class="container mt-4">
+        <!-- <h1 class="text-center mb-5">المناطق</h1> -->
         {% for region in regions %}
-        <li class="list-group-item">
-            <h2>{{ region.name }}</h2>
-            <p>{{ region.description }}</p>
-            <h3>الوصفات</h3>
-            <ul>
-                {% for recipe in recipes %}
-                    {% if recipe.region == region.name %}
-                        <li>
-                            <a href="{% url 'main:recipe_detail' recipe.name %}">{{ recipe.name }}</a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </li>
+            <div class="row mb-5 align-items-center">
+                {% if forloop.counter0|divisibleby:2 %}
+                    <div class="col-md-6">
+                        <img src="{% static 'images/' %}{{ region.image }}" class="img-fluid rounded" alt="{{ region.name }}">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <h2 class="card-title card-p">{{ region.name }}</h2>
+                                <p class="card-text">{{ region.description }}</p>
+                                <h3 class="card-p">أكلات المنطقة</h3>
+                                <ul class="list-unstyled mt-auto">
+                                    {% for recipe in recipes %}
+                                        {% if recipe.region == region.name %}
+                                            <li>
+                                                <a href="{% url 'main:recipe_detail' recipe.name %}">{{ recipe.name }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="col-md-6 order-md-2">
+                        <img src="{% static 'images/' %}{{ region.image }}" class="img-fluid rounded" alt="{{ region.name }}">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <div class="card h-100 border" style="height: 33rem;">
+                            <div class="card-body d-flex flex-column">
+                                <h2 class="card-title card-p">{{ region.name }}</h2>
+                                <p class="card-text">{{ region.description }}</p>
+                                <h3 class="card-p">الوصفات</h3>
+                                <ul class="list-unstyled mt-auto">
+                                    {% for recipe in recipes %}
+                                        {% if recipe.region == region.name %}
+                                            <li>
+                                                <a href="{% url 'main:recipe_detail' recipe.name %}">{{ recipe.name }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endblock %}

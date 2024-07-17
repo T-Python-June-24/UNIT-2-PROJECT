@@ -2,45 +2,89 @@
 
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>أكلاتنا</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fustat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" rel="stylesheet">
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 </head>
-<body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{% url 'main:home' %}">أكلاتنا</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'main:regions' %}">المناطق</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'main:recipe_list' %}">وصفات</a>
-                </li>
-            </ul>
-        </div>
-        <button id="modeToggle" class="btn btn-secondary">الوضع الليلي</button>
-    </nav>
-    <div class="container">
+<body>
+    <div class="container fixed-top ps-2 pe-0" >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow rounded-3" aria-label="Eighth navbar example">
+            <div class="container d-flex justify-content-between align-items-center max-width: initial-scale">
+                <a class="navbar-brand mb-0 logo" href="{% url 'main:home' %}">أكلاتنا</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarsExample07">
+                    <ul class="navbar-nav d-flex justify-content-between">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'main:home' %}">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'main:regions' %}">المناطق</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'main:restaurants' %}">المطاعم</a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="modeToggle" class="btn btn-secondary me-3">
+                    <i id="modeIcon" class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid p-0">
+        {% block banner %}
+        {% endblock %}
+    </div>
+
+
+    <div class="container mt-5 p-5">
+         <!-- style="width: 100%; text-align: right; min-height: 100vh;"> -->
         {% block content %}
         {% endblock %}
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <footer class="bg-light text-center text-lg-start">
+        <div class="container p-4">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-align-r d-flex flex-column justify-content-between">
+                    <p>أكلاتنا | اكتشف النكهات الغنية والتراث الثقافي للمطبخ السعودي</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0 d-flex align-items-center">
+                    <p class="text-fot">اطلع على</p>
+                    <a href="https://www.foundingday.sa/culinary-eastern">
+                        <img src="{% static 'images/FD_logo.svg' %}" alt="Founding Day Logo" style="height: 5rem;">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 bg-dark text-white">
+            © 2024 أكلاتنا
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
     <script>
         const modeToggle = document.getElementById('modeToggle');
+        const modeIcon = document.getElementById('modeIcon');
         modeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
             document.querySelector('.navbar').classList.toggle('navbar-dark-mode');
             if (document.body.classList.contains('dark-mode')) {
-                modeToggle.textContent = 'الوضع النهاري';
+                modeIcon.classList.remove('fa-moon');
+                modeIcon.classList.add('fa-sun');
             } else {
-                modeToggle.textContent = 'الوضع الليلي';
+                modeIcon.classList.remove('fa-sun');
+                modeIcon.classList.add('fa-moon');
             }
         });
     </script>

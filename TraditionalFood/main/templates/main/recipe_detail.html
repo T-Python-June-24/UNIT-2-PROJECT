@@ -2,15 +2,44 @@
 
 {% load static %}
 
+{% block banner %}
+    <div class="row align-items-center intro-section m-0" style="height: 55vh; width: 100vw; background-image: url('{% static 'images/' %}{{ recipe.image }}'); background-size: cover; background-position: center;">
+        <div class="col-12 p-0 bannerimage rcp d-flex align-items-center justify-content-center h-100">
+            <div class="text-white text-left ml-5 pl-5">
+                <h1 class="intro-title">{{ recipe.name }}</h1>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
 {% block content %}
-    <h1>{{ recipe.name }}</h1>
-    <img src="{% static 'images/' %}{{ recipe.image }}" alt="{{ recipe.name }}" class="img-fluid">
-    <p>{{ recipe.description }}</p>
-    <h2>المكونات</h2>
-    <p>{{ recipe.ingredients }}</p>
-    <h2>طريقة التحضير</h2>
-    <p>{{ recipe.instructions }}</p>
-    <h2>وين أحصله</h2>
-    <a href="{{ recipe.get_it_link }}" target="_blank">اطلبه</a> أو 
-    <a href="{{ recipe.map_link }}" target="_blank">اعثر عليه على الخريطة</a>
+    <div class="blog_section layout_padding">
+        <div class="container">
+            <div class="row" style="height: 45rem;">
+                <div class="col-md-6">
+                    <div class="blog_box card h-100 border">
+                        <div class="card-body d-flex flex-column card-p">
+                            <h4 >{{ recipe.name }}</h4>
+                            <p class="lorem_text">{{ recipe.description }}</p>
+                            <h3 class="card-p">المكونات</h3>
+                            <p>{{ recipe.ingredients }}</p>
+                            <h3 class="card-p">طريقة التحضير</h3>
+                            <p>{{ recipe.instructions }}</p>
+                            <h3 class="card-p">اشتهيته؟</h3>
+                            <p>
+                                <a href="{{ recipe.get_it_link }}" target="_blank" class="btn btn-outline-danger">تبيه طلب لبيتك</a> أو 
+                                <a href="{{ recipe.map_link }}" target="_blank" class="btn btn-outline-secondary">تغير جو وتروح لمطعم؟</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog_img">
+                        <img src="{% static 'images/' %}{{ recipe.image }}" alt="{{ recipe.name }}" class="img-fluid rounded" style="height: 45rem; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

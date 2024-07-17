@@ -2,7 +2,39 @@
 
 {% load static %}
 
+{% block title %}الرئيسية{% endblock %}
+
+{% block banner %}
+    <div class="row align-items-center intro-section m-0" style="height: 90vh; width: 100vw;">
+        <div class="col-12 p-0 bannerimage h d-flex align-items-center justify-content-center h-100">
+            <div class="text-white text-left ml-5 pl-5">
+                <h1 class="intro-title">أكلنا جزء من تاريخنا وثقافتنا</h1>
+                <p class="intro-text">حياكم! استكشفوا النكهات الغنية والتراث الثقافي للمطبخ السعودي</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1>أكلنا جزء من تاريخنا وثقافتنا</h1>
-    <p>حياكم استكشفوا النكهات الغنية والتراث الثقافي للمطبخ السعودي</p>
+
+<h2 class="mt-5 mb-5">الأطباق</h2>
+<div class="row">
+    {% for recipe in recipes %}
+    <div class="col-md-4 mb-5">
+        <div class="card h-100" style="width: 25rem; height: 33rem;">
+            <div class="card-header region-tag">
+                <span>{{ recipe.region }}</span>
+            </div>
+            <img src="{% static 'images/' %}{{ recipe.image }}" class="card-img-top" alt="{{ recipe.name }}" style="height: 500px;">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title ct-s">{{ recipe.name }}</h5>
+                <p class="card-text mt-3">{{ recipe.description }}</p>
+                <!-- <p class="card-text mt-auto"><small class="text-muted">{{ recipe.region }}</small></p> -->
+                <a href="{% url 'main:recipe_detail' recipe.name %}" class="btn btn-outline-danger mt-auto">عرض الوصفة</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}
