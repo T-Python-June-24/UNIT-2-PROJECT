@@ -11,6 +11,8 @@
                 <h5 class="card-title">{{ activity.name }}</h5>
                 <p class="card-text"><strong>Overview: </strong> {{ activity.description }}</p>
                 <p><strong>Difficulty: </strong> {{ activity.difficulty_level }}</p>
+                <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query={{ activity.location|urlencode }}" target="_blank">{{ activity.location }}</a></p>
+
             </div>
         </div>
     </div>

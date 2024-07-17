@@ -7,9 +7,12 @@
     <div class="row">
         <div class="col-md-8">
             <h1>{{ dining.name }}</h1>
+            <p> <strong>Category: </strong> {{ dining.category }}</p>
             <p> <strong>Cuisine: </strong> {{ dining.cuisine }}</p>
-            <p> <strong>Location: </strong> {{ dining.location }}</p>
-            <p> <strong>Menu: </strong> {{ dining.menu }}</p>
+            <p> <strong>Price: </strong> {{ dining.price }}</p>
+            <p> <strong>Dress: </strong> {{ dining.dress }}</p>
+            <p> <strong>Phone: </strong>  <a href="tel:{{ dining.phone }}">{{ dining.phone }}</a></p>
+            <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query={{ dining.location|urlencode }}" target="_blank">{{ dining.location }}</a></p>
 
             <h2>Images</h2>
             <div class="row">

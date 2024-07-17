@@ -14,8 +14,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ dining_place.name }}</h5>
                 <p class="card-text"><strong>Cuisine: </strong>{{ dining_place.cuisine }}</p>
-                <!--<p>{{ dining_place.menu }}</p>-->
-                
+                <a href="{% url 'dining_detail' dining_place.pk %}" > More info</a>
             </div>
         </div>
     </div>

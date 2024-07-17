@@ -11,7 +11,7 @@
                 <h5 class="card-title">{{ event.name }}</h5>
                 <p class="card-text"><strong>Overview: </strong> {{ event.description }}</p>
                 <p><strong>Date: </strong> {{ event.date }}</p>
-                <p><strong>Location: </strong> {{ event.location }}</p>
+                <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query={{ event.location|urlencode }}" target="_blank">{{ event.location }}</a></p>
                 <p><strong>Ticket info: </strong>{{ event.ticket_info }}</p>
             </div>
         </div>

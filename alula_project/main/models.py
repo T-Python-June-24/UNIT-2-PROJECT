@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 class HeritageSite(models.Model):
     name = models.CharField(max_length=200)
@@ -30,15 +31,19 @@ class Event(models.Model):
     def __str__(self):
         return self.name
 
+
 class Dining(models.Model):
     name = models.CharField(max_length=200)
+    category = models.CharField(max_length=100, default='Fine dining')
     cuisine = models.CharField(max_length=100)
+    price = models.CharField(max_length=100, default='$$')
+    dress = models.CharField(max_length=100, default='Smart casual')
+    phone = PhoneNumberField(default = '+966 503782355')
     location = models.CharField(max_length=200)
-    menu = models.TextField()
 
     def __str__(self):
         return self.name
-    
+
 class DiningImage(models.Model):
     dining = models.ForeignKey(Dining, related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='dining_images')

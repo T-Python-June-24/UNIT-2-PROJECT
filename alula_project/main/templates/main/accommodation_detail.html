@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-8">
             <h1>{{ accommodation.name }}</h1>
-            <p><strong>Location: </strong> {{ accommodation.location }}</p>
+            <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query={{ accommodation.location|urlencode }}" target="_blank">{{ accommodation.location }}</a></p>
             <p><strong>Type: </strong> {{ accommodation.type }}</p>
 
             <h2>Amenities</h2>

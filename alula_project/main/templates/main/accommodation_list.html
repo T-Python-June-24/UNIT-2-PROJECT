@@ -14,6 +14,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ accommodation.name }}</h5>
                 <p class="card-text"><strong>Type: </strong>{{ accommodation.type }}</p>
+                <a href="{% url 'accommodation_detail' accommodation.pk %}">More info</a>
             </div>
         </div>
     </div>
