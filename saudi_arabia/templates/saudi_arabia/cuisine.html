@@ -1,126 +1,16 @@
 {% extends 'saudi_arabia/base.html' %} {% load static %} {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/cuisine.css' %}" />
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
-<style>
-  .swiper-slide {
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    width: 85%;
-    max-width: 350px;
-    height: 400px;
-  }
 
-  .swiper-slide:hover {
-    transform: scale(1.05) translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-  }
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #047857;
-    background-color: transparent;
-    padding: 25px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-  }
-
-  .swiper-pagination-bullet {
-    background: #047857;
-    opacity: 0.5;
-    width: 12px;
-    height: 12px;
-    transition: all 0.3s ease;
-  }
-
-  .swiper-pagination-bullet-active {
-    opacity: 1;
-    width: 20px;
-    border-radius: 10px;
-  }
-
-  @media (max-width: 640px) {
-    .swiper-container {
-      height: auto;
-      padding-bottom: 70px;
-    }
-
-    .swiper-slide {
-      height: 250px;
-      width: 95%;
-    }
-
-    .swiper-pagination {
-      bottom: 35px !important;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      top: auto;
-      bottom: 5px;
-      transform: translateY(0);
-    }
-
-    .swiper-button-prev {
-      left: 20px;
-    }
-
-    .swiper-button-next {
-      right: 20px;
-    }
-  }
-
-  .swiper-slide-content {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 1.5rem;
-    border-radius: 0 0 15px 15px;
-    width: 100%;
-    text-align: center;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    backdrop-filter: blur(5px);
-  }
-
-  .dark .swiper-slide-content {
-    background: rgba(0, 0, 0, 0.8);
-  }
-
-  .swiper-slide-active .swiper-slide-content {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  #modalImage {
-    max-width: 100%;
-    height: auto;
-    max-height: 50vh;
-    object-fit: contain;
-  }
-
-</style>
 {% endblock %} {% block content %}
 <div class="container mx-auto px-4 py-12">
   <h1
-    class="text-6xl font-bold mb-12 text-center text-[#34D399] animate__animated animate__fadeInDown"
+    class="text-6xl font-bold mb-12 text-center animate__animated animate__fadeInDown"
   >
     Explore Saudi Arabian Cuisines
   </h1>
   <p
-    class="text-center mb-8 animate__animated animate__fadeInUp max-w-2xl mx-auto text-lg md:text-xl text-gray-500"
+    class="text-center mb-8 animate__animated animate__fadeInUp max-w-2xl mx-auto text-lg md:text-xl text-gray-700"
   >
     Discover the rich flavors and diverse dishes of Saudi Arabian cuisine. Swipe
     through the images below to learn more about each culinary tradition.
@@ -135,11 +25,11 @@
       >
         <div class="swiper-slide-content">
           <h2
-            class="font-bold mb-2 text-xl md:text-2xl text-emerald-800 dark:text-emerald-200"
+            class="font-bold mb-2 text-xl md:text-2xl text-emerald-800"
           >
             {{ cuisine.name }}
           </h2>
-          <p class="text-sm md:text-base text-gray-600 dark:text-gray-400">
+          <p class="text-sm md:text-base text-gray-600">
             Click for more details
           </p>
         </div>
@@ -163,14 +53,14 @@
     />
     <h2
       id="modalTitle"
-      class="text-2xl sm:text-3xl font-bold mb-4 text-emerald-700 dark:text-emerald-400"
+      class="text-2xl sm:text-3xl font-bold mb-4 text-emerald-700"
     ></h2>
     <p
       id="modalDescription"
-      class="mb-6 text-lg text-gray-700 dark:text-gray-300"
+      class="mb-6 text-lg text-gray-700"
     ></p>
     <h3
-      class="text-xl font-semibold mb-4 text-emerald-600 dark:text-emerald-500"
+      class="text-xl font-semibold mb-4 text-emerald-600"
     >
       Ingredients:
     </h3>

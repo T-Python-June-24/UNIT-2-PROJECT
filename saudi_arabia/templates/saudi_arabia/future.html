@@ -4,21 +4,21 @@
 {% block content %}
 <div class="flex flex-col items-center justify-center bg-transparent">
   <div class="container mx-auto px-4 py-12">
-    <h1 class="text-6xl font-extrabold mb-12 text-center text-[#34D399] animate__animated animate__fadeInDown">
+    <h1 class="text-6xl font-extrabold mb-12 text-center animate__animated animate__fadeInDown">
       The Future of Saudi Arabia
     </h1>
   </div>
 
-  <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto animate__animated animate__fadeInUp animate__delay-1s transition-all duration-300 hover:shadow-3xl">
+  <div class="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto animate__animated animate__fadeInUp animate__delay-1s transition-all duration-300 hover:shadow-3xl">
     <div class="md:flex">
       <div class="md:flex-shrink-0">
         <img class="h-64 w-full object-cover md:w-64 transition-transform duration-300 hover:scale-105" src="{% static 'images/mohammed-bin-salman.jpg' %}" alt="Mohammed bin Salman" />
       </div>
       <div class="p-8">
-        <h2 class="text-3xl font-bold mb-4 text-emerald-700 dark:text-emerald-400">
+        <h2 class="text-3xl font-bold mb-4 text-emerald-700">
           Mohammed bin Salman
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+        <p class="text-gray-600 leading-relaxed">
           Crown Prince and Prime Minister of Saudi Arabia, spearheading the ambitious Vision 2030 plan to revolutionize the Kingdom's economy and modernize society.
         </p>
       </div>
@@ -26,11 +26,11 @@
   </div>
 
   <div class="mt-16 grid md:grid-cols-2 gap-12 w-full max-w-6xl">
-    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg animate__animated animate__fadeInLeft animate__delay-2s transition-all duration-300 hover:shadow-2xl">
-      <h3 class="text-3xl font-bold mb-6 text-emerald-600 dark:text-emerald-400">
+    <div class="bg-white p-8 rounded-2xl shadow-lg animate__animated animate__fadeInLeft animate__delay-2s transition-all duration-300 hover:shadow-2xl">
+      <h3 class="text-3xl font-bold mb-6 text-emerald-600">
         Key Initiatives
       </h3>
-      <ul class="space-y-4 text-gray-700 dark:text-gray-300">
+      <ul class="space-y-4 text-gray-700">
         <li class="flex items-center">
           <svg class="w-6 h-6 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           Economic diversification through Vision 2030
@@ -53,14 +53,14 @@
         </li>
       </ul>
     </div>
-    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg animate__animated animate__fadeInRight animate__delay-2s transition-all duration-300 hover:shadow-2xl">
-      <h3 class="text-3xl font-bold mb-6 text-emerald-600 dark:text-emerald-400">
+    <div class="bg-white p-8 rounded-2xl shadow-lg animate__animated animate__fadeInRight animate__delay-2s transition-all duration-300 hover:shadow-2xl">
+      <h3 class="text-3xl font-bold mb-6 text-emerald-600">
         Vision for 2030
       </h3>
-      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+      <p class="text-gray-700 leading-relaxed">
         Mohammed bin Salman's Vision 2030 is a bold blueprint to transform Saudi Arabia into a global investment powerhouse. This ambitious plan aims to:
       </p>
-      <ul class="mt-4 space-y-2 text-gray-700 dark:text-gray-300">
+      <ul class="mt-4 space-y-2 text-gray-700">
         <li class="flex items-center">
           <svg class="w-5 h-5 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
           Diversify the economy beyond oil dependency
@@ -89,9 +89,6 @@
 </div>
 {% endblock %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-{% endblock %}
 
 {% block extra_js %}
 <script>
