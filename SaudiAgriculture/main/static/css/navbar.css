@@ -30,7 +30,14 @@ body{
     align-items: center;
     padding: 10px;
     border-radius: 0px 0px 30px 30px;
+    transition: background-color 0.3s;
 
+}
+.navbar.scrolled .navbar-container {
+    background-color: #059212;
+}
+.navbar.scrolled .navbar-logo a{
+    color: white;
 }
 .navbar-logo{
   font-size: 27px;

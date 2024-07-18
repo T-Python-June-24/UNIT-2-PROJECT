@@ -5,6 +5,10 @@
   <video autoplay muted loop id="hero-video">
     <source  src="https://res.cloudinary.com/dp5hwcef0/video/upload/v1721128808/Untitled_design_1_djmoxu.mp4" type="video/mp4"/>
   </video>
+   <div class="hero-content-home">
+            <h1 class="hero-title-home">Saudi Arabia Agriculture</h1>
+            <p class="hero-description-home">Discover Saudi Arabia's exports of agricultural crops</p>
+        </div>
 </div>
 {% endblock%}
 
@@ -93,31 +97,31 @@
 <div class="sa-region"><h2>Saudi Region</h2></div>
 <div class="region-container">
   <div class="card">
-    <img src="../static/images/coffe2.avif" />
+    <img src="{% static 'images/aseer.jpeg'%}" />
     <div class="card__head"><a href="{% url 'cities_view'%}" >Aseer</a></div>
   </div>
   <div class="card">
-    <img src="../static/images/coffe3.jpg" />
+    <img src="{% static 'images/taif.jpeg'%}" />
     <div class="card__head"><a href="{% url 'cities_view'%}" >Taif</a></div>
   </div>
   <div class="card">
-    <img src="../static/images/coffe4.jpg" />
+    <img src="{% static 'images/coffe3.jpg'%}" />
     <div class="card__head"><a href="{% url 'cities_view'%}" >Jazan</a></div>
   </div>
   <div class="card">
-    <img src="../static/images/mango.webp" />
+    <img src="{% static 'images/aljouf.jpeg'%}" />
     <div class="card__head"><a href="{% url 'cities_view'%}" >AlJouf</a></div>
   </div>
   <div class="card">
-    <img src="../static/images/mango.webp" />
+    <img src="{% static 'images/Tabuk.jpeg'%}" />
     <div class="card__head"><a href="{% url 'cities_view'%}" >Tabuk</a></div>
   </div>
   <div class="card">
-    <img src="../static/images/mango.webp" />
+    <img src="{% static 'images/Al-Qassim.jpeg'%}" />
     <div class="card__head"><a href="{% url 'cities_view'%}" >Al-Qassim</a></div>
   </div>
   <div class="card">
-    <img src="../static/images/mango.webp" />
+    <img src="{% static 'images/Al-Ahsa.jpeg'%}" />
     <div class="card__head"><a href="{% url 'cities_view'%}" >Al-Ahsa</a></div>
   </div>
 </div>
