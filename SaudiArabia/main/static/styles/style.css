@@ -1,0 +1,117 @@
+:root {
+    --light-color: #f8f9fa;
+    --darker-light-color: #dee2e6;
+    --dark-color: #212529;
+    --lighter-dark-color: #495057;
+}
+
+
+.light-theme .text-theme {
+    color: var(--dark-color);
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.dark-theme .text-theme {
+    color: var(--light-color);
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.light-theme .background-theme {
+    background-color: var(--light-color);
+}
+
+.dark-theme .background-theme {
+    background-color: var(--dark-color);
+}
+
+.light-theme .custom-navbar {
+    background-color: var(--darker-light-color);
+    color: var(--dark-color);
+}
+
+.dark-theme .custom-navbar {
+    background-color: var(--lighter-dark-color);
+    color: var(--light-color);
+}
+
+.navbar-shadow {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.img-style {
+    border: 2px solid #000;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.leftCol {
+    position: relative;
+    animation: slideFromLeft 2s forwards;
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.rightCol {
+    position: relative;
+    animation: slideFromRight 2s forwards;
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out 1 both;
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+.zoom-out {
+    animation: zoomOut 2s ease-in-out 1 both;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.zoom-in {
+    animation: zoomIn 2s ease-in-out 1 both;
+}

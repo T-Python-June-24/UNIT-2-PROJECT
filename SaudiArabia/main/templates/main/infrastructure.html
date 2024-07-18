@@ -1,0 +1,112 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Investment Plans {% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col"><h1 class="text-center">Saudi Arabia's Strategic Plan for eSports Development</h1></div>
+        </div>
+        <div class="row">
+            <div class="col"><h2>Saudi Arabia as a Regional and Global eSports Hub</h2>
+                <hr>
+                <p>Vision 2030’s focus on entertainment and cultural development intersects with the growth of eSports,
+                    which is seen not only as a recreational activity but also as a vehicle for cultural expression and
+                    economic growth. Saudi Arabia aims to leverage the global impact of eSports to become a regional hub
+                    for gaming and innovation.</p>
+                <p>One key goal is to create career pathways for Saudi youth passionate about gaming. According to HRH
+                    <i>Prince Faisal bin Bandar bin Sultan Al Saud</i>, Chairman of the Federation of eSports and
+                    Gaming, the
+                    Kingdom aims to become a leading global hub for eSports by 2030, creating over <b>35,000 jobs and
+                        contributing $13.3 billion to the economy</b>. The growth of the gaming industry has already led
+                    to job
+                    creation in areas such as game development, eSports event management, and streaming.</p>
+                <h2>Key Initiatives and Investments</h2>
+                <p>A notable initiative is the establishment of the <i>Saudi eSports Federation</i>, which hosts major
+                    gaming
+                    events to nurture local talent and build a competitive gaming ecosystem. The rise of eSports has
+                    also attracted global sponsorships and partnerships, enhancing international visibility and
+                    potentially boosting tourism. These partnerships infuse capital into the gaming sector and foster an
+                    environment conducive to further growth.</p>
+                <h2>Multi-Billion Dollar Infrastructure Investments</h2>
+                <p>The development of eSports in Saudi Arabia involves comprehensive infrastructure investments,
+                    educational initiatives, and alignment with Vision 2030’s goals. Investments in gaming
+                    infrastructure, such as the establishment of eSports arenas and gaming hubs, play a pivotal role in
+                    industry growth and economic diversification. An example is the ambitious gaming and eSports
+                    facility in <i>Qiddiya City</i>, featuring a <b>5,155-seat multifunctional venue</b>, which aims to
+                    host
+                    large-scale events and attract millions of visitors.</p>
+            </div>
+            <div class="col d-flex align-items-center">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/qiddiya-gaming-district.jpg' %}" class="d-block w-100"
+                                 alt="Qiddiya Gaming District">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/qiddiya-gaming-arena.jpg' %}" class="d-block w-100"
+                                 alt="Qidiyya Gaming Arena">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/qiddiya-gaming-city.jpeg' %}" class="d-block w-100"
+                                 alt="Qiddiya Gaming City">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <iframe width="1280" height="497" src="https://www.youtube.com/embed/uCOCc3uOpqM?controls=0&rel=0;"
+                        title="World First Gaming &amp; Esport District" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style" src="{% static 'images/sea_logo.jpg' %}" alt="Saudi eSports Academy logo"></div>
+            <div class="col"><h2>Educational Programs at the Saudi eSports Academy</h2>
+                <hr>
+                <p>The Saudi eSports Academy plays a crucial role in promoting eSports as a medium for
+                teaching essential values such as teamwork, collaboration, problem-solving, persistence, and
+                professionalism. The Academy aims to create career pathways in eSports by offering extensive courses on
+                strategies and tactics for various game titles.</p>
+                <h2 class="text-center">Training and Development</h2>
+                <p>The Academy provides comprehensive eSports training, enabling players to enhance their skills,
+                    achieve professionalism, and compete in major local and international events. It covers all areas of
+                    eSports, helping students build a professional profile to become future leaders in the industry.</p>
+                <h2 class="text-center">Faculty and Expertise</h2>
+                <p>The Academy is staffed by a team of professional eSports players, global eSports coaches, and
+                    numerous experts in the field, ensuring high-quality education and training.</p>
+                <h2 class="text-center">Key Statistics</h2>
+                <ul>
+                    <li><strong>Training Programs:</strong> 17</li>
+                    <li><strong>Coaches:</strong> 117</li>
+                    <li><strong>"Become Pro Player" Graduates:</strong> 202</li>
+                    <li><strong>"eSports Career Training" Graduates:</strong> 197</li>
+                    <li><strong>Outreach Participants:</strong> 630</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
