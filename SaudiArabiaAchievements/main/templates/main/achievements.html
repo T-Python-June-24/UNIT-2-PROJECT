@@ -1,0 +1,96 @@
+{% extends "main/base.html" %}
+{%load static%}
+{% block title %}
+ الإنجازات
+{% endblock title %}
+
+{% block style %}
+<style>
+    .award-item {
+        display: flex;
+        align-items: center;
+        background: var(--dark-card-bg);
+        border: 1px solid var(--dark-card-border);
+        color: var(--dark-text);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+    }
+
+    .award-item img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+        padding-left: 1rem;
+    }
+
+    .award-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .award-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .award-description {
+        font-size: 16px;
+    }
+</style>
+{% endblock style %}
+
+{% block content %}
+<section class="pt-24 pb-12 ">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold pt-6 mb-8 mr-10 text-start"> ملخص لاهم منجزات رؤية المملكة 2023 </h1>
+        <div class="award-list">
+            <div class="award-item">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
+                <div>
+                    <div class="award-title">                         تسهيل الحصول على الخدمات الصحية الطارئة خلال 4 ساعات بنسبة تتجاوز 87%
+                    </div>
+
+                </div>
+            </div>
+            <div class="award-item">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
+                <div>
+                    <div class="award-title"> خفض معدل وفيات حوادث الطرق سنويًّا إلى 13.5 وفاة لكل 100 ألف نسمة</div>
+
+                </div>
+            </div>
+            <div class="award-item">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
+                <div>
+                    <div class="award-title"> ارتفاع نسبة الممارسين للرياضة مرة واحدة على الأقل أسبوعيًّا إلى 19% </div>
+
+                </div>
+            </div>
+            <div class="award-item">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
+                <div>
+                    <div class="award-title">ارتفاع عدد المواقع التراثية القابلة للزيارة في المملكة عام 2020 إلى 354 موقعًا</div>
+
+                </div>
+            </div>
+            <div class="award-item">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
+                <div>
+                    <div class="award-title"> أتمتة عملية الحصول على تأشيرة العمرة لتصبح مدة الحصول عليها 5 دقائق فقط </div>
+
+                </div>
+            </div>
+            <div class="award-item">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
+                <div>
+                    <div class="award-title"> إطلاق "التأشيرة السياحية الإلكترونية" التي يمكن الحصول عليها إلكترونيًّا خلال دقائق</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
