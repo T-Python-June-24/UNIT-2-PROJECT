@@ -32,8 +32,7 @@
     <title>{% block title %} {% endblock title %}</title>
 </head>
 
-<body {% if 'mode' in request.COOKIES %} class=" bg-gradient-to-tr from-slate-700 via-slate-800 to-sky-900 text-white"
-    {% else %} class=" bg-gradient-to-r from-rose-100 to-teal-100 text-gray-700" {% endif %}>
+<body {% if 'mode' in request.COOKIES %} class="bg-[#1e293b] text-white" {% else %} class=" bg-gradient-to-r from-rose-100 to-teal-100 text-gray-700" {% endif %}>
 
     <div class="container-fluid">
 
@@ -46,9 +45,9 @@
                 </div>
                 <div class="flex gap-x-6 md:flex md:gap-x-5 md:text-xl lg:flex lg:gap-x-12 lg:text-2xl">
                     <a href="{%url 'main:home'%}" class="leading-6"> الرئيسية</a>
-                    <a href="{%url 'main:achievements'%}" class="leading-6">الإنجازات التقنية</a>
-                    <a href="#" class="leading-6 ">المشاريع التقنية </a>
-                    <a href="#" class="leading-6 ">الجوائز العالمية</a>
+                    <a href="{%url 'main:achievements'%}" class="leading-6">الإنجازات</a>
+                    <a href="{%url 'main:projects'%}" class="leading-6 ">المشاريع </a>
+                    <a href="{%url 'main:award'%}" class="leading-6 ">الجوائز العالمية</a>
                 </div>
                 <div class="flex gap-x-4 sm:justify-between md:flex md:gap-5 lg:flex lg:gap-10 lg:justify-around">
                     <a href="{%url 'main:dark_mode'%}" class="leading-6 ">
@@ -69,7 +68,7 @@
 
     </div>
 
-    <footer class="w-full h-fit inset-x-0 top-0 z-50   text-center  lg:text-left">
+    <footer class="footer relative bottom-0 w-full h-fit  z-50   text-center  lg:text-left">
         <div class="bg-black/5 p-4 text-center  ">
             جميع الحقوق محفوظة © 2024 
         </div>

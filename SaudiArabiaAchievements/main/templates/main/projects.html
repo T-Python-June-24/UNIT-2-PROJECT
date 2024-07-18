@@ -1,0 +1,62 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}الإنجازات التقنية {% endblock title %}
+
+{% block style %}
+<style>
+    .achievement-card {
+        background: whitesmoke;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        color: black;
+    }
+    .achievement-card:hover {
+        transform: translateY(-10px);
+    }
+
+
+</style>
+{% endblock style %}
+
+{% block content %}
+
+
+
+<section class="pt-32 pb-12 ">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold mb-8 text-start">ابرز المشاريع</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="achievement-card">
+                <h2 class="text-2xl font-semibold mb-4">رؤية 2030</h2>
+                <p>رؤية المملكة العربية السعودية 2030 هي خطة طموحة تهدف إلى تقليل اعتماد المملكة على النفط، وتنويع اقتصادها، وتطوير قطاعات الخدمات العامة مثل الصحة والتعليم والبنية التحتية والترفيه والسياحة.</p>
+            </div>
+            <div class="achievement-card">
+                <h2 class="text-2xl font-semibold mb-4">نيوم</h2>
+                <p>نيوم هي مدينة مستقبلية قيد التطوير في شمال غرب المملكة العربية السعودية. تهدف نيوم إلى أن تكون مركزاً للتكنولوجيا والابتكار والاستدامة.</p>
+            </div>
+            <div class="achievement-card">
+                <h2 class="text-2xl font-semibold mb-4">مشروع البحر الأحمر</h2>
+                <p>مشروع البحر الأحمر هو وجهة سياحية فاخرة قيد التطوير على الساحل الغربي للمملكة العربية السعودية. يهدف المشروع إلى توفير تجارب سياحية متميزة في إطار من الاستدامة البيئية.</p>
+            </div>
+            <div class="achievement-card">
+                <h2 class="text-2xl font-semibold mb-4">مدينة الملك عبد الله الاقتصادية</h2>
+                <p>مدينة الملك عبد الله الاقتصادية هي مدينة جديدة تم تطويرها لتعزيز النمو الاقتصادي في المملكة. تضم المدينة موانئ ومنشآت صناعية وتجارية وسكنية.</p>
+            </div>
+            <div class="achievement-card">
+                <h2 class="text-2xl font-semibold mb-4">برنامج التحول الوطني</h2>
+                <p>برنامج التحول الوطني هو أحد البرامج التنفيذية لتحقيق رؤية المملكة 2030. يهدف البرنامج إلى تطوير العمل الحكومي وتحسين الأداء في مختلف القطاعات.</p>
+            </div>
+            <div class="achievement-card">
+                <h2 class="text-2xl font-semibold mb-4">جامعة الملك عبد الله للعلوم والتقنية (KAUST)</h2>
+                <p>جامعة الملك عبد الله للعلوم والتقنية هي جامعة بحثية حديثة تهدف إلى تعزيز البحث العلمي والابتكار في المملكة العربية السعودية.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock content %}
+

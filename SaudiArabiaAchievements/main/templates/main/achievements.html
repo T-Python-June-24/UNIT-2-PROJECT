@@ -1,97 +1,106 @@
 {% extends "main/base.html" %}
-{% load static %}
-{% block title %}الإنجازات التقنية {% endblock title %}
+{%load static%}
+{% block title %}
+الجوائز العالمية
+{% endblock title %}
 
+{% block style %}
+<style>
+    .award-item {
+        display: flex;
+        align-items: center;
+        background: var(--dark-card-bg);
+        border: 1px solid var(--dark-card-border);
+        color: var(--dark-text);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+    }
+
+    .award-item img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    .award-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .award-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .award-description {
+        font-size: 16px;
+    }
+</style>
+{% endblock style %}
 
 {% block content %}
-
-
-<div id="carouselExampleCrossfade" class="relative shadow-md shadow-slate-950 " data-twe-carousel-init data-twe-ride="carousel">
-    <!--Carousel indicators-->
-    <div class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-6"
-        data-twe-carousel-indicators>
-        <button type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide-to="0" data-twe-carousel-active
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide-to="1"
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-label="Slide 2"></button>
-        <button type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide-to="2"
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-label="Slide 3"></button>
-    </div>
-
-    <!--Carousel items-->
-    <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-        <!--First item-->
-        <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-twe-carousel-fade data-twe-carousel-item data-twe-carousel-active>
-            <img src="{%static 'img/achieve2.jpeg'%}" class="block object-contain " alt="image" />
-        </div>
-        <!--Second item-->
-        <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-twe-carousel-fade data-twe-carousel-item>
-            <img src="{%static 'img/bg2.jpeg'%}" class="block w-full object-contain " alt="image" />
-        </div>
-        <!--Third item-->
-        <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-twe-carousel-fade data-twe-carousel-item>
-            <img src="{%static 'img/b3.jpeg'%}" class="block w-full object-contain " alt="image" />
-        </div>
-    </div>
-
-    <!--Carousel controls - prev item-->
-    <button
-        class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-        type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide="prev">
-        <span class="inline-block h-8 w-8">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="h-6 w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-        </span>
-        <span
-            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
-    </button>
-    <!--Carousel controls - next item-->
-    <button
-        class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-        type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide="next">
-        <span class="inline-block h-8 w-8">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="h-6 w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-        </span>
-        <span
-            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
-    </button>
-</div>
-
-
-<section class="w-full h-screen">
-    <div class="properties-wrapper relative isolate inset-y-20 ">
-        {% for i in achievements %}
-        <div class="property-card mx-6">
-            <img src="{% static i.image %}" alt="{{ i.title }}">
-
-            <div>
-                {{ i.title }}
-
+<section class="pt-24 pb-12 bg-gradient-to-tr from-slate-700 via-slate-800 to-sky-900 text-white">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold mb-8 text-center">الجوائز العالمية</h1>
+        <div class="award-list">
+            <div class="award-item">
+                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة نوبل">
+                <div>
+                    <div class="award-title">جائزة نوبل</div>
+                    <div class="award-description">
+                        جائزة نوبل هي مجموعة من الجوائز الدولية السنوية التي تُمنح في مجالات الفيزياء، الكيمياء، الطب، الأدب، السلام، والاقتصاد.
+                    </div>
+                </div>
             </div>
-            <div>
-                <br><a href="#" class="btn">more</a>
-
+            <div class="award-item">
+                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة الأوسكار">
+                <div>
+                    <div class="award-title">جائزة الأوسكار</div>
+                    <div class="award-description">
+                        جائزة الأوسكار هي جوائز تُمنح سنويًا من قبل أكاديمية فنون وعلوم الصور المتحركة لتكريم الإنجازات الفنية والتقنية في صناعة السينما.
+                    </div>
+                </div>
             </div>
-
+            <div class="award-item">
+                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة بوليتزر">
+                <div>
+                    <div class="award-title">جائزة بوليتزر</div>
+                    <div class="award-description">
+                        جائزة بوليتزر هي مجموعة من الجوائز التي تُمنح لإنجازات في الصحافة، الأدب، والموسيقى. تُمنح الجوائز سنويًا في الولايات المتحدة.
+                    </div>
+                </div>
+            </div>
+            <div class="award-item">
+                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة غرامي">
+                <div>
+                    <div class="award-title">جائزة غرامي</div>
+                    <div class="award-description">
+                        جائزة غرامي هي جوائز تُمنح سنويًا لتكريم الإنجازات في صناعة الموسيقى من قبل الأكاديمية الوطنية لتسجيل الفنون والعلوم.
+                    </div>
+                </div>
+            </div>
+            <div class="award-item">
+                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة بالون دور">
+                <div>
+                    <div class="award-title">جائزة بالون دور</div>
+                    <div class="award-description">
+                        جائزة بالون دور تُمنح سنويًا لأفضل لاعب كرة قدم في العالم من قبل مجلة فرانس فوتبول.
+                    </div>
+                </div>
+            </div>
+            <div class="award-item">
+                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة إيمي">
+                <div>
+                    <div class="award-title">جائزة إيمي</div>
+                    <div class="award-description">
+                        جائزة إيمي هي جوائز تُمنح للإنتاج التلفزيوني، وهي تعادل جوائز الأوسكار (للفيلم)، غرامي (للموسيقى)، وتوني (للمسرح).
+                    </div>
+                </div>
+            </div>
         </div>
-        {% endfor %}
     </div>
 </section>
-
-
 {% endblock content %}
-
-
-
-

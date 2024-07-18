@@ -19,6 +19,18 @@ def achievements(request:HttpRequest):
     return render(request,'main/achievements.html',{'achievements':achievements})
 
 
+def projects(request:HttpRequest):
+
+
+    return render(request,'main/projects.html')
+
+
+def award(request:HttpRequest):
+
+
+    return render(request,'main/award.html')
+
+
 def dark_mode(request:HttpRequest):
 
     response =  redirect(request.META.get('HTTP_REFERER', '/'))  
