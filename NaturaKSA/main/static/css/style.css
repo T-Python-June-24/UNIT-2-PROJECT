@@ -77,6 +77,10 @@ img.full-width {
 .main{
     overflow: hidden;
 }
+.home{
+    margin: 0%;
+}
+
 .home__swiper{
     position: relative;
 }
@@ -153,6 +157,7 @@ align-items: center;
 
 }
 .sub {
+    margin-top: 0%;
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -368,7 +373,7 @@ align-items: center;
     animation-duration: 1s;
     animation-delay: 1s;
     color: var(--paragraph-color);
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     text-align: right; 
     width: 80%; 
     max-width: 600px; 
