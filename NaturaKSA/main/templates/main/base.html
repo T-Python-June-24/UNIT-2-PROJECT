@@ -1,0 +1,54 @@
+
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet"></link>
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body data-theme="{% if request.COOKIES.mode == 'dark' %}dark{% else %}light{% endif %}"></body>
+    {% block navbar %}
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'main:about' %}">من نحن</a>
+                    </li>
+                    <!-- <li class="nav__item">
+                        <a href="#contact">تواصل معنا</a>
+                    </li> -->
+                    <li class="nav__item">
+                        <a href="{% url 'main:home_page' %}">الرئيسية</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="mode-icons-container">
+                <a href="{% url 'main:dark_mode' %}">
+                    <span class="material-symbols-outlined {% if request.COOKIES.mode == 'dark' %}dark-mode{% endif %}">dark_mode</span>
+                </a>
+                <a href="{% url 'main:light_mode' %}">
+                    <span class="material-symbols-outlined {% if request.COOKIES.mode != 'dark' %}light-mode{% endif %}">light_mode</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+      
+    {% endblock navbar %}
+
+    {% block content %}
+    <!-- Main content from child templates will go here -->
+    {% endblock %}
+</body>
+</html>

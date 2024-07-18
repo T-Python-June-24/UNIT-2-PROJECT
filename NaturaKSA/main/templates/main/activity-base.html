@@ -1,0 +1,91 @@
+{% extends 'main/base.html' %}
+
+{%load static%}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en" >
+
+    
+    <main class="main">
+        <section class="home">
+
+           <div class="home__swiper swiper">
+            <div class="swiper-wrapper">
+                <article class="home__article swiper-slide">
+                    <div class="home__data container">
+                        <h1 class="Activity-title"> {% block Activity-title %} {% endblock %}   </h1>
+
+                    </div>
+                    {% block 1stActivity-img %} {% endblock %}
+                     </article>
+
+                     <article class="home__article swiper-slide">
+                        <div class="home__data container">
+                          
+                        </div>
+                        {% block 2stActivity-img %} {% endblock %}
+                         </article>
+                         <div class="info-bar">
+                             <div class="info-section">
+                                 <p> {% block Activity-duration %} {% endblock %}  </p>
+                             </div>
+                             <div class="info-section">
+                                 <p><i class="icon-land"></i></p>
+                                 <p>{% block Activity-price %} {% endblock %}</p>
+                             </div>
+                          
+                             <div class="info-section">
+                                 <div class="group-size-title">
+                                     <p>:حجم المجموعة</p>
+                                     <p>{% block groub-size %} {% endblock %}</p>
+                                 </div>
+                                     
+                             </div>
+                             <div class="info-section">
+                                {% block RESERVATIONS%} {% endblock %}
+                             </div>
+                         </div>
+            </div>
+           <!--  pagination -->
+           <!-- navagtion buttons -->
+           <div class="swiper-navagation">
+            <div class="swiper-button-prev">
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+            </div>
+            <div class="swiper-button-next">
+                <span class="material-symbols-outlined">arrow_forward_ios</span>
+
+            </div>
+
+           </div>
+           </div> 
+    <section class="Activity-info">
+        <div class="overview-titel"> {% block overview-titel"%} {% endblock %}   </div>
+
+        <div class="overview-container">
+            <p class="overview">{% block overview-paragraph"%} {% endblock %} 
+            </p>
+        </div>
+        <div class="map"> <!-- 300x600 -->
+            {% block google-map-link"%} {% endblock %} 
+        </div>
+        
+    </section>
+
+    <section class="history">
+        <div class="history-container">
+            <div class="history-imgs">
+                {% block 1sthistory-img %} {% endblock %}
+                {% block 2sthistory-img %} {% endblock %}
+
+            </div>
+            <h1 class="history-title">{% block history-title %} {% endblock %}</h1>
+            <p class="history-paragraph">{% block history-paragraph %} {% endblock %}</p>
+            </p>
+        </div>
+    </section>
+    </main>
+    <script src="{% static 'js/main.js' %}"></script>
+
+{%endblock%}
