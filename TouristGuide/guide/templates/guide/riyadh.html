@@ -1,0 +1,63 @@
+
+{% extends 'guide/base.html' %}
+{% load static %}
+{% block title %} Abha city {% endblock %}
+{% block content %}
+
+<div class="container">
+
+    <div class="row g-0 mt-4 row-cols-1 row-cols-md-2">
+      {% for city in cities %}
+        <div class="col order order-md-1">
+            <div class="d-flex flex-column p-5 text-light justify-content-center align-items-center h-100">
+              
+                <h1>Abha</h1>
+                <h5>{{city.title}}</h5>
+            </div>
+
+        </div>
+
+        <div class="col order">
+            <img class="w-100 rounded-4" src="{{city.images.0}}"/>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <hr>
+
+    <div class="row">
+      <div class="col">
+          <h2>Our movies Gallery</h2>
+          <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner" style="height: 400px;">
+                { % for image in city.images %}
+                <div class="carousel-item active">
+                  <img src="https://res.cloudinary.com/dirlusg8s/image/upload/v1721266516/abha4_nmbk3e.jpg" class="d-block w-100" alt="...">
+                </div>
+                
+                <div class="carousel-item">
+                  <img src="https://res.cloudinary.com/dirlusg8s/image/upload/v1721266519/abha3_m6uge7.png
+                  " class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://res.cloudinary.com/dirlusg8s/image/upload/v1721266521/abha2_hj76ct.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+      </div>
+  </div>
+
+{% endblock %}
