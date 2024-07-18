@@ -1,0 +1,91 @@
+{% extends "base_pages/base.html" %}
+{% load static %}
+{% block title %}Saudi Heritage{% endblock %}
+{% block display %}
+<section>
+  <div class="owl-item active" style="width: 100%;">
+    <div class="item">
+      <div class="text-in-banner-city">
+        <p class="text-banner">{% block TitleBanner%}{%endblock%}</p>
+        <p class="text-banner">{% block BannerDescription%}{%endblock%}</p>
+        
+      </div>
+      <video autoplay muted loop playsinline id="hail_video_slide" data-video="1" class="mtz-lpcbi">
+        <source src="{% block video%}{%endblock%}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<section>
+  <div>
+    <div class="row box-info">
+      <div class="col-8 box {% if request.COOKIES.mode == 'dark' %}text-white{%endif%}">
+        {%block report%}
+
+        {%endblock%}
+      </div>
+      <div class="col-3 box width-mobile ">
+        <div class="map {% if request.COOKIES.mode == 'dark' %}background-dark{%endif%}">
+          {% block FromGoogle %}
+          
+          {% endblock %}
+          <a href="{%block LingGoogle%}{%endblock%}" target="_blank" class="btn  mt-2 text-white {% if request.COOKIES.mode == 'dark' %}bg-dark{%endif%}">للأنتقال للموقع
+          </a>
+        </div>
+        {%block CodeTele%}
+       
+        {%endblock%}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="historical-cities {% if request.COOKIES.mode == 'dark' %}background-dark-body text-white{%endif%}">
+  <div class="container">
+    <div class="stylish-line animate-on-scroll"></div>
+    <div class="stylish-line1 animate-on-scroll"></div>
+
+    <h2 class="animate-on-scroll text-center mb-5 {% if request.COOKIES.mode == 'dark' %} text-white{%endif%}"> مناطق
+      اخرى
+    </h2>
+
+    <div class="row">
+      <div class="col-md-4 mb-4 animate-on-scroll">
+        <div class="card ">
+          <img src="{% static 'images/alanga.jpg' %}" class="card-img-top" >
+          <div class="card-body {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">
+            <h5 class="card-title">قلعة العنقة </h5>
+            <p class="card-text"> القرية تطل على سهول تهامة و تتميز بموقعها الاستراتيجي وصلابة مبانيها وهي من ديار آل
+              سلمى من آل يعلى من آل كثير من بني مالك.</p>
+            <a href="{% url 'ClientPages:alanga'%}" class="btn btn-primary {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">اقرأ
+              المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 animate-on-scroll">
+        <div class="card">
+          <img src="{% static 'images/alma.jpg' %}" class="card-img-top" >
+          <div class="card-body {% if request.COOKIES.mode == 'dark' %} background-dark {%endif%}">
+            <h5 class="card-title">رجال المع</h5>
+            <p class="card-text">قرية رجال ألمع التراثية هي قرية تراثية تقع في محافظة رجال ألمع الواقعة بمنطقة عسير جنوب
+              غرب السعودية، وتبعد عن مدينة أبها حوالي 52 كم باتجاه الغرب. يزيد تاريخ بناءها عن 900 سنة.</p>
+            <a href="{% url 'ClientPages:RjalAlma'%}" class="btn btn-primary {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">اقرأ
+              المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 animate-on-scroll">
+        <div class="card">
+          <img src="{% static 'images/mard.jpg' %}" class="card-img-top" >
+          <div class="card-body {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">
+            <h5 class="card-title">قلعة مارد</h5>
+            <p class="card-text">تقع قلعة مارد على جبل أو تل صخري يبلغ ارتفاعها 600م في حي الدرع بدومة الجندل التابعة
+              لمنطقة الجوف، ويعود سبب تسميتها بهذا الاسم إلى تمردها واستعصائها على كل من حاول اقتحامها</p>
+            <a href="{% url 'ClientPages:mard'%}" class="btn btn-primary  {% if request.COOKIES.mode == 'dark' %} background-dark{%endif%}">اقرأ
+              المزيد</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock%}
