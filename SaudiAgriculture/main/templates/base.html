@@ -23,7 +23,7 @@
     <script src="{% static 'js/script.js' %}"></script>
     <title>{% block title %}{% endblock %}</title>
   </head>
-  <body>
+  <body {% if dark_mode in  request.COOKIES %} class=" dark-mode"  {% endif %}>
     <div class="navbar"> 
       <div class="navbar-container">
         <div class="navbar-logo"><a href="{% url 'home_view'%}"> Saudi Arabia</a></div>
@@ -95,8 +95,8 @@
           </a>
         </div>
         <div class="navbar-page-mode">
-          <a><span class="material-symbols-outlined"> light_mode </span></a>
-          <a><span class="material-symbols-outlined"> dark_mode </span></a>
+          <a href="{% url 'light_mode_view' %}"><span class="material-symbols-outlined" > light_mode </span></a>
+          <a href="{% url 'dark_mode_view' %}"> <span class="material-symbols-outlined"> dark_mode </span></a>
         </div>
       </div>
       </div>
