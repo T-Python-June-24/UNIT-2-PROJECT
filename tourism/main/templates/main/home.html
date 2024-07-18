@@ -9,7 +9,7 @@
 {% block content %}
 
   
-<div>
+<div class="container-fluid">
     <div class="row justify-content-center align-self-center text-center bg-success-subtle">
         <div class="p-0 b-0 blank-0 col-sm sidenav justify-content-center align-self-center object-fit-none">
                     
@@ -119,5 +119,42 @@
     </div>
   </div>
   
+  <div class="album py-5">
+    <div class="container mt-2 p-1">
+      <div class="row card-body">
+          
+        <div class="col-6 text-center">
+          <div class="p-0 b-0 blank-0 col-sm object-fit-none">
+            <div class="image-container">
+              <div class="text-success">
+                <h1 class="display-1">The Saudi Cousine</h1>
+                <h4>Our traditional cousine has a plenty of choices</h4>
+                <h4>-</h4>
+                <h4>-</h4>
+                <h4>do not forget to check it</h4>
+                <h4>-</h4>
+                <h4>-</h4>
+                <h4>to learn more click on the button bellow</h4>
+                <button class="btn btn-sm btn-outline-secondary rounded py-2"><a class="nav-link" href="{% url 'main:food' %}">learn more</a></button>
+              </div>
+        </div>
+        </div>
+      </div>
+      <hr class="w-100 clearfix d-md-none" />
+        <div class="col-6">
+            <div id="slider">
+                <figure>                
+                  <img src="{% static 'images/f1.jpg' %}" class="rounded">
+                  <img src="{% static 'images/f2.jpg' %}" class="rounded">
+                  <img src="{% static 'images/f3.jpg' %}" class="rounded">
+                  <img src="{% static 'images/f4.jpg' %}" class="rounded">
+                  <img src="{% static 'images/f1.jpg' %}" class="rounded">
+                </figure>
+            </div>
+        </div>
+        
+    </div>
+  </div>
+  </div>
   
 {% endblock %}
