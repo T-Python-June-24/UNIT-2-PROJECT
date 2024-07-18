@@ -8,15 +8,8 @@ def home(request:HttpRequest):
 
 def achievements(request:HttpRequest):
 
-    achievements = [
-        
-        {"title" : "Villa Modern in Malqa", "image" : "img/achieve1.jpeg"},
-        {"title" : "Great home for you in Rimal", "image" : "img/achieve2.jpeg"},
-        {"title" : "Villa with 8 bedrooms in Swedey", "image" : "img/achieve3.jpeg"},
 
-    ]
-
-    return render(request,'main/achievements.html',{'achievements':achievements})
+    return render(request,'main/achievements.html')
 
 
 def projects(request:HttpRequest):
