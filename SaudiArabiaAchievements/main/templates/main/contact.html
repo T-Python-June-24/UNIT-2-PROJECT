@@ -1,0 +1,77 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}الإنجازات التقنية {% endblock title %}
+
+{% block style %}
+<style>
+
+.contact-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .contact-section h2 {
+            text-align: center;
+        }
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-section form label {
+            margin-bottom: 5px;
+        }
+        .contact-section form input, .contact-section form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .contact-section form button {
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .contact-section form button:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-section {
+            color: black;
+        }
+
+
+</style>
+{% endblock style %}
+
+{% block content %}
+
+
+
+<section class="con mx-auto px-4 pt-32 mb-12 ">
+    <h2 class="text-4xl font-bold mb-6 text-center "> تواصل معنا</h2>
+    <div class="contact-section mt-6 mb-32">
+        <form action="#" method="post">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
+</section>
+
+
+
+{% endblock content %}
+

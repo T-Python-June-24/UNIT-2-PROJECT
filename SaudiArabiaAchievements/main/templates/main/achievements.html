@@ -23,6 +23,7 @@
         height: 80px;
         border-radius: 50%;
         margin-right: 20px;
+        padding-left: 1rem;
     }
 
     .award-item:hover {
@@ -30,7 +31,7 @@
     }
 
     .award-title {
-        font-size: 24px;
+        font-size: 1.3rem;
         font-weight: 600;
         margin-bottom: 5px;
     }
@@ -42,62 +43,51 @@
 {% endblock style %}
 
 {% block content %}
-<section class="pt-24 pb-12 bg-gradient-to-tr from-slate-700 via-slate-800 to-sky-900 text-white">
+<section class="pt-24 pb-12 ">
     <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold mb-8 text-center">الجوائز العالمية</h1>
+        <h1 class="text-4xl font-bold pt-6 mb-8 mr-10 text-start"> ملخص لاهم منجزات رؤية المملكة 2023 </h1>
         <div class="award-list">
             <div class="award-item">
-                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة نوبل">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
                 <div>
-                    <div class="award-title">جائزة نوبل</div>
-                    <div class="award-description">
-                        جائزة نوبل هي مجموعة من الجوائز الدولية السنوية التي تُمنح في مجالات الفيزياء، الكيمياء، الطب، الأدب، السلام، والاقتصاد.
+                    <div class="award-title">                         تسهيل الحصول على الخدمات الصحية الطارئة خلال 4 ساعات بنسبة تتجاوز 87%
                     </div>
+
                 </div>
             </div>
             <div class="award-item">
-                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة الأوسكار">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
                 <div>
-                    <div class="award-title">جائزة الأوسكار</div>
-                    <div class="award-description">
-                        جائزة الأوسكار هي جوائز تُمنح سنويًا من قبل أكاديمية فنون وعلوم الصور المتحركة لتكريم الإنجازات الفنية والتقنية في صناعة السينما.
-                    </div>
+                    <div class="award-title"> خفض معدل وفيات حوادث الطرق سنويًّا إلى 13.5 وفاة لكل 100 ألف نسمة</div>
+
                 </div>
             </div>
             <div class="award-item">
-                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة بوليتزر">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
                 <div>
-                    <div class="award-title">جائزة بوليتزر</div>
-                    <div class="award-description">
-                        جائزة بوليتزر هي مجموعة من الجوائز التي تُمنح لإنجازات في الصحافة، الأدب، والموسيقى. تُمنح الجوائز سنويًا في الولايات المتحدة.
-                    </div>
+                    <div class="award-title"> ارتفاع نسبة الممارسين للرياضة مرة واحدة على الأقل أسبوعيًّا إلى 19% </div>
+
                 </div>
             </div>
             <div class="award-item">
-                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة غرامي">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
                 <div>
-                    <div class="award-title">جائزة غرامي</div>
-                    <div class="award-description">
-                        جائزة غرامي هي جوائز تُمنح سنويًا لتكريم الإنجازات في صناعة الموسيقى من قبل الأكاديمية الوطنية لتسجيل الفنون والعلوم.
-                    </div>
+                    <div class="award-title">ارتفاع عدد المواقع التراثية القابلة للزيارة في المملكة عام 2020 إلى 354 موقعًا</div>
+
                 </div>
             </div>
             <div class="award-item">
-                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة بالون دور">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
                 <div>
-                    <div class="award-title">جائزة بالون دور</div>
-                    <div class="award-description">
-                        جائزة بالون دور تُمنح سنويًا لأفضل لاعب كرة قدم في العالم من قبل مجلة فرانس فوتبول.
-                    </div>
+                    <div class="award-title"> أتمتة عملية الحصول على تأشيرة العمرة لتصبح مدة الحصول عليها 5 دقائق فقط </div>
+
                 </div>
             </div>
             <div class="award-item">
-                <img src="{% static 'img/b3.jpeg' %}" alt="جائزة إيمي">
+                <img src="{% static 'img/achieve.png' %}" alt=" ">
                 <div>
-                    <div class="award-title">جائزة إيمي</div>
-                    <div class="award-description">
-                        جائزة إيمي هي جوائز تُمنح للإنتاج التلفزيوني، وهي تعادل جوائز الأوسكار (للفيلم)، غرامي (للموسيقى)، وتوني (للمسرح).
-                    </div>
+                    <div class="award-title"> إطلاق "التأشيرة السياحية الإلكترونية" التي يمكن الحصول عليها إلكترونيًّا خلال دقائق</div>
+
                 </div>
             </div>
         </div>

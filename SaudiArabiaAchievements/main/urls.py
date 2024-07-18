@@ -10,4 +10,5 @@ urlpatterns = [
     path('/achievements',views.achievements,name='achievements'),
     path('/projects',views.projects,name='projects'),
     path('/award',views.award,name='award'),
+    path('/contact',views.contact,name='contact'),
 ]

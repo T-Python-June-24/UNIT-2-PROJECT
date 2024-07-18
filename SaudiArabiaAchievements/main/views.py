@@ -31,6 +31,13 @@ def award(request:HttpRequest):
     return render(request,'main/award.html')
 
 
+
+def contact(request:HttpRequest):
+
+
+    return render(request,'main/contact.html')
+
+
 def dark_mode(request:HttpRequest):
 
     response =  redirect(request.META.get('HTTP_REFERER', '/'))  
