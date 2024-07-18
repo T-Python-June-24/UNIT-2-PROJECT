@@ -2,9 +2,9 @@
   "abha": {
     "title": "Abha - The City of Fog",
     "top_attractions": [
-      {"name": "Asir National Park", "image": "images/abha1.png"},
-      {"name": "Jabal Sawda", "image": "images/abha2.png"},
-      {"name": "Traditional Markets", "image": "images/abha3.png"}
+      {"name": "Asir National Park", "image": "images/abha1.png", "description": "A vast park offering hiking trails, picnicking spots, and diverse wildlife.", "type": "Nature", "map_link": "https://maps.google.com/?q=Asir+National+Park"},
+      {"name": "Jabal Sawda", "image": "images/abha2.png", "description": "The highest peak in Saudi Arabia, known for its stunning views and cool climate.", "type": "Nature", "map_link": "https://maps.google.com/?q=Jabal+Sawda"},
+      {"name": "Traditional Markets", "image": "images/abha3.png", "description": "Vibrant markets where you can explore and purchase local handicrafts and foods.", "type": "Cultural", "map_link": "https://maps.google.com/?q=Traditional+Markets+Abha"}
     ],
     "brief": "Aseer, the cultural heart of Saudi, offers diverse attractions in Abha. Explore Shada Palace, Abha Dam Lake, and Abha Palace Theme Park. Hike Aseer National Park near Souda Mountain and visit Waterfall Park and Abu Kheyal Park. Enjoy Abha’s cable cars, the Aseer Regional Museum, Al Muftaha art village, and local tribal customs in Al Habala and Rijal Almaa.",
     "images": ["images/abha1.png", "images/abha2.png", "images/abha3.png"]
@@ -12,9 +12,9 @@
   "riyadh": {
     "title": "Riyadh - The Capital City",
     "top_attractions": [
-      {"name": "Via Riyadh", "image": "images/riyadh1.png"},
-      {"name": "Boulevard Riyadh City", "image": "images/riyadh2.png"},
-      {"name": "Riyadh Park", "image": "images/riyadh3.png"}
+      {"name": "Via Riyadh", "image": "images/riyadh1.png", "description": "A luxury shopping and entertainment destination with high-end boutiques and restaurants.", "type": "Entertainment", "map_link": "https://maps.google.com/?q=Via+Riyadh"},
+      {"name": "Boulevard Riyadh City", "image": "images/riyadh2.png", "description": "A large, modern complex with shopping, dining, and entertainment options.", "type": "Entertainment", "map_link": "https://maps.google.com/?q=Boulevard+Riyadh+City"},
+      {"name": "Riyadh Park", "image": "images/riyadh3.png", "description": "A popular park with recreational facilities, shops, and eateries.", "type": "Entertainment", "map_link": "https://maps.google.com/?q=Riyadh+Park"}
     ],
     "brief": "Riyadh combines ancient history with modern dynamism, offering a glimpse into Arabia’s past and future. Explore the city's rich heritage through souqs, museums, and historical architecture, and experience its modern side with high-rises and a thriving art scene, highlighted by the Riyadh Art initiative that turns the city into an open-air gallery. Don't miss Riyadh Season, featuring themed zones like Boulevard City and the Riyadh Zoo, open year-round. For dining, try local delicacies at Najd Village restaurant.",
     "images": ["images/riyadh1.png", "images/riyadh2.png", "images/riyadh3.png"]
@@ -22,9 +22,9 @@
   "mekkah": {
     "title": "Mekkah - The Holy City",
     "top_attractions": [
-      {"name": "Makkah Museum", "image": "images/mekkah2.png"},
-      {"name": "Al Masjed Al Haram", "image": "images/mekkah3.png"},
-      {"name": "Hira Cultural District", "image": "images/mekkah4.png"}
+      {"name": "Makkah Museum", "image": "images/mekkah2.png", "description": "A museum showcasing Islamic history and pre-Islamic artifacts.", "type": "Historic", "map_link": "https://maps.google.com/?q=Makkah+Museum"},
+      {"name": "Al Masjed Al Haram", "image": "images/mekkah3.png", "description": "The largest mosque in the world and the holiest site in Islam.", "type": "Religious", "map_link": "https://maps.google.com/?q=Al+Masjed+Al+Haram"},
+      {"name": "Hira Cultural District", "image": "images/mekkah4.png", "description": "A cultural hub offering insights into Islamic traditions and history.", "type": "Cultural", "map_link": "https://maps.google.com/?q=Hira+Cultural+District"}
     ],
     "brief": "Makkah, the birthplace of Prophet Muhammad and where the Quran was revealed, is a pivotal city in Islam. It hosts the annual Hajj pilgrimage, one of the five pillars of Islam, and welcomes millions for the Umrah pilgrimage year-round. Key sites include Al Masjid Al Haram, the largest mosque in the world, and the historic Masjid-e-Aisha. Beyond its spiritual significance, visitors can explore the Makkah Museum's pre-Islamic artifacts or shop and play at Makkah Mall.",
     "images": ["images/mekkah1.png", "images/mekkah2.png", "images/mekkah3.png"]
@@ -32,9 +32,9 @@
   "alula": {
     "title": "AlUla - The Ancient Oasis",
     "top_attractions": [
-      {"name": "AlUla Old Town Village", "image": "images/alula1.png"},
-      {"name": "Elephant Rock", "image": "images/alula2.png"},
-      {"name": "Tama at Our Habitas", "image": "images/alula3.png"}
+      {"name": "AlUla Old Town Village", "image": "images/alula1.png", "description": "A historical village offering a glimpse into the rich past of AlUla.", "type": "Historic", "map_link": "https://maps.google.com/?q=AlUla+Old+Town+Village"},
+      {"name": "Elephant Rock", "image": "images/alula2.png", "description": "A natural rock formation shaped like an elephant, a popular spot for photography.", "type": "Nature", "map_link": "https://maps.google.com/?q=Elephant+Rock+AlUla"},
+      {"name": "Tama at Our Habitas", "image": "images/alula3.png", "description": "A luxurious retreat offering unique experiences in the heart of the desert.", "type": "Resort", "map_link": "https://maps.google.com/?q=Tama+at+Our+Habitas"}
     ],
     "brief": "Explore AlUla, Saudi Arabia's first UNESCO World Heritage Site, nestled in the northwest desert. Marvel at ancient tombs from 7,000 years of civilization and stunning rock formations like the 52-meter Elephant Rock. Enjoy the lush AlUla Oasis, adventure sports, and innovative art installations. Each September, experience the Azimuth AlUla festival of art and music set in breathtaking landscapes. Stay in luxury at Banyan Tree AlUla's tented villas or the desert resort, Habitas AlUla.",
     "images": ["images/alula1.png", "images/alula2.png", "images/alula3.png"]
