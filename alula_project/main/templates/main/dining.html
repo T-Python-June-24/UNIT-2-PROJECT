@@ -3,7 +3,7 @@
 {% block title %}Dining{% endblock %}
 
 {% block content %}
-<h1>Dining</h1>
+<h1><strong>Dining</strong></h1>
 <div class="row">
     {% for dining_place in dining_places %}
     <div class="col-md-4">
@@ -12,7 +12,7 @@
             <img class="card-img-top fixed-size" src="{{ dining_place.images.first.image.url }}" alt="{{ dining_place.name }}">
             </a>
             <div class="card-body">
-                <h5 class="card-title">{{ dining_place.name }}</h5>
+                <h5 class="card-title"><strong>{{ dining_place.name }}</strong></h5>
                 <p class="card-text"><strong>Cuisine: </strong>{{ dining_place.cuisine }}</p>
                 <a href="{% url 'dining_detail' dining_place.pk %}" > More info</a>
             </div>

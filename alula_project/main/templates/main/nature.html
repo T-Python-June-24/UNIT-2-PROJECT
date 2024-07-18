@@ -1,18 +1,19 @@
 {% extends 'main/base.html' %}
 {% block title %}Nature & Adventure{% endblock %}
 {% block content %}
-<h1>Nature & Adventure</h1>
+<h1><strong>Nature & Adventure</strong></h1>
 <div class="row">
     {% for activity in activities %}
     <div class="col-md-4">
-        <div class="card mb-4">
-            <img class="card-img-top fixed-size" src="{{ activity.images.url }}" alt="{{ activity.name }}">
+        <div class="card mb-4 card-fixed-size">
+            <a href="#" class="card-toggle">
+                <img class="card-img-top fixed-size" src="{{ activity.images.url }}" alt="{{ activity.name }}">
+            </a>
             <div class="card-body">
-                <h5 class="card-title">{{ activity.name }}</h5>
+                <h5 class="card-title"><strong>{{ activity.name }}</strong></h5>
                 <p class="card-text"><strong>Overview: </strong> {{ activity.description }}</p>
                 <p><strong>Difficulty: </strong> {{ activity.difficulty_level }}</p>
                 <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query={{ activity.location|urlencode }}" target="_blank">{{ activity.location }}</a></p>
-
             </div>
         </div>
     </div>

@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import HeritageSite, NatureActivity, Event, Accommodation, Dining
+from django.http import HttpRequest, HttpResponse
+from django.conf import settings
 
 def index(request):
     return render(request, 'main/index.html')
@@ -35,3 +37,9 @@ def accommodation_detail(request, pk):
 def dining_detail(request, pk):
     dining = get_object_or_404(Dining, pk=pk)
     return render(request, 'main/dining_detail.html', {'dining': dining})
+
+def set_dark_mode_cookie(response):
+    if 'dark_mode' in request.COOKIES:
+        dark_mode_cookie = request.COOKIES['dark_mode']
+        response.set_cookie('dark_mode', dark_mode_cookie)
+    return response

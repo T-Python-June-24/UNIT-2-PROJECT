@@ -1,16 +1,16 @@
 {% extends 'main/base.html' %}
 {% block title %}Heritage Sites{% endblock %}
 {% block content %}
-<h1>Heritage Sites</h1>
+<h1><strong>Heritage Sites</strong></h1>
 <div class="row">
     {% for site in sites %}
     <div class="col-md-4">
         <div class="card mb-4 card-fixed-size">
-            <a href="#">
+            <a href="#" class="card-toggle">
                 <img class="card-img-top fixed-size" src="{{ site.images.url }}" alt="{{ site.name }}">
             </a>
             <div class="card-body">
-                <h5 class="card-title">{{ site.name }}</h5>
+                <h5 class="card-title"><strong>{{ site.name }}</strong></h5>
                 <p class="card-text"> <strong> Overview: </strong>{{ site.description }}</p>
                 <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query={{ site.location|urlencode }}" target="_blank">{{ site.location }}</a></p>
             </div>

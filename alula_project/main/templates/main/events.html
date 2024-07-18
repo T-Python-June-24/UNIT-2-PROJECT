@@ -1,14 +1,14 @@
 {% extends 'main/base.html' %}
 {% block title %}Events & Festivals{% endblock %}
 {% block content %}
-<h1>Events & Festivals</h1>
+<h1><strong>Events & Festivals</strong></h1>
 <div class="row">
     {% for event in events %}
     <div class="col-md-4">
         <div class="card mb-4 ">
             <img class="card-img-top fixed-size" src="{{ event.images.url }}" alt="{{ event.name }}">
             <div class="card-body">
-                <h5 class="card-title">{{ event.name }}</h5>
+                <h5 class="card-title"><strong>{{ event.name }}</strong></h5>
                 <p class="card-text"><strong>Overview: </strong> {{ event.description }}</p>
                 <p><strong>Date: </strong> {{ event.date }}</p>
                 <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query={{ event.location|urlencode }}" target="_blank">{{ event.location }}</a></p>

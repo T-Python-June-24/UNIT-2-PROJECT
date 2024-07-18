@@ -19,7 +19,7 @@
                 {% for image in dining.images.all %}
                     <div class="col-md-4">
                         <a href="{{ image.image.url }}" data-lightbox="dining-gallery" data-title="{{ dining.name }}">
-                            <img src="{{ image.image.url }}" class="img-fluid mb-2" alt="Image for {{ dining.name }}">
+                            <img src="{{ image.image.url }}" class="img-fluid mb-2 gallery-img" alt="Image for {{ dining.name }}">
                         </a>
                     </div>
                 {% endfor %}

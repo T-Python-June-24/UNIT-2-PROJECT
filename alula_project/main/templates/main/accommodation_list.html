@@ -3,7 +3,7 @@
 {% block title %}Accommodation List{% endblock %}
 
 {% block content %}
-<h1>Accommodation</h1>
+<h1><strong>Accommodation</strong></h1>
 <div class="row">
     {% for accommodation in accommodations %}
     <div class="col-md-4">
@@ -12,7 +12,7 @@
                 <img class="card-img-top fixed-size" src="{{ accommodation.images.first.image.url }}" alt="{{ accommodation.name }}">
             </a>
             <div class="card-body">
-                <h5 class="card-title">{{ accommodation.name }}</h5>
+                <h5 class="card-title"><strong>{{ accommodation.name }}</strong></h5>
                 <p class="card-text"><strong>Type: </strong>{{ accommodation.type }}</p>
                 <a href="{% url 'accommodation_detail' accommodation.pk %}">More info</a>
             </div>
