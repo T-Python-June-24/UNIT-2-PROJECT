@@ -1,38 +1,98 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% block title %} Teams {% endblock %}
+{% block title %} Saudi eSports Teams {% endblock %}
 {% block content %}
-<div class="container">
-<div class="row">
-    <div class="col"><h1>Prominent eSports Teams in Saudi Arabia</h1></div>
-</div>
-<div class="row">
-    <div class="col"><h2>Team Falcons</h2></div>
-    <div class="col"><img src="{% static 'images/falcons_logo.jpg' %}" alt="Team Falcons logo"></div>
-</div>
-<div class="row">
-    <div class="col">Members</div>
-    <div class="col">Win Rate</div>
-    <div class="col">Highest Streak</div>
-</div>
-<div class="row">
-    <div class="col">43</div>
-    <div class="col">57.02%</div>
-    <div class="col">13</div>
-</div>
-<div class="row">
-    <div class="col">Twisted Minds</div>
-    <div class="col"><img src="{% static 'images/twisted_minds_logo.jpg' %}" alt="Twisted Minds logo"></div>
-</div>
-<div class="row">
-    <div class="col">Members</div>
-    <div class="col">Win Rate</div>
-    <div class="col">Highest Streak</div>
-</div>
-<div class="row">
-    <div class="col">53</div>
-    <div class="col">54.84%</div>
-    <div class="col">0</div>
-</div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col"><h1 class="text-capitalize text-center">Prominent eSports Teams in Saudi Arabia</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><h2 class="text-center">Team Falcons</h2>
+                <hr>
+                <h3 class="text-center">Overview</h3>
+                <p>Team Falcons is one of the leading eSports teams in Saudi Arabia, known for their prowess in games
+                    such as Counter-Strike: Global Offensive (CS:GO) and League of Legends (LoL). The team has a strong
+                    track record and a dedicated fanbase.</p>
+
+                <h3 class="text-center">Team Details</h3>
+                <div class="row text-center">
+                    <div class="col">
+                        <strong>Members:</strong> 43<br>
+                    </div>
+                    <div class="col">
+                        <strong>Win Rate:</strong> 57.02%<br>
+                    </div>
+                    <div class="col">
+                        <strong>Highest Streak:</strong> 13<br>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-center">Notable Achievements</h3>
+                        <ul>
+                            <li>Winners of the 2023 Saudi eLeagues Championship in CS:GO</li>
+                            <li>Top 3 finish in the MENA LoL Championship 2022</li>
+                            <li>Represented Saudi Arabia in the 2023 International Gaming Tournament</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-center">Key Players</h3>
+                <p class="text-center">
+                    <strong>Yasser "Falcons_Yass" Al Harbi</strong> (FIFA)<br>
+                    <strong>Abdullah "Abd" Al-Ghamdi</strong> (Dota 2)<br>
+                    <strong>Mansour "Manso" Al-Qahtani</strong> (LoL)
+                </p></div>
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style zoom-in"
+                                                            src="{% static 'images/falcons_logo.jpg' %}"
+                                                            alt="Team Falcons logo"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style zoom-in"
+                                                            src="{% static 'images/twisted_minds_logo.jpg' %}"
+                                                            alt="Twisted Minds logo"></div>
+            <div class="col"><h2 class="text-center">Twisted Minds</h2>
+                <hr>
+                <h3 class="text-center">Overview</h3>
+                <p>Twisted Minds is another top-tier eSports team from Saudi Arabia, known for their strategic gameplay
+                    and strong performances in various competitive titles.</p>
+
+                <h3 class="text-center">Team Details</h3>
+                <div class="row text-center">
+                    <div class="col">
+                        <strong>Members:</strong> 53<br>
+                    </div>
+                    <div class="col">
+                        <strong>Win Rate:</strong> 54.84%<br>
+                    </div>
+                    <div class="col">
+                        <strong>Highest Streak:</strong> 0<br>
+                    </div>
+                </div>
+                <h3 class="text-center">Notable Achievements</h3>
+                <ul>
+                    <li>Semi-finalists in the 2022 GCC Gaming Tournament</li>
+                    <li>Champions of the 2023 Riyadh Open in Overwatch</li>
+                    <li>Consistent top 5 finishes in national tournaments</li>
+                </ul>
+
+                <h3 class="text-center">Key Players</h3>
+                <p class="text-center">
+                    <strong>Sami "Twist" Al-Salem</strong> (Overwatch)<br>
+                    <strong>Noura "NouraG" Al-Rashid</strong> (Valorant)<br>
+                    <strong>Hassan "Hassy" Al-Ahmad</strong> (Fortnite)
+                </p></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col text-center"><h5>Explore what kind of investment is planned for eSports in Saudi Arabia:</h5></div>
+        <div class="col"><a class="button w-100" href="{% url 'main:infrastructure_view' %}">
+            <button type="button" class="btn btn-success w-100 text-theme">Investment plans</button>
+        </a></div>
+    </div>
 {% endblock %}

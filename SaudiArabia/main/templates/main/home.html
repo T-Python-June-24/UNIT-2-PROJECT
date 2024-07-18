@@ -3,34 +3,57 @@
 {% block title %} Home {% endblock %}
 {% block style %}
     <style>
-    .homepage {
-        height: 100vh;
-        width: 100vw;
-        background: url("{% static 'images/homepage.png' %}") no-repeat cover;
-        {#background-repeat: no-repeat;#}
-        {#background-position: center;#}
-        {#background-size: cover;#}
-        {#background-clip: border-box;#}
-    }
+        .homepage {
+            height: 100vh;
+            width: 100vw;
+            background-image: url("{% static 'images/homepage.png' %}");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-clip: border-box;
+        }
     </style>
 {% endblock %}
 {% block content %}
-    <div class="container homepage">
-    <div class="row">
-        <div class="col"><h1>The Rise of eSports in Saudi Arabia</h1></div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <p>Discover the burgeoning eSports scene in Saudi Arabia,
-                where digital sports have rapidly gained popularity among the youth.
-                With increasing investments in infrastructure, tournaments, and professional teams,
-                Saudi Arabia is becoming a regional hub for competitive gaming.
-                Learn about the local gaming culture, key players, and future prospects in this dynamic and evolving industry.</p></div>
-    </div>
-    <div class="row">
-        <div class="col"><img src="{% static 'images/homepage.png' %}" alt="Saudi eSports"></div>
-    </div>
-    </div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1 class="text-capitalize text-center">eSports in Saudi Arabia</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p class="lead fs-2 fst-italic">Discover the burgeoning eSports scene in Saudi Arabia,
+                        where digital sports have rapidly gained popularity among the youth.
+                        With increasing investments in infrastructure, tournaments, and professional teams,
+                        Saudi Arabia is becoming a regional hub for competitive gaming.
+                        Learn about the local gaming culture, key players, and future prospects in this dynamic and
+                        evolving industry.</p></div>
+                <div class="col-6"><img class="img-fluid img-style" src="{% static 'images/homepage.png' %}"
+                                        alt="Saudi eSports">
+                    <figure>
+                        <blockquote class="blockquote"><p>“We are harnessing the untapped potential across the eSports
+                            and
+                            games sector to
+                            diversify our economy, drive innovation in the sector, and further scale the entertainment
+                            and
+                            eSports
+                            competition offerings across the Kingdom.”</p></blockquote>
+                        <figcaption class="blockquote-footer">HRH Mohammed bin Salman bin Abdulaziz Al Saud <cite
+                                title="Source Title">Crown Prince of Saudi Arabia</cite></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col text-center"><h5>See what games are popular in Saudi Arabia:</h5></div>
+                <div class="col"><a class="button w-100" href="{% url 'main:games_view' %}">
+                    <button type="button" class="btn btn-success w-100 text-theme">Popular games</button>
+                </a></div>
+            </div>
+        </div>
+    </main>
 
 
 {% endblock %}

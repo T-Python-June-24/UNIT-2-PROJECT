@@ -1,71 +1,105 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% block title %} Events {% endblock %}
+{% block title %} Major Events {% endblock %}
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col"><h1>eSports Tournaments and Events in Saudi Arabia</h1></div>
+            <div class="col"><h1 class="text-capitalize text-center">eSports Tournaments and Events in Saudi Arabia</h1>
+                <hr>
+            </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col"><h2>ESPORTS WORLD CUP 2024</h2></div>
+            <div class="col"><h2 class="text-center">ESports World Cup 2024</h2>
+                <hr>
+                <h3 class="lead fs-2">The eSports World Cup is an elite multi-genre eSports competition that will take
+                    place
+                    annually in Saudi Arabia from 2024 during July and August in a world-class venue in Riyadh Boulevard
+                    City. The EWC will offer the largest prize pool in eSports and feature the most popular eSports
+                    titles
+                    across all major gaming genres. It will welcome a new cross-game competition format, awarding prizes
+                    for
+                    individual game titles and club performances. It is designed for both professional eSports players
+                    and
+                    gaming enthusiasts, with qualifiers to provide as many teams as possible with the opportunity to
+                    participate, along with a thrilling calendar of on-the-ground activations, live entertainment, and
+                    competitions for fans.</h3>
+            </div>
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style fade-in"
+                                                            src="{% static 'images/ewc.webp' %}"
+                                                            alt="EWC image"></div>
         </div>
-        <div class="row">
-            <div class="col"><img src="{% static 'images/ewc.webp' %}" alt="EWC image"></div>
-        </div>
-        <div class="row">
-            <div class="col"><p>The eSports World Cup is an elite multi-genre eSports competition that will take place
-                annually in Saudi Arabia from 2024 during July and August in a world-class venue in Riyadh Boulevard
-                City. The EWC will offer the largest prize pool in eSports and feature the most popular eSports titles
-                across all major gaming genres. It will welcome a new cross-game competition format, awarding prizes for
-                individual game titles and club performances. It is designed for both professional eSports players and
-                gaming enthusiasts, with qualifiers to provide as many teams as possible with the opportunity to
-                participate, along with a thrilling calendar of on-the-ground activations, live entertainment, and
-                competitions for fans.</p></div>
-        </div>
+        <br>
         <div class="row">
             <div class="col">
-                <iframe width="1280" height="497" src="https://www.youtube.com/embed/VIHOBnFqOvw?controls=0&rel=0;"
+                <iframe class="img-style" width="1280" height="497"
+                        src="https://www.youtube.com/embed/VIHOBnFqOvw?controls=0&rel=0;"
                         title="Esports World Cup | Explainer" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
+        <br>
         <div class="row">
-            <div class="col"><img src="{% static 'images/ewc_explain.png' %}" alt="Assorted EWC images"></div>
-        </div>
-        <div class="row">
-            <div class="col"><p>21 GAME TITLES <br>
-                $60,000,000+ PRIZE POOL <br>
-                500+ TEAMS <br>
-                1,500+ BEST ESPORTS PLAYERS <br>
-                TAKES PLACE FROM JULY 03 - AUGUST 25, 2024</p></div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col"><h2>Saudi eLeagues</h2></div>
-        </div>
-        <div class="row">
-        </div>
-        <div class="col"><img src="{% static 'images/Saudi_eLeague_allmode.png' %}" alt="Saudi eLeague logo"></div>
-        <div class="row">
-            <div class="col"><p>The Saudi eLeague is the umbrella that holds together all the esports leagues in the
-                Kingdom. The best players compete against one another in what is the pinnacle of Saudi competition. The
-                leagues aim to discover and nurture professional clubs/players and create an environment where they can
-                compete and shine on a local level, to prepare them for the international competitions. It is now a home
-                for all competitive gaming enthusiasts to watch Saudi’s best talent showcase their skill.</p></div>
-            <div class="col"><h2>Total prizepool <br>
-                6,000,000 SR</h2></div>
-        </div>
-        <div class="row">
+            <div class="col d-flex align-items-center">
+                <ul class="list-unstyled text-center">
+                    <li class="h2">21 GAME TITLES
+                        <hr>
+                    </li>
+                    <li class="h2">$60,000,000+ PRIZE POOL
+                        <hr>
+                    </li>
+                    <li class="h2">500+ TEAMS
+                        <hr>
+                    </li>
+                    <li class="h2">1,500+ BEST ESPORTS PLAYERS
+                        <hr>
+                    </li>
+                    <li class="h2">TAKES PLACE FROM JULY 03 - AUGUST 25, 2024</li>
+                </ul>
+            </div>
             <div class="col">
-                <iframe width="1280" height="497" src="https://www.youtube.com/embed/N_u-txtyjWE?controls=0&rel=0;"
-                        title="للمجد حاملين وللقمة سائرين 🇸🇦💚" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="col d-flex align-items-center"><img class="img-fluid img-style d-block mx-auto fade-in"
+                                                                height="500" width="500"
+                                                                src="{% static 'images/ewc_explain.png' %}"
+                                                                alt="Assorted EWC images"></div>
             </div>
         </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style fade-in"
+                                                            src="{% static 'images/Saudi_eLeague_allmode.png' %}"
+                                                            alt="Saudi eLeague logo"></div>
+            <div class="col">
+                <div class="col"><h2 class="text-center">Saudi eLeagues</h2>
+                    <hr>
+                    <h3 class="lead fs-2">The Saudi eLeague unites all esports leagues in the Kingdom, providing a
+                        platform for the best
+                        players to compete at the highest level in Saudi Arabia. It aims to discover and nurture
+                        professional clubs and players, creating an environment for them to excel locally and prepare
+                        for international competitions. The league is a hub for competitive gaming enthusiasts to watch
+                        top Saudi talent, with a total <b>prize pool of 6,000,000 SAR</b>.</h3></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <iframe class="img-style" width="1280" height="497"
+                            src="https://www.youtube.com/embed/N_u-txtyjWE?controls=0&rel=0;"
+                            title="للمجد حاملين وللقمة سائرين 🇸🇦💚" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col text-center"><h5>Take a look at the most prominent eSports teams in Saudi Arabia:</h5></div>
+        <div class="col"><a class="button w-100" href="{% url 'main:teams_view' %}">
+            <button type="button" class="btn btn-success w-100 text-theme">Saudi teams</button>
+        </a></div>
     </div>
 {% endblock %}

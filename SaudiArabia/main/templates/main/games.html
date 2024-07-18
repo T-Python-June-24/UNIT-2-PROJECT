@@ -1,103 +1,229 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% block title %} Games {% endblock %}
+{% block title %} Popular Games {% endblock %}
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col"><h1>Popular eSports Games</h1></div>
+            <div class="col"><h1 class="text-capitalize text-center">Popular eSports Games</h1>
+                <hr>
+            </div>
         </div>
         <div class="row">
-            <div class="col"><h2>Overview of the Most Popular eSports Games Globally and Their Popularity in Saudi
+            <div class="col"><h2 class="display-6">Overview of the Most Popular eSports Games Globally and Their
+                Popularity
+                in Saudi
                 Arabia</h2></div>
         </div>
-        <ol>
-            <li><h3>League of Legends (LoL)</h3>
-                <img src="{% static 'images/Lol_logo.png' %}" alt="League of legenda logo">
-                <ul>
-                    <li><p>Global Popularity: One of the most popular multiplayer online battle arena (MOBA) games
-                        worldwide, with millions of active players and a thriving professional scene.</p>
-                    </li>
-                    <li><p>Popularity in Saudi Arabia: LoL has a significant player base in Saudi Arabia, with numerous
-                        local
-                        tournaments and a growing fanbase. The strategic depth and team-based gameplay make it appealing
-                        to Saudi gamers.</p>
-                    </li>
-                    <li><p>Player Demographics: Predominantly male, aged between 16-30, with a mix of casual and
-                        competitive players.</p>
-                    </li>
-                    <li><p>Competitive Scene: Local teams regularly compete in regional and international tournaments,
-                        showcasing impressive skill levels.</p>
-                    </li>
-                </ul>
-            </li>
-            <li><h3>Counter-Strike: Global Offensive (CS:GO)</h3>
-                <img src="{% static 'images/csgo_logo.png' %}" alt="Counter-Strike: Global Offensive logo">
-                <ul>
-                    <li><p>Global Popularity: A leading first-person shooter (FPS) game known for its strategic gameplay
-                        and professional eSports scene.</p></li>
-                    <li><p>Popularity in Saudi Arabia: CS enjoys a dedicated following in Saudi Arabia, with frequent
-                        local and regional competitions.</p>
-                    </li>
-                    <li><p>Player Demographics: Primarily male, aged between 18-35, with a strong focus on teamwork and
-                        strategy.</p></li>
-                    <li><p>Competitive Scene: Saudi teams have participated in various international tournaments,
-                        gaining recognition for their tactical prowess.</p></li>
-                </ul>
-            </li>
-            <li><h3>Dota 2</h3>
-                <img src="{% static 'images/dota2_logo2.jpg' %}" alt="Dota 2 logo">
-                <ul>
-                    <li><p>Global Popularity: Another top-tier MOBA game, known for its complex gameplay and massive
-                        prize pools
-                        in tournaments like The International.</p></li>
-                    <li><p>Popularity in Saudi Arabia: Dota 2 has a loyal fanbase in Saudi Arabia, with active
-                        communities and
-                        regular tournaments.</p></li>
-                    <li><p>Player Demographics: Mainly male, aged 18-30, with a mix of both casual and professional
-                        players.</p>
-                    </li>
-                    <li><p>Competitive Scene: Local teams often compete in regional qualifiers, aiming to make a mark on
-                        the
-                        global stage.</p>
-                </ul>
-            <li><h3>Fortnite</h3>
-                <img src="{% static 'images/fortnite_logo.png' %}" alt="Fortnite logo">
-                <ul>
-                    <li><p>Global Popularity: A hugely popular battle royale game with a massive player base and a
-                        thriving competitive scene.</p></li>
-                    <li><p>Popularity in Saudi Arabia: Fortnite is very popular among Saudi youth, with numerous events
-                        and online competitions.</p></li>
-                    <li><p>Player Demographics: Diverse, including both male and female players, typically aged
-                        12-25.</p></li>
-                    <li><p>Competitive Scene: Saudi players regularly participate in online tournaments, showcasing
-                        their skills in this fast-paced game.</p></li>
-                </ul>
-            </li>
-            <li><h3>FIFA</h3>
-                <ul>
-                    <li><p>Global Popularity: The leading football simulation game, with a strong eSports presence and a
-                        dedicated player base.</p></li>
-                    <li><p>Popularity in Saudi Arabia: FIFA is exceptionally popular in Saudi Arabia, reflecting the
-                        country's passion for football.</p></li>
-                    <li><p>Player Demographics: Predominantly male, aged 15-35, ranging from casual gamers to serious
-                        competitors.</p></li>
-                    <li><p>Competitive Scene: Numerous local and national tournaments are held, with Saudi players
-                        achieving notable success in international competitions.</p></li>
-                </ul>
-            </li>
-            <li><h3>Call of Duty (CoD)</h3>
-                <img src="{% static 'images/CoD_logo.png' %}" alt="Call of Duty (CoD) logo">
-                <ul>
-                    <li><p>Global Popularity: A renowned FPS game series with a robust eSports scene and numerous titles
-                        catering to different play styles.</p></li>
-                    <li><p>Popularity in Saudi Arabia: CoD has a strong presence in Saudi Arabia, with a dedicated
-                        player community and regular events.</p></li>
-                    <li><p>Player Demographics: Mainly male, aged 18-30, with a focus on competitive multiplayer
-                        modes.</p></li>
-                    <li><p>Competitive Scene: Saudi teams and players frequently compete in regional and global
-                        tournaments, demonstrating high levels of skill.</p></li>
-                </ul>
-            </li>
-        </ol>
+        <hr>
+        <div class="row">
+            <div class="col"><h2 class="text-center">League of Legends (LoL)</h2>
+                <hr>
+                <h3 class="text-center">Nature of the Game</h3>
+                <p>League of Legends is a team-based strategy game where two teams of five players each compete to
+                    destroy the opposing team's Nexus. Each player controls a unique champion with specific abilities
+                    and roles, such as attacking, defending, or providing support. The game involves earning gold and
+                    experience to strengthen champions, and strategic coordination to achieve victory.</p>
+
+                <h3 class="text-center">Player Demographics</h3>
+                <p>
+                    <strong>Age Range:</strong> Predominantly 16-30 years old<br>
+                    <strong>Gender:</strong> Mostly male, but with a growing number of female players<br>
+                    <strong>Player Type:</strong> Mix of casual and competitive players, with a noticeable presence in
+                    both amateur and professional scenes
+                </p>
+
+                <h3 class="text-center">Global Popularity</h3>
+                <p>League of Legends, developed by Riot Games, is one of the most popular multiplayer online battle
+                    arena (MOBA) games worldwide. As of 2024, it boasts over 115 million monthly active players
+                    globally, with major tournaments like the World Championship attracting millions of viewers.</p>
+
+                <h3 class="text-center">Popularity in Saudi Arabia</h3>
+                <p>League of Legends enjoys significant popularity in Saudi Arabia. The game has a robust player base,
+                    with thousands of active players participating in local and regional tournaments. According to
+                    recent statistics, approximately 10% of the gaming population in Saudi Arabia plays LoL regularly.
+                    The game’s strategic depth and team-based gameplay make it highly appealing to Saudi gamers.</p>
+            </div>
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style rightCol" width="90%"
+                                                            height="90%"
+                                                            src="{% static 'images/League-of-Legends-(LoL).png' %}"
+                                                            alt="League of legenda logo"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style leftCol" width="90%"
+                                                            height="90%"
+                                                            src="{% static 'images/Counter-Strike-Global-Offensive-(CSGO).png' %}"
+                                                            alt="Counter-Strike: Global Offensive logo">
+            </div>
+            <div class="col"><h2 class="text-center">Counter-Strike: Global Offensive (CS:GO)</h2>
+                <hr>
+                <h3 class="text-center">Nature of the Game</h3>
+                <p>Counter-Strike: Global Offensive is a team-based first-person shooter game where two teams,
+                    Terrorists and Counter-Terrorists, compete in various game modes to complete objectives such as
+                    planting/defusing bombs or rescuing hostages. The game is renowned for its tactical gameplay,
+                    requiring precise aiming, strategic planning, and team coordination.</p>
+
+                <h3 class="text-center">Player Demographics</h3>
+                <p>
+                    <strong>Age Range:</strong> Primarily 18-35 years old<br>
+                    <strong>Gender:</strong> Predominantly male<br>
+                    <strong>Player Type:</strong> Mix of casual players and serious competitors, with a strong emphasis
+                    on teamwork and strategy
+                </p>
+
+                <h3 class="text-center">Global Popularity</h3>
+                <p>CS:GO is one of the leading first-person shooter (FPS) games worldwide, developed by Valve and Hidden
+                    Path Entertainment. As of 2024, it continues to have a massive player base with millions of active
+                    users and a vibrant professional eSports scene, including prestigious tournaments like the ESL Pro
+                    League and Major Championships.</p>
+
+                <h3 class="text-center">Popularity in Saudi Arabia</h3>
+                <p>CS:GO has a dedicated following in Saudi Arabia, where it enjoys a robust player base. The game is
+                    frequently featured in local and regional competitions, attracting a passionate community of players
+                    and fans. The strategic depth and competitive nature of CS:GO make it a favorite among Saudi
+                    gamers.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col"><h2 class="text-center">Dota 2</h2>
+                <hr>
+                <h3 class="text-center">Nature of the Game</h3>
+                <p>Dota 2 is a multiplayer online battle arena (MOBA) game where two teams of five players each battle
+                    to destroy the opposing team's Ancient, a large structure located within their base. Players control
+                    powerful heroes with unique abilities, working together to outmaneuver and outfight the enemy team
+                    through strategic planning, skillful play, and effective teamwork.</p>
+
+                <h3 class="text-center">Player Demographics</h3>
+                <p>
+                    <strong>Age Range:</strong> Mainly 18-30 years old<br>
+                    <strong>Gender:</strong> Predominantly male<br>
+                    <strong>Player Type:</strong> Mix of casual and professional players, with a strong community of
+                    dedicated gamers
+                </p>
+
+                <h3 class="text-center">Global Popularity</h3>
+                <p>Dota 2, developed by Valve, is a top-tier MOBA game known for its complex gameplay and massive prize
+                    pools in tournaments like The International. It has millions of active players worldwide and is
+                    renowned for its deep strategic elements and competitive scene.</p>
+
+                <h3 class="text-center">Popularity in Saudi Arabia</h3>
+                <p>Dota 2 has a loyal fanbase in Saudi Arabia, with active communities and regular tournaments. The
+                    game's complexity and strategic depth make it particularly appealing to Saudi gamers, who enjoy both
+                    casual play and competitive matches. Local events and online platforms frequently host Dota 2
+                    competitions, contributing to the game's sustained popularity in the region.</p>
+
+            </div>
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style rightCol" width="90%"
+                                                            height="90%"
+                                                            src="{% static 'images/Dota-2.png' %}"
+                                                            alt="Dota 2 logo"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style leftCol" width="90%" height="90%"
+                                                            src="{% static 'images/Fortnite.png' %}"
+                                                            alt="Fortnite logo"></div>
+            <div class="col"><h2 class="text-center">Fortnite</h2>
+                <hr>
+                <h3 class="text-center">Nature of the Game</h3>
+                <p>Dota 2 is a multiplayer online battle arena (MOBA) game where two teams of five players each battle
+                    to destroy the opposing team's Ancient, a large structure located within their base. Players control
+                    powerful heroes with unique abilities, working together to outmaneuver and outfight the enemy team
+                    through strategic planning, skillful play, and effective teamwork.</p>
+
+                <h3 class="text-center">Player Demographics</h3>
+                <p>
+                    <strong>Age Range:</strong> Mainly 18-30 years old<br>
+                    <strong>Gender:</strong> Predominantly male<br>
+                    <strong>Player Type:</strong> Mix of casual and professional players, with a strong community of
+                    dedicated gamers
+                </p>
+
+                <h3 class="text-center">Global Popularity</h3>
+                <p>Dota 2, developed by Valve, is a top-tier MOBA game known for its complex gameplay and massive prize
+                    pools in tournaments like The International. It has millions of active players worldwide and is
+                    renowned for its deep strategic elements and competitive scene.</p>
+
+                <h3 class="text-center">Popularity in Saudi Arabia</h3>
+                <p>Dota 2 has a loyal fanbase in Saudi Arabia, with active communities and regular tournaments. The
+                    game's complexity and strategic depth make it particularly appealing to Saudi gamers, who enjoy both
+                    casual play and competitive matches. Local events and online platforms frequently host Dota 2
+                    competitions, contributing to the game's sustained popularity in the region.</p>
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col"><h2 class="text-center">FIFA</h2>
+                <hr>
+                <h3 class="text-center">Nature of the Game</h3>
+                <p>Dota 2 is a multiplayer online battle arena (MOBA) game where two teams of five players each battle
+                    to destroy the opposing team's Ancient, a large structure located within their base. Players control
+                    powerful heroes with unique abilities, working together to outmaneuver and outfight the enemy team
+                    through strategic planning, skillful play, and effective teamwork.</p>
+
+                <h3 class="text-center">Player Demographics</h3>
+                <p>
+                    <strong>Age Range:</strong> Mainly 18-30 years old<br>
+                    <strong>Gender:</strong> Predominantly male<br>
+                    <strong>Player Type:</strong> Mix of casual and professional players, with a strong community of
+                    dedicated gamers
+                </p>
+
+                <h3 class="text-center">Global Popularity</h3>
+                <p>Dota 2, developed by Valve, is a top-tier MOBA game known for its complex gameplay and massive prize
+                    pools in tournaments like The International. It has millions of active players worldwide and is
+                    renowned for its deep strategic elements and competitive scene.</p>
+
+                <h3 class="text-center">Popularity in Saudi Arabia</h3>
+                <p>Dota 2 has a loyal fanbase in Saudi Arabia, with active communities and regular tournaments. The
+                    game's complexity and strategic depth make it particularly appealing to Saudi gamers, who enjoy both
+                    casual play and competitive matches. Local events and online platforms frequently host Dota 2
+                    competitions, contributing to the game's sustained popularity in the region.</p>
+
+            </div>
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style rightCol" width="90%"
+                                                            height="90%"
+                                                            src="{% static 'images/FIFA.png' %}"
+                                                            alt="FIFA logo"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col d-flex align-items-center"><img class="img-fluid img-style leftCol" width="90%" height="90%"
+                                                            src="{% static 'images/Call-of-Duty-(CoD).png' %}"
+                                                            alt="Call of Duty (CoD) logo"></div>
+            <div class="col"><h2 class="text-center">Call of Duty (CoD)</h2>
+                <hr>
+                <h3 class="text-center">Nature of the Game</h3>
+                <p>Dota 2 is a multiplayer online battle arena (MOBA) game where two teams of five players each battle
+                    to destroy the opposing team's Ancient, a large structure located within their base. Players control
+                    powerful heroes with unique abilities, working together to outmaneuver and outfight the enemy team
+                    through strategic planning, skillful play, and effective teamwork.</p>
+                <h3 class="text-center">Player Demographics</h3>
+                <p>
+                    <strong>Age Range:</strong> Mainly 18-30 years old<br>
+                    <strong>Gender:</strong> Predominantly male<br>
+                    <strong>Player Type:</strong> Mix of casual and professional players, with a strong community of
+                    dedicated gamers
+                </p>
+                <h3 class="text-center">Global Popularity</h3>
+                <p>Dota 2, developed by Valve, is a top-tier MOBA game known for its complex gameplay and massive prize
+                    pools in tournaments like The International. It has millions of active players worldwide and is
+                    renowned for its deep strategic elements and competitive scene.</p>
+                <h3 class="text-center">Popularity in Saudi Arabia</h3>
+                <p>Dota 2 has a loyal fanbase in Saudi Arabia, with active communities and regular tournaments. The
+                    game's complexity and strategic depth make it particularly appealing to Saudi gamers, who enjoy both
+                    casual play and competitive matches. Local events and online platforms frequently host Dota 2
+                    competitions, contributing to the game's sustained popularity in the region.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col text-center"><h5>See what kind of eSport events take place in Saudi Arabia:</h5></div>
+            <div class="col"><a class="button w-100" href="{% url 'main:events_view' %}">
+                <button type="button" class="btn btn-success w-100 text-theme">Major events</button>
+            </a></div>
+        </div>
     </div>
 {% endblock %}
