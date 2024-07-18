@@ -6,7 +6,7 @@
     <div class="row align-items-center intro-section m-0" style="height: 70vh; width: 100vw;">
         <div class="col-12 p-0 bannerimage rstrnts d-flex align-items-center justify-content-center h-100">
             <div class="text-white text-left ml-5 pl-5">
-                <h1 class="intro-title">المطاعم</h1>
+                <h1 class="intro-title">المطاعم الشعبية</h1>
             </div>
         </div>
     </div>
@@ -26,37 +26,6 @@
                             <div class="mt-auto">
                                 <a href="{{ restaurant.website_link }}" target="_blank" class="btn btn-outline-danger">الموقع الإلكتروني</a>
                                 <a href="{{ restaurant.map_link }}" target="_blank" class="btn btn-outline-danger">عرض على الخريطة</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Gallery Modal -->
-                <div class="modal fade" id="galleryModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="galleryModalLabel{{ forloop.counter }}" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="galleryModalLabel{{ forloop.counter }}">{{ restaurant.name }}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div id="carousel{{ forloop.counter }}" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        {% for image in restaurant.gallery %}
-                                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                                                <img src="{% static 'images/' %}{{ image }}" class="d-block w-100" alt="{{ restaurant.name }}">
-                                            </div>
-                                        {% endfor %}
-                                    </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{ forloop.counter }}" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carousel{{ forloop.counter }}" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </div>

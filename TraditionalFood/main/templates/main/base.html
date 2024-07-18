@@ -24,13 +24,13 @@
                 <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarsExample07">
                     <ul class="navbar-nav d-flex justify-content-between">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'main:home' %}">الرئيسية</a>
+                            <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page" href="{% url 'main:home' %}">الرئيسية</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'main:regions' %}">المناطق</a>
+                            <a class="nav-link {% if request.path == '/regions/' %}active{% endif %}" href="{% url 'main:regions' %}">المناطق</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'main:restaurants' %}">المطاعم</a>
+                            <a class="nav-link {% if request.path == '/restaurants/' %}active{% endif %}" href="{% url 'main:restaurants' %}">المطاعم الشعبية</a>
                         </li>
                     </ul>
                 </div>
