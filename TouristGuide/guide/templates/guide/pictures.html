@@ -1,0 +1,30 @@
+{% extends 'guide/base.html' %}
+{% load static %}
+
+{% block title %} Our Properties {% endblock %}
+
+{% block content %}
+<style>
+    .container-bg{
+    background: none;
+    }
+</style>
+<div class="container bg-light">
+    <h3>Our Properties</h3>
+    <div class="row row-cols-1 row-cols-md-3 mt-4 g-1">
+        {% for property in properties%}
+        <div class="col">
+            <div class="d-flex flex-column justify-content-center shadow p-3 gap-2">
+                <img class="rounded-5" src="{% static 'images/' %}{{ property.image }}" />
+                <h6>{{ property.title }}</h6>
+                <button class="btn btn-dark text-light ms-auto ps-4 pe-4">more</button>
+            </div>
+        </div>
+        {% endfor %}
+
+        
+    </div>
+    <hr class="mt-4">
+</div>
+
+{% endblock %}
