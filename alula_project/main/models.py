@@ -60,6 +60,7 @@ class Amenity(models.Model):
 class Accommodation(models.Model):
     name = models.CharField(max_length=200)
     type = models.CharField(max_length=100)
+    phone = PhoneNumberField(default = '+966 503782355')
     location = models.CharField(max_length=200)
     amenities = models.ManyToManyField(Amenity)
 
