@@ -17,9 +17,79 @@
         <p>The plans drawn up in this framework aim to achieve stability in the prices of food products in the Kingdom to study food security through... Ensuring stability in food product prices and supporting rural and economic development.</p>
     </div>
     <div class="home-content-image">
-
     </div>
 </div>
+ <div class="home-card-container">
+      <div class="about-card">
+        <h2>Self-Sufficiency in 2021</h2>
+        <div class="stats">
+          <div class="stat">
+                  <img src="{% static 'icons/crops.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="5.7">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Agricultural crops</p>
+              </div>
+          <div class="stat">
+            <img src="{% static 'icons/fruit.png' %}" style="width: 50px;">
+            <p class="number" data-target="120">0</p>
+            <p class="label">Fruit</p>
+          </div>
+              <div class="stat">
+                  <img src="{% static 'icons/fish.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="40">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Fish</p>
+              </div>
+              <div class="stat">
+                  <img src="{% static 'icons/meat.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="43">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Meat</p>
+              </div>
+              <div class="stat">
+                  <img src="{% static 'icons/chicken.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="66">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Chicken</p>
+              </div>
+              <div class="stat">
+                  <img src="{% static 'icons/dairy.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="121">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Dairy products</p>
+              </div>
+          <div class="stat">
+            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+              <rect fill="none" height="256" width="256" />
+              <path
+                d="M208,152a80,80,0,0,1-160,0C48,88,96,24,128,24S208,88,208,152Z"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+            </svg>
+            <div class="number-container">
+                      <p class="number" data-target="112">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">egg</p>
+          </div>
+          </div>
+        <a href="{% url 'about_view' %}"><button class="about-card-btn"> More info .. </button></a>
+      </div>
+    </div>
 <div class="sa-region"><h2>Saudi Region</h2></div>
 <div class="region-container">
   <div class="card">
@@ -51,5 +121,5 @@
     <div class="card__head"><a href="{% url 'cities_view'%}" >Al-Ahsa</a></div>
   </div>
 </div>
-
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
