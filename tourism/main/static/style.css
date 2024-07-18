@@ -17,9 +17,9 @@ body {
     align-self: center;
 }
 
-body.dark {
-    background-color: black;
-    color: aquamarine;
+html.dark {
+	background-color: black;
+	color: azure;
 }
 
 .pics{
