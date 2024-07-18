@@ -323,7 +323,9 @@ button.btn.my-2.my-sm-0 {
 .number-dark {
   background: #121212;
 }
-
+.dark{
+  
+}
 .features {
   background: linear-gradient(to left, #868585bf, #ffffff00);
   color: #fff;
@@ -496,7 +498,7 @@ button.btn.my-2.my-sm-0 {
   transform: rotate(45deg);
   margin: 100px;
   position: absolute;
-  left: 10%;
+  left: 0%;
 }
 
 .stylish-line1 {
@@ -507,13 +509,16 @@ button.btn.my-2.my-sm-0 {
   transform: rotate(311deg);
   margin: 100px;
   position: absolute;
-  right: 10%;
+  right: 0%;
 }
 
 .background-dark {
-  background: #1f1f1f !important;
+  background: #313135 !important;
 }
+.telegram{
+  background-color: blue !important;
 
+}
 .background-dark-body {
   background-color: #1f1f1f !important;
 }
@@ -754,7 +759,9 @@ button.btn.my-2.my-sm-0 {
   padding: 1.5rem;
   border-radius: 20px;
 }
-
+.map a{
+  background-color: blue;
+}
 .map iframe {
   height: 100%;
   width: 100%;

@@ -5,13 +5,18 @@ from django.http import HttpRequest , HttpResponse
 
 
 def index(request:HttpRequest):
-    return render(request , 'index.html')
+    return render(request , 'pages/index.html')
 
 def Regions(request:HttpRequest):
-    return render(request , 'Regions.html')
+    return render(request , 'pages/Regions.html')
 
-def abha(request:HttpRequest):
-    return render(request , 'base-caty.html')
+def RjalAlma(request:HttpRequest):
+    return render(request , 'pages/rjal_alma.html')
+def alanga(request:HttpRequest):
+    return render(request , 'pages/alanga.html')
+
+def mard(request:HttpRequest):
+    return render(request , 'pages/mard.html')
 
 def light_mode(request:HttpRequest):
     response = redirect(request.META.get('HTTP_REFERER', '/'))

@@ -16,7 +16,7 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="icon" href="{% static 'images/logo-white.png'%}" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -36,7 +36,7 @@
 <body class="{% if request.COOKIES.mode == 'dark' %}background-dark-body{%endif%}">
   <nav class="navbar navbar-expand-md navbar-dark {% block ClassNav%} {% endblock%} fixed-top {% if request.COOKIES.mode == 'dark' %} dark {%else%}light{%endif%} hidden background"
     id="navbar">
-    <a class="navbar-brand" href="#"><img id="logo" src="{% static 'images/logo-white.png' %}" style="height: 70px;"
+    <a class="navbar-brand" href="{% url 'ClientPages:index'%}"><img id="logo" src="{% static 'images/logo-white.png' %}" style="height: 70px;"
         alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
       aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,13 +45,10 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav mr-auto justify-content-center d-flex">
         <li class="nav-item active">
-          <a class="nav-link color" href="#">الرئيسية <span class="sr-only">(current)</span></a>
+          <a class="nav-link color" href="{% url 'ClientPages:index'%}">الرئيسية <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link color" href="#">المقالات</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link color" href="#">مدري هنا</a>
+          <a class="nav-link color" href="{% url 'ClientPages:Regions'%}">المناطق</a>
         </li>
       </ul>
       <form class="form-inline mt-2 mt-md-0">
@@ -62,8 +59,8 @@
           </span>
         </a>
 
-        <button class="btn my-2 my-sm-0 color" type="submit">sign in</button>
-        <button class="btn btn-outline-success my-2 my-sm-0 color" type="submit">Registry</button>
+        <button class="btn my-2 my-sm-0 color" type="submit">تسجيل الدخول</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 color" type="submit">انشاء حساب</button>
       </form>
     </div>
   </nav>
@@ -86,15 +83,15 @@
         </div>
         <div class="col-md-3 animate-on-scroll">
           <h5>اتصل بنا</h5>
-          <p>البريد الإلكتروني<br> info@example.com</p>
-          <p>الهاتف<br> 123-456-7890</p>
+          <p>البريد الإلكتروني<br> naif.n1158@gmail.com</p>
+          <p>الهاتف<br> +966545821287</p>
         </div>
         <div class="col-md-3 animate-on-scroll">
           <h5>روابط سريعة</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white">الرئيسية</a></li>
-            <li><a href="#" class="text-white">المقالات</a></li>
-            <li><a href="#" class="text-white">مدري هنا</a></li>
+            <li><a href="{% url 'ClientPages:index'%}" class="text-white">الرئيسية</a></li>
+            <li><a href="{% url 'ClientPages:Regions'%}" class="text-white">المناطق</a></li>
+            
           </ul>
         </div>
         <div class="col-md-3 animate-on-scroll">

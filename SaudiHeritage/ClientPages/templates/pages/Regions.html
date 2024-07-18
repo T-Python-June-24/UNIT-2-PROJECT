@@ -1,6 +1,7 @@
-{% extends "base.html" %}
+{% extends "base_pages/base.html" %}
 {% load static %}
 {% block title %}Saudi Heritage{% endblock %}
+{% block ClassNav%} {% if request.COOKIES.mode == 'dark' %}background-dark-body {%else%}bg-dark{%endif%}{%endblock%}
 {% block display %}
 
     <div class="containerr">
@@ -9,21 +10,21 @@
                 <div class="content">
                     <div class="name">رجال المع</div>
                     <div class="des">قرية رجال ألمع التراثية هي قرية تراثية تقع في محافظة رجال ألمع الواقعة بمنطقة عسير جنوب غرب السعودية، وتبعد عن مدينة أبها حوالي 52 كم باتجاه الغرب. يزيد تاريخ بناءها عن 900 سنة.</div>
-                    <button>أقرأ المزيد</button>
+                    <button onclick="window.location.href='../RjalAlma'">أقرأ المزيد</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(https://pbs.twimg.com/media/FGHdQg0XEAQa6Sk.jpg);">
                 <div class="content">
                     <div class="name">قلعة العنقة</div>
                     <div class="des">القرية تطل على سهول تهامة و تتميز بموقعها الاستراتيجي وصلابة مبانيها وهي من ديار آل سلمى من آل يعلى من آل كثير من بني مالك.</div>
-                    <button>اقرأ المزيد</button>
+                    <button onclick="window.location.href='../alanga'">اقرأ المزيد</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(https://heritage.moc.gov.sa/assets/klaa-mard-alathry-bdom-aljndl-10.jpg);">
                 <div class="content">
                     <div class="name">قلعة مارد</div>
                     <div class="des">تقع قلعة مارد على جبل أو تل صخري يبلغ ارتفاعها 600م في حي الدرع بدومة الجندل التابعة لمنطقة الجوف، ويعود سبب تسميتها بهذا الاسم إلى تمردها واستعصائها على كل من حاول اقتحامها</div>
-                    <button>اقرأ المزيد</button>
+                    <button onclick="window.location.href='../mard'">اقرأ المزيد</button>
                 </div>
             </div>
           
