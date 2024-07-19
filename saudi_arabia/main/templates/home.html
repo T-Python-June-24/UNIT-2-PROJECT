@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Saudi Arabia</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-image: url('{% static "shutterstock_1420411868-1024x512.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        body.night-mode {
+            background-image: url('{% static "saudinight.jpg" %}');
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 50px;
+        }
+
+        .text-content {
+            max-width: 50%;
+            margin-right: 20px;
+        }
+
+        .title h1 {
+            font-size: 88px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: 200px;
+        }
+
+        .subtitle p {
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
+
+        .explore-btn {
+            padding: 10px 20px;
+            font-size: 28px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .slideshow {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-right: 20px;
+        }
+
+        .slide-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .slide {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .text {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            margin-top: -40px;
+            border-radius: 0 0 10px 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">Travel Saudi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'WhatToDo' %}">What To Do</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'PlanYourTrip' %}">Plan Your Trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'SaudiSeasons' %}">Saudi Seasons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'SaudiMap' %}">Saudi Map</a>
+                    </li>
+                </ul>
+                <div class="mode-toggle">
+                    <button id="day-mode" class="btn-mode"><i class="bi bi-brightness-high"></i></button>
+                    <button id="night-mode" class="btn-mode"><i class="bi bi-moon"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="text-content">
+            <div class="title">
+                <h1>Saudi Arabia</h1>
+            </div>
+            <div class="subtitle">
+                <p>Beyond Words.</p>
+            </div>
+            <a href="#" class="explore-btn">EXPLORE</a>
+        </div>
+        <div class="slideshow">
+            <div class="slide-container">
+                <div class="slide">
+                    <img src="{% static 'redsea.webp' %}">
+                    <div class="text">The red sea project.</div>
+                </div>
+                <div class="slide">
+                    <img src="{% static 'zee-ayn.jpg' %}">
+                    <div class="text">Thee (Zee) Ain Ancient Village.</div>
+                </div>
+                <div class="slide">
+                    <img src="{% static 'saudi-arabia-hail.webp' %}">
+                    <div class="text">rock art in Hail.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dayModeButton = document.getElementById('day-mode');
+        const nightModeButton = document.getElementById('night-mode');
+    
+        function showSlides() {
+            slides.forEach(slide => slide.style.display = 'none');
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000);
+        }
+    
+        function toggleNightMode() {
+            document.body.classList.toggle('night-mode');
+        }
+        dayModeButton.addEventListener('click', () => {
+            document.body.classList.remove('night-mode');
+        });
+        nightModeButton.addEventListener('click', () => {
+            document.body.classList.add('night-mode');
+        });
+    
+        showSlides();
+    </script>
+
+<footer class="footer">
+    <ul>
+        <li><a href="{% url 'WhatToDo' %}">What To Do</a></li>
+        <li><a href="{% url 'PlanYourTrip' %}">Plan Your Trip</a></li>
+        <li><a href="{% url 'SaudiSeasons' %}">Saudi Seasons</a></li>
+        <li><a href="{% url 'SaudiMap' %}">Saudi Map</a></li>
+    </ul>
+    <br>
+    <p>&copy; 2024 Travel Saudi. All rights reserved.</p>
+
+</footer>
+</body>
+</html>
