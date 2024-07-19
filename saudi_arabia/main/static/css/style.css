@@ -1,0 +1,76 @@
+.navbar, .footer {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-link, .footer-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover, .footer-link:hover {
+    text-decoration: underline;
+}
+
+.navbar.night-mode {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mode-toggle {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.btn-mode {
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-mode:hover {
+    background-color: white;
+    color: black;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.footer ul li {
+    margin: 0 10px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
