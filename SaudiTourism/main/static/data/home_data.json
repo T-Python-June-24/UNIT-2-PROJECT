@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "url": "images/abha.png",
+      "title": "Abha",
+      "alt": "Image of Abha city",
+      "link": "city/abha"
+    },
+    {
+      "url": "images/riyadh.png",
+      "title": "Riyadh",
+      "alt": "Image of Riyadh city",
+      "link": "city/riyadh"
+    },
+    {
+      "url": "images/mekkah.png",
+      "title": "Mekkah",
+      "alt": "Image of Mekkah city",
+      "link": "city/mekkah"
+    },
+    {
+      "url": "images/alula.png",
+      "title": "AlUla",
+      "alt": "Image of AlUla city",
+      "link": "city/alula"
+    }
+  ]
+}
