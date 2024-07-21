@@ -174,30 +174,3 @@ body {
 }
 
 
-body.dark-mode .hero-content-home {
-    color: lightgray;
-}
-body.dark-mode .home-content {
-    background-color: #333333;
-}
-body.dark-mode .home-content-intro {
-    color: white;
-}
-body.dark-mode .region-container {
-    background-color: #222222;
-}
-body.dark-mode .card__head a {
-    color: white;
-}
-body.dark-mode .sa-region {
-    color: white;
-}
-body.dark-mode .about-card-btn {
-    background-color: #00cc00;
-    color: white;
-}
-
-body.dark-mode .about-card-btn:hover {
-    background-color: #33ff33;
-    color: black;
-}

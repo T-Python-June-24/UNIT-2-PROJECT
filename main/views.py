@@ -16,15 +16,15 @@ def agriculture_technologies_view(request: HttpRequest):
 
 def dark_mode_view(request: HttpRequest):
 
-    response = redirect("main:home_view")
-    response.set_cookie("dark", "dark-mode")
+    response = redirect("home_view")
+    response.set_cookie("mode", "dark-mode" , max_age=60*60*24)
     return response
 
 
 def light_mode_view(request: HttpRequest):
 
     response = redirect("home_view")
-    response.set_cookie("light", "light-mode")
+    response.set_cookie("mode", "dark-mode" ,max_age=-3600)
     return response
 
 
