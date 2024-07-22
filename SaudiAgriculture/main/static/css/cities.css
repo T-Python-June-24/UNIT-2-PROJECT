@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Antic+Slab&family=Asap+Condensed&family=Bubbler+One&family=Cagliostro&family=Cambo&family=Capriola&family=Chathura&family=Copse&family=Courier+Prime&family=Crimson+Pro&family=Cutive&family=Cutive+Mono&family=Dongle&family=Dosis&family=DotGothic16&family=Gowun+Batang&family=IM+Fell+English&family=Istok+Web&family=Jaldi&family=Josefin+Slab&family=Kite+One&family=Kiwi+Maru&family=Kodchasan&family=Laila&family=M+PLUS+Rounded+1c&family=Maitree&family=Mandali&family=Manjari&family=Marmelad&family=NTR&family=New+Tegomin&family=Nunito&family=Port+Lligat+Slab&family=Qahiri&family=Quando&family=Quicksand&family=Sanchez&family=Sawarabi+Mincho&family=Solway&family=Stylish&family=Text+Me+One&family=Varela+Round&family=Yomogi&family=Yuji+Syuku&display=swap");
+
+.cities-hero-container {
+  background-color: #06d001;
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+.cities-hero-content h1{
+  font-size: 30px;
+  padding: 40px;
+  animation: fadeIn 3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cities-main-content{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.cities-card-content{
+    background-color: #93f84b80;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+      padding: 15px;
+  gap:  calc(1rem + max(1vh, 1vw));
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc h1 {
+  text-align: center;
+  font-family: "Capriola", sans-serif;
+  font-size: 3rem;
+}
+
+/* create generic section */
+section {
+  display: flex;
+  overflow-x: auto;
+  gap:  calc(1rem + max(1vh, 1vw));
+  width: 100%;
+  height: 400px;
+  padding: calc( calc(1rem + max(1vh, 1vw)) * 2);
+  border-radius: 30px;
+}
+
+.container {
+  position: relative;
+  flex: 0 0 auto;
+  height: 120%;
+  width: 600px; 
+  border-radius:  calc(1rem + max(1vh, 1vw));
+}
+
+.container figure {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  inset: 0 auto;
+  height: 75%;
+  width: 45%;
+  box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.5);
+  overflow: hidden;
+      border-radius: 20px
+}
+
+.container figure img {
+  min-height: 100%;
+  transform: rotate(0deg);
+  scale: 1;
+  transition: scale 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.cities-card {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 85%;
+  border-radius:  calc(1rem + max(1vh, 1vw));
+  background: linear-gradient(hsl(49deg 95.48% 81.64%), hsl(116.19deg 71.53% 60.5%));
+}
+
+.cities-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  inset: 0 0 0 auto;
+  width: 64.5%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.cities-title {
+  position: absolute;
+  padding: calc( calc(1rem + max(1vh, 1vw)) * 0.25) calc( calc(1rem + max(1vh, 1vw)) * 0.5);
+  margin: auto;
+  inset: auto 0 50%;
+  font-family: "Capriola", sans-serif;
+  text-align: center;
+  transition: bottom 500ms ease-in-out;
+}
+
+.cities-title::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 5%;
+  width: 90%;
+  height: 5px;
+  border-radius: 2.5px;
+  background: hsla(15, 48%, 37%, 100%);
+  transition: width 500ms 300ms ease-in-out;
+}
+
+
+
+.cities-text {
+  position: absolute;
+  top: 100%;
+  padding: 0 calc( calc(1rem + max(1vh, 1vw)) * 0.5);
+  transition: top 500ms ease-in;
+}
+
+.cities-text p {
+  font-size: calc(calc( calc(1rem + max(1vh, 1vw)) * 0.75) * 0.9);
+}
+
+.cities-content > span {
+  font-size: calc( calc(1rem + max(1vh, 1vw)) * 1.75);
+  opacity: 100%;
+  transform: translateY(0px);
+  transition: transform 500ms 500ms ease-out, opacity 300ms 500ms;
+}
+
+a:hover figure {
+  box-shadow: 5px 5px 30px hsla(0, 0%, 0%, 0.5);
+}
+
+a:hover figure img {
+  transform: rotate(-1.25deg);
+  scale: 1.1;
+  transition: scale 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+a:hover .cities-card {
+  transform: translateX(2.5px) translateY(2.5px);
+  background: linear-gradient(hsla(49, 24%, 90%, 100%),hsla(49, 24%, 75%, 100%));
+}
+
+a:hover .cities-title {
+  bottom: 75%;
+  transition: bottom 300ms 495ms ease-out;
+}
+
+a:hover .cities-title::before {
+  width: 0%;
+  transition: width 300ms 300ms ease-in;
+}
+
+
+a:hover .cities-text {
+  top: 25%;
+  transition: top 500ms 300ms ease-out;
+}
+
+a:hover .cities-content > span {
+  transform: translateY(25%);
+  opacity: 0%;
+  transition: transform 300ms ease-in, opacity 200ms;
+}

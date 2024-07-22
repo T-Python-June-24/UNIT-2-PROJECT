@@ -1,0 +1,129 @@
+{% extends 'base.html' %} {% load static%} {%block title %} Home {% endblock %}
+
+{%block heroHome %} 
+<div class="hero-background">
+  <video autoplay muted loop id="hero-video">
+    <source  src="https://res.cloudinary.com/dp5hwcef0/video/upload/v1721128808/Untitled_design_1_djmoxu.mp4" type="video/mp4"/>
+  </video>
+   <div class="hero-content-home">
+            <h1 class="hero-title-home">Saudi Arabia Agriculture</h1>
+            <p class="hero-description-home">Discover Saudi Arabia's exports of agricultural crops</p>
+        </div>
+</div>
+{% endblock%}
+
+{% block content %}
+<hr style="border: 0.5px solid #e6e6e6c7;">
+<div class="home-content">
+    <div class="home-content-intro">
+        <h2> Agriculture in Saudi Arabia</h2>
+        <p> The agricultural sector in Saudi Arabia is considered one of the sectors that receive wide attention from the Kingdom, and many target groups have been allocated to it within Vision 2030 and the <strong>National Agriculture Strategy for 2030.</strong> </p>
+        <p>The plans drawn up in this framework aim to achieve stability in the prices of food products in the Kingdom to study food security through... Ensuring stability in food product prices and supporting rural and economic development.</p>
+    </div>
+    <div class="home-content-image">
+    </div>
+</div>
+ <div class="home-card-container">
+      <div class="about-card">
+        <h2>Self-Sufficiency in 2021</h2>
+        <div class="stats">
+          <div class="stat">
+                  <img src="{% static 'icons/crops.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="5.7">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Agricultural crops</p>
+              </div>
+          <div class="stat">
+            <img src="{% static 'icons/fruit.png' %}" style="width: 50px;">
+            <p class="number" data-target="120">0</p>
+            <p class="label">Fruit</p>
+          </div>
+              <div class="stat">
+                  <img src="{% static 'icons/fish.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="40">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Fish</p>
+              </div>
+              <div class="stat">
+                  <img src="{% static 'icons/meat.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="43">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Meat</p>
+              </div>
+              <div class="stat">
+                  <img src="{% static 'icons/chicken.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="66">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Chicken</p>
+              </div>
+              <div class="stat">
+                  <img src="{% static 'icons/dairy.png' %}" style="width: 50px;">
+                  <div class="number-container">
+                      <p class="number" data-target="121">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">Dairy products</p>
+              </div>
+          <div class="stat">
+            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+              <rect fill="none" height="256" width="256" />
+              <path
+                d="M208,152a80,80,0,0,1-160,0C48,88,96,24,128,24S208,88,208,152Z"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+            </svg>
+            <div class="number-container">
+                      <p class="number" data-target="112">0</p>
+                      <span class="module-sign">%</span> 
+                  </div>
+                  <p class="label">egg</p>
+          </div>
+          </div>
+        <a href="{% url 'about_view' %}"><button class="about-card-btn"> More info .. </button></a>
+      </div>
+    </div>
+<div class="sa-region"><h2>Saudi Region</h2></div>
+<div class="region-container">
+  <div class="card">
+    <img src="{% static 'images/aseer.jpeg'%}" />
+    <div class="card__head"><a href="{% url 'cities_view'%}" >Aseer</a></div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/taif.jpeg'%}" />
+    <div class="card__head"><a href="{% url 'cities_view'%}" >Taif</a></div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/coffe3.jpg'%}" />
+    <div class="card__head"><a href="{% url 'cities_view'%}" >Jazan</a></div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/aljouf.jpeg'%}" />
+    <div class="card__head"><a href="{% url 'cities_view'%}" >AlJouf</a></div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/Tabuk.jpeg'%}" />
+    <div class="card__head"><a href="{% url 'cities_view'%}" >Tabuk</a></div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/Al-Qassim.jpeg'%}" />
+    <div class="card__head"><a href="{% url 'cities_view'%}" >Al-Qassim</a></div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/Al-Ahsa.jpeg'%}" />
+    <div class="card__head"><a href="{% url 'cities_view'%}" >Al-Ahsa</a></div>
+  </div>
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

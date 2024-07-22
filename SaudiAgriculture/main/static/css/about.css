@@ -1,0 +1,151 @@
+
+.-hero-content{
+    background-color: #06D001;
+    min-height: 90vh;
+    align-content: center;
+}
+.about-hero-content{
+    display: flex;
+    padding: 80px 80px 0px 80px;
+}
+.about-hero-content img{
+    height: 383px;
+    border-radius: 50px;
+
+   
+} 
+
+
+ 
+.about-hero-text{
+    font-size: 30px;
+    padding: 20px;
+}
+
+.about-content-container{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    padding:80px;
+}
+.content{
+    background-color: #93f84b80;
+    padding: 40px;
+    border-radius: 30px;
+}
+.content h2{
+    padding-bottom: 20px;
+    font-size: 40px;  
+}
+.content ul{
+    padding-left: 40px; 
+    padding-bottom: 20px;   
+}
+.content-2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #93f84b80;
+    padding: 40px;
+     border-radius: 30px;
+}
+.content-2 h2{
+    font-size: 40px;
+    
+}
+.card-container{
+    padding-left: 300px;
+}
+.about-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 900px;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.number-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    color: #1cc62a;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.module-sign {
+    color: #1cc62a;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.label {
+    color: #777;
+    font-size: 14px;
+    margin: 0;
+} 
+.active {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
